@@ -83,14 +83,15 @@ function fullpageFigures() {
 };
 
 function addEndnotesToNav() {
-  // check for endnotes section
-  var endnotes_section = document.getElementsByClassName('endnotes');
-  if (endnotes_section.length == 1) {
+  // check for endnotes section & auto-toc / nav
+  var endnotes_sections = document.getElementsByClassName('endnotes');
+  var toc_ol = document.getElementsByClassName('toc');
+  if (endnotes_sections.length == 1 && toc_ol.length == 1) {
     // if endnotes section, add an id attribute
-    var endnotes_id = "id_endnotes"
-    endnotes_section.setAttribute("id", endnotes_id);
+    var endnotes_id = "id_endnotes";
+    endnotes_sections[0].setAttribute("id", endnotes_id);
     // create new link element, set text and attributes
-    var newhref = document.createElement("a")
+    var newhref = document.createElement("a");
     var textnode = document.createTextNode("Endnotes");
     newhref.appendChild(textnode);
     newhref.setAttribute("href", "#"+endnotes_id);
@@ -100,8 +101,7 @@ function addEndnotesToNav() {
     newli.setAttribute("class", "BMHeadbmh");
     newli.appendChild(newhref);
     // get toc ordered list and append new <li>
-    var toc_ol = document.getElementsByClassName('toc')[0];
-    toc_ol.append(newli);
+    toc_ol[0].insertBefore(newli,toc_ol[0].lastChild.nextSibling);
   }
 }
 
