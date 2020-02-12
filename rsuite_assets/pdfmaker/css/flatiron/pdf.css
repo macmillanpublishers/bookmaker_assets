@@ -842,7 +842,7 @@ nav[data-type=toc] li.TOC-ChapterTocch + li.TOC-BackmatterTocbm {
   margin-top: 16pt;
 }
 
-nav[data-type=toc] li.TOC-PartTocpt ~ li {
+nav[data-type=toc] li.TOC-PartTocpt ~ li.TOC-ChapterTocch {
   margin-bottom: 0;
 }
 
@@ -2366,7 +2366,6 @@ nav[data-type=toc] li.TOC-BackmatterTocbm a:before {
   content: normal;
 }
 
-nav[data-type=toc] li.TOC-PartTocpt a:after,
 nav[data-type=toc] li.TOC-PartTocpt a:after {
   content: normal;
   display: inline;
