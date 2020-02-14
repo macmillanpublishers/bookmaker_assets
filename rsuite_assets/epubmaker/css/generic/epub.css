@@ -1236,8 +1236,9 @@ table {
   }
 th,
 td {
-  padding: .5em;
+  padding: .3em;
   border: 1px solid #ccc;
+  word-wrap: break-word;
   }
 *[class^="TableColumnHead"],
 *[class^="TableSourceNote"],
@@ -1265,6 +1266,9 @@ td {
 *[class^="FigureFootnote"] {
   font-size: .75em;
   margin: 1em 0;
+  }
+td p {
+ font-size: .9em;
   }
 
 /*
