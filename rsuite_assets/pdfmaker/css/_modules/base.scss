@@ -496,7 +496,7 @@ section.adcard > h1 {
   text-indent: 0;
 }
 
-section.adcard > p[class*="SubtitleSttl"], 
+section.adcard > p[class*="SubtitleSttl"],
 section.adcard > p[class*="List-HeadLhead"] {
   text-align: center;
   text-indent: 0;
@@ -613,8 +613,8 @@ section[data-type="titlepage"] *[class*="Logo-PlacementLogo"] {
   margin-bottom: 0.2in;
 }
 
-section[data-type="titlepage"] *[class*="CitiesCit"], 
-section[data-type="titlepage"] *[class*="TitlepagePublisherNamepub"], 
+section[data-type="titlepage"] *[class*="CitiesCit"],
+section[data-type="titlepage"] *[class*="TitlepagePublisherNamepub"],
 section[data-type="titlepage"] *[class*="ImprintImp"] {
   font-family: "ArnoPro-SmText", serif, "Noto";
   font-variant: small-caps;
@@ -1373,7 +1373,7 @@ section[data-type="copyright-page"] p[class^="Epigraph-Source"] {
   /*page-break-before: avoid;*/
   widows: 2;
   orphans: 2;
-  margin-top: $gridheight; 
+  margin-top: $gridheight;
 
   em {
     break-inside: avoid;
@@ -1458,7 +1458,7 @@ blockquote.looseextract > *[class*="Main-HeadMHead"] {
 }
 
 blockquote.looseextract > *[class*="TitleTtl"],
-blockquote.looseextract > *[class*="Main-HeadMHead"], 
+blockquote.looseextract > *[class*="Main-HeadMHead"],
 *[class*="HeadlineHdline"] {
   font-size: $sizeextracthead;
   line-height: $gridheight;
@@ -1718,8 +1718,8 @@ h1 + ul, h1 + ol {
   padding-top: 3pt;
 }
 
-li[class^="Alpha-Level-"] { 
-  list-style-type: lower-alpha; 
+li[class^="Alpha-Level-"] {
+  list-style-type: lower-alpha;
 }
 
 blockquote[data-type="recipe"] ol,
@@ -2089,8 +2089,8 @@ span[class^="smallcaps"] {
     top: -0.6em;
 }
 
-.subsub { 
-  top: 0.1em; 
+.subsub {
+  top: 0.1em;
   font-size: $sizesuperscript;
   vertical-align: top;
   position: relative;
@@ -2153,4 +2153,31 @@ header {
 .right {
   text-align: right;
   text-indent: 0;
+}
+
+/* tables */
+
+table {
+  margin: $gridheight auto;
+  width: 95%;
+  page-break-inside: avoid;
+}
+
+table, th, td {
+  border: 0.5px solid cmyk(0%,0%,0%,100%);
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0 .3em;
+  word-wrap: break-word;
+}
+
+td p {
+ font-size: $sizenormal * 0.9;
+}
+
+td  p ~ p {
+margin-top: ($gridheight / 2);
+text-indent: 0;
 }
