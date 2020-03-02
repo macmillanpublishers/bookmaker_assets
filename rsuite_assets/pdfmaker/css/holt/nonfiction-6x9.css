@@ -2,7 +2,6 @@
 /* TO COMPILE: $ sass novella.scss pdf.css */
 /* GLOBAL VARIABLES */
 /* LOCAL VARIABLES */
-/*$big2 * 1.625*/
 /* normal * o.875 */
 @font-face {
   font-family: "ArnoPro";
@@ -147,10 +146,10 @@
   font-weight: normal;
 }
 @page {
-  size: 5.5in 8.5in;
-  margin-top: 39pt;
-  margin-bottom: 42pt;
-  padding: 16pt 0 0 0;
+  size: 6.125in 9.25in;
+  margin-top: 42pt;
+  margin-bottom: 57pt;
+  padding: 18pt 0 0 0;
   background-position: top left;
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -159,8 +158,8 @@
   prince-mark-length: 0in;
   bleed: 0.125in;
   @footnotes {
-    font-family: "ArnoPro-SmText", serif;
-    font-size: 9pt;
+    font-family: "MinionPro", serif, "Noto";
+    font-size: 8.5pt;
     background-image: url("https://raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images/generic/titlepage-rule.jpg");
     background-position: 0 0in;
     background-size: 60pt auto;
@@ -170,21 +169,21 @@
   }
 }
 @page :left {
-  margin-left: 40pt;
-  margin-right: 50pt;
+  margin-left: 60pt;
+  margin-right: 60pt;
 }
 @page :right {
-  margin-left: 50pt;
-  margin-right: 40pt;
+  margin-left: 60pt;
+  margin-right: 60pt;
 }
 @page part {
   @top-center {
-    font-family: "ArnoPro-Caption", serif;
+    font-family: "MinionPro", serif, "Noto";
     text-align: center;
     font-style: italic;
-    font-size: 8.5pt;
+    font-size: 9pt;
     vertical-align: top;
-    padding: 31pt 0 0 0;
+    padding: 30pt 0 0 0;
     margin: 0;
   }
   @bottom-center {
@@ -193,7 +192,7 @@
     /*content: counter(page);*/
     content: flow(runfoot);
     text-align: center;
-    font-size: 8.5pt;
+    font-size: 9pt;
     vertical-align: top;
   }
 }
@@ -228,12 +227,12 @@
 }
 @page chapter {
   @top-center {
-    font-family: "ArnoPro-Caption", serif;
+    font-family: "MinionPro", serif, "Noto";
     text-align: center;
     font-style: italic;
-    font-size: 8.5pt;
+    font-size: 9pt;
     vertical-align: top;
-    padding: 31pt 0 0 0;
+    padding: 30pt 0 0 0;
     margin: 0;
   }
   @bottom-center {
@@ -242,7 +241,7 @@
     /*content: counter(page);*/
     content: flow(runfoot);
     text-align: center;
-    font-size: 8.5pt;
+    font-size: 9pt;
     vertical-align: top;
   }
 }
@@ -275,12 +274,12 @@
 @page front {
   @top-center {
     content: normal;
-    font-family: "ArnoPro-Caption", serif;
+    font-family: "MinionPro", serif, "Noto";
     text-align: center;
     font-style: italic;
-    font-size: 8.5pt;
+    font-size: 9pt;
     vertical-align: top;
-    padding: 31pt 0 0 0;
+    padding: 30pt 0 0 0;
     margin: 0;
   }
   @bottom-center {
@@ -289,19 +288,19 @@
     font-variant: prince-opentype(onum);
     content: counter(page);
     text-align: center;
-    font-size: 8.5pt;
+    font-size: 9pt;
     vertical-align: top;
   }
 }
 @page front:left {
   @top-center {
     content: normal;
-    font-family: "ArnoPro-Caption", serif;
+    font-family: "MinionPro", serif, "Noto";
     text-align: center;
     font-style: italic;
-    font-size: 8.5pt;
+    font-size: 9pt;
     vertical-align: top;
-    padding: 31pt 0 0 0;
+    padding: 30pt 0 0 0;
     margin: 0;
   }
   @bottom-center {
@@ -338,12 +337,12 @@
   padding-bottom: 0;
   @top-center {
     content: normal;
-    font-family: "ArnoPro-Caption", serif;
+    font-family: "MinionPro", serif, "Noto";
     text-align: center;
     font-style: italic;
-    font-size: 8.5pt;
+    font-size: 9pt;
     vertical-align: top;
-    padding: 31pt 0 0 0;
+    padding: 30pt 0 0 0;
     margin: 0;
   }
   @bottom-center {
@@ -352,7 +351,7 @@
     font-variant: prince-opentype(onum);
     content: counter(page);
     text-align: center;
-    font-size: 8.5pt;
+    font-size: 9pt;
     vertical-align: top;
   }
 }
@@ -454,8 +453,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-  font-size: 11.75pt;
-  line-height: 15.5pt;
+  font-size: 11.2pt;
+  line-height: 15pt;
   text-indent: 12pt;
   text-align: justify;
   text-align-last: left;
@@ -482,7 +481,7 @@ div.runheadleft {
   font-family: "ArnoPro-Caption", serif, "Noto";
   text-align: center;
   font-style: italic;
-  font-size: 8.5pt;
+  font-size: 9pt;
   padding: 0;
   margin: 0;
   text-indent: 0;
@@ -493,7 +492,7 @@ div.runheadright {
   font-family: "ArnoPro-Caption", serif, "Noto";
   text-align: center;
   font-style: italic;
-  font-size: 8.5pt;
+  font-size: 9pt;
   padding: 0;
   margin: 0;
   text-indent: 0;
@@ -504,7 +503,7 @@ div.runfoot {
   font-family: "ArnoPro-Caption", serif, "Noto";
   font-variant: prince-opentype(onum);
   text-align: center;
-  font-size: 8.5pt;
+  font-size: 9pt;
   text-indent: 0;
   padding: 0;
   margin: 0;
@@ -516,7 +515,7 @@ div.runfoot span {
   font-family: "ArnoPro-Caption", serif, "Noto";
   font-variant: prince-opentype(onum);
   text-align: center;
-  font-size: 8.5pt;
+  font-size: 9pt;
   text-indent: 0;
 }
 
@@ -526,25 +525,25 @@ p[class*=-Space-Break] + p {
 }
 
 p[class*=SpaceBefore] {
-  margin-top: 15.5pt;
+  margin-top: 15pt;
 }
 
 p[class*=SpaceAround] {
-  margin-top: 15.5pt;
-  margin-bottom: 15.5pt;
+  margin-top: 15pt;
+  margin-bottom: 15pt;
 }
 
 p[class*=SpaceAfter] {
-  margin-bottom: 15.5pt;
+  margin-bottom: 15pt;
 }
 
 blockquote {
-  margin: 15.5pt;
+  margin: 15pt;
   page-break-inside: auto;
 }
 
 blockquote p {
-  font-size: 10.5pt;
+  font-size: 10pt;
 }
 
 blockquote p:first-child {
@@ -584,10 +583,10 @@ section[data-type=copyright-page] {
 }
 
 *[class*=FrontSalesTitlefst] {
-  font-size: 16pt;
+  font-size: 13pt;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 15.5pt;
+  margin-bottom: 15pt;
 }
 
 *[class*=FrontSalesQuoteNoIndentfsq1] {
@@ -606,7 +605,7 @@ section[data-type=copyright-page] {
   font-weight: bold;
   font-size: 10.5pt;
   text-align: right;
-  margin-bottom: 15.5pt;
+  margin-bottom: 15pt;
 }
 
 *[class*=FrontSalesQuoteSourcefsqs] em,
@@ -615,10 +614,10 @@ section[data-type=copyright-page] {
 }
 
 section[data-type=halftitlepage] > h1 {
-  font-size: 16pt;
+  font-size: 18pt;
   font-weight: normal;
-  line-height: 15.5pt;
-  margin-top: 182pt;
+  line-height: 15pt;
+  margin-top: 60pt;
   text-align: center;
 }
 
@@ -630,7 +629,7 @@ section.adcard > p[class*=SubtitleSttl],
 section.adcard > p[class*=List-HeadLhead] {
   text-align: center;
   text-indent: 0;
-  margin-top: 15.5pt;
+  margin-top: 15pt;
   margin-bottom: 0;
 }
 
@@ -661,8 +660,8 @@ section[data-type=titlepage] > h1 {
   font-family: "ArnoPro-BoldSubhead", serif, "Noto";
   font-weight: normal;
   font-style: normal;
-  font-size: 25pt;
-  line-height: 28pt;
+  font-size: 26pt;
+  line-height: 29.12pt;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 0;
@@ -670,23 +669,23 @@ section[data-type=titlepage] > h1 {
 }
 
 section[data-type=titlepage] > h1:first-child {
-  margin-top: 23.25pt;
+  margin-top: 22.5pt;
 }
 
 section[data-type=titlepage] p + h1 {
-  margin-top: 25.1875pt;
+  margin-top: 24.375pt;
 }
 
 section[data-type=titlepage] h1 + p {
-  margin-top: 23.25pt;
+  margin-top: 22.5pt;
   margin-bottom: 0;
 }
 
 section[data-type=titlepage] p[class*=SubtitleSttl],
 section[data-type=titlepage] p[class*=TitlepageSeriesTitleser] {
   font-weight: normal;
-  font-size: 16pt;
-  line-height: 23.25pt;
+  font-size: 14pt;
+  line-height: 22.5pt;
   font-style: italic;
   text-align: center;
 }
@@ -701,7 +700,7 @@ section[data-type=titlepage] p[class*=TitlepageSeriesTitleser] span.itali {
 
 section[data-type=titlepage] p[class*=SubtitleSttl]:first-child,
 section[data-type=titlepage] p[class*=TitlepageSeriesTitleser]:first-child {
-  margin-top: 5.8125pt;
+  margin-top: 5.625pt;
 }
 
 section[data-type=titlepage] p[class*=Author] {
@@ -709,14 +708,14 @@ section[data-type=titlepage] p[class*=Author] {
 }
 
 section[data-type=titlepage] p[class*=Author1Au1] {
-  font-size: 16pt;
-  padding-top: 38.75pt;
+  font-size: 24pt;
+  padding-top: 37.5pt;
   background-image: url("https://raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images/generic/titlepage-rule.jpg");
   background-size: 60pt auto;
   background-position: top;
   background-repeat: no-repeat;
-  margin-top: 23.25pt;
-  margin-bottom: 31pt;
+  margin-top: 22.5pt;
+  margin-bottom: 30pt;
   text-indent: 0;
   string-set: author content();
 }
@@ -731,7 +730,7 @@ section[data-type=titlepage] *[class*=Logo-PlacementLogo] {
   content: " ";
   background-image: url("https://raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images/torDOTcom/logo.jpg");
   background-position: center bottom;
-  background-size: 0.58in auto;
+  background-size: 0 0;
   background-repeat: no-repeat;
   display: block;
   float: bottom;
@@ -751,22 +750,22 @@ section[data-type=titlepage] *[class*=ImprintImp] {
   font-weight: normal;
   text-transform: lowercase;
   font-size: 10pt;
-  line-height: 15.5pt;
+  line-height: 15pt;
   float: bottom;
   text-align: center;
   text-indent: 0;
 }
 
 section[data-type=copyright-page] p:first-child {
-  margin-top: 15.5pt;
+  margin-top: 15pt;
 }
 
 section[data-type=copyright-page] p {
   font-family: "ArnoPro-SmText", serif, "Noto";
-  font-size: 9pt;
+  font-size: 8pt;
   text-align: center;
   text-indent: 0;
-  line-height: 12.6pt;
+  line-height: 11.2pt;
 }
 
 /* This style no longer exists in RSuite styles. Leaving in, just in case. */
@@ -801,8 +800,8 @@ nav[data-type=toc] {
 
 nav[data-type=toc] h1 {
   font-weight: bold;
-  font-size: 16pt;
-  line-height: 15.5pt;
+  font-size: 15pt;
+  line-height: 15pt;
   margin-top: 0;
   text-align: center;
 }
@@ -813,8 +812,8 @@ nav[data-type=toc] ol {
 
 nav[data-type=toc] li {
   font-size: 11pt;
-  line-height: 15.5pt;
-  margin-bottom: 15.5pt;
+  line-height: 15pt;
+  margin-bottom: 15pt;
   margin-left: 0;
   list-style-type: none;
 }
@@ -824,13 +823,13 @@ nav[data-type=toc] li.TOC-FrontmatterTocfm {
 }
 
 nav[data-type=toc] li.TOC-BackmatterTocbm {
-  margin-left: 23.5pt;
+  margin-left: 22.4pt;
   font-weight: normal;
   text-align: left;
 }
 
 nav[data-type=toc] li.TOC-ChapterTocch + li.TOC-BackmatterTocbm {
-  margin-top: 15.5pt;
+  margin-top: 15pt;
 }
 
 nav[data-type=toc] li.TOC-PartTocpt ~ li {
@@ -845,7 +844,7 @@ nav[data-type=toc] a {
 nav[data-type=toc] li a:before {
   content: target-counter(attr(href), page);
   display: inline-block;
-  width: 23.5pt;
+  width: 22.4pt;
   text-align: left;
 }
 
@@ -854,8 +853,8 @@ nav[data-type=toc] li.TOC-BackmatterTocbm a:before {
 }
 
 nav[data-type=toc] li.TOC-PartTocpt {
-  margin-bottom: 8.7203pt;
-  margin-top: 23.5pt;
+  margin-bottom: 8.439pt;
+  margin-top: 22.4pt;
   vertical-align: top;
   font-style: italic;
 }
@@ -896,11 +895,11 @@ section[data-type=index] > h1,
 section[data-type=bibliography] > h1,
 section[data-type=conclusion] > h1,
 section[data-type=acknowledgments] > h1 {
-  font-size: 16pt;
-  line-height: 15.5pt;
+  font-size: 13pt;
+  line-height: 15pt;
   font-weight: bold;
-  margin-top: 16pt;
-  margin-bottom: 46.5pt;
+  margin-top: 60pt;
+  margin-bottom: 45pt;
   padding: 0;
   text-align: center;
 }
@@ -909,9 +908,9 @@ section.adcard[data-type=preface] > h1 {
   text-transform: lowercase;
   font-variant: small-caps;
   font-variant: prince-opentype(smcp, onum);
-  font-size: 14pt;
-  margin-top: 15.5pt;
-  margin-bottom: 15.5pt;
+  font-size: 11.2pt;
+  margin-top: 15pt;
+  margin-bottom: 15pt;
   text-align: center;
   text-indent: 0;
 }
@@ -931,12 +930,12 @@ section[data-type=preface] > p[class*=Author1Au1],
 section[data-type=foreword] > p[class*=Author1Au1],
 section[data-type=introduction] > p[class*=Author1Au1] {
   text-indent: 0;
-  font-size: 14pt;
-  line-height: 15.5pt;
+  font-size: 13pt;
+  line-height: 15pt;
   font-style: italic;
-  margin-top: 31pt;
+  margin-top: 30pt;
   text-align: center;
-  margin-bottom: 31pt;
+  margin-bottom: 30pt;
   page-break-after: avoid;
 }
 section[data-type=preface] > p[class*=SubtitleSttl] em,
@@ -985,7 +984,7 @@ section[data-type=acknowledgments] > p[class*=SubtitleSttl]:first-of-type,
 section[data-type=preface] > p[class*=Author1Au1]:first-of-type,
 section[data-type=foreword] > p[class*=Author1Au1]:first-of-type,
 section[data-type=introduction] > p[class*=Author1Au1]:first-of-type {
-  margin-top: -31pt;
+  margin-top: -30pt;
 }
 
 /* ---------------- CHAPTERS */
@@ -1010,17 +1009,17 @@ div[data-type=part] + section[data-type=chapter] {
 }
 
 section[data-type=chapter] > h1[class*=NumberNum] {
-  font-size: 11.75pt;
-  line-height: 15.5pt;
+  font-size: 20pt;
+  line-height: 15pt;
   font-weight: 600;
   text-align: center;
-  margin-top: 19.375pt;
-  margin-bottom: 46.5pt;
+  margin-top: 18.75pt;
+  margin-bottom: 0pt;
   text-indent: 0;
 }
 
 section[data-type=chapter] > h1[class*=NumberNum] + p {
-  margin-top: 15.5pt;
+  margin-top: 15pt;
   margin-bottom: 7pt;
 }
 
@@ -1032,12 +1031,12 @@ section[data-type=dedication] h1[class*=ChapTitleNonprintingctnp] + * {
 }
 
 section[data-type=chapter] h1[class*=TitleTtl] {
-  font-size: 16pt;
-  line-height: 15.5pt;
+  font-size: 15pt;
+  line-height: 15pt;
   font-weight: normal;
-  margin-top: 16pt;
+  margin-top: 60pt;
   text-align: center;
-  margin-bottom: 46.5pt;
+  margin-bottom: 0pt;
   counter-increment: chapternumber;
   padding: 0;
 }
@@ -1045,17 +1044,17 @@ section[data-type=chapter] h1[class*=TitleTtl] {
 h1[class*=TitleTtl][data-autolabel=yes]:before {
   content: attr(data-labeltext);
   display: block;
-  font-size: 11.75pt;
-  line-height: 15.5pt;
+  font-size: 20pt;
+  line-height: 15pt;
   font-weight: 600;
   text-align: center;
-  margin-top: 15.5pt;
-  margin-bottom: 15.5pt;
+  margin-top: 15pt;
+  margin-bottom: 15pt;
   text-indent: 0;
 }
 
 section[data-type=chapter] h1[class*=TitleTtl] + p {
-  margin-top: 15.5pt;
+  margin-top: 75pt;
 }
 
 *[class*=Nonprinting] {
@@ -1106,12 +1105,12 @@ p[class*=Body-TextTx] .chapopener {
 /* ---------------- HEADINGS */
 *[class*=A-HeadAhead] {
   text-indent: 0;
-  font-size: 14pt;
+  font-size: 13pt;
   font-style: italic;
   text-align: center;
-  line-height: 15.5pt;
-  margin-top: 31pt;
-  margin-bottom: 15.5pt;
+  line-height: 15pt;
+  margin-top: 30pt;
+  margin-bottom: 15pt;
   page-break-after: avoid;
 }
 *[class*=A-HeadAhead] em {
@@ -1123,25 +1122,25 @@ p[class*=Body-TextTx] .chapopener {
 
 *[class*=B-HeadBhead] {
   text-indent: 0;
-  font-size: 11.75pt;
+  font-size: 11.2pt;
   font-variant: small-caps;
   font-variant: prince-opentype(smcp, onum);
   text-transform: lowercase;
   text-align: center;
-  line-height: 15.5pt;
-  margin-top: 31pt;
-  margin-bottom: 15.5pt;
+  line-height: 15pt;
+  margin-top: 30pt;
+  margin-bottom: 15pt;
   page-break-after: avoid;
 }
 
 *[class*=C-HeadChead] {
   text-indent: 0;
-  font-size: 11.75pt;
+  font-size: 11.2pt;
   font-style: italic;
   text-align: center;
-  line-height: 15.5pt;
-  margin-top: 31pt;
-  margin-bottom: 15.5pt;
+  line-height: 15pt;
+  margin-top: 30pt;
+  margin-bottom: 15pt;
   page-break-after: avoid;
 }
 *[class*=C-HeadChead] em {
@@ -1168,12 +1167,12 @@ p[class*=Body-TextTx] .chapopener {
 
 *[class=Main-HeadMHead] + *[class*=A-HeadAhead],
 *[class=Main-HeadMHead] + div.runfoot + div.runheadright + div.runheadleft + *[class*=A-HeadAhead] {
-  margin-top: -31pt;
-  margin-bottom: 31pt;
+  margin-top: -30pt;
+  margin-bottom: 30pt;
 }
 
 section[data-type=appendix].notes *[class*=A-HeadAhead] {
-  margin-bottom: 31pt;
+  margin-bottom: 30pt;
 }
 
 /* ---------------- PARTS */
@@ -1186,7 +1185,7 @@ div[data-type=part] {
 
 div[data-type=part] > h1 {
   font-weight: normal;
-  font-size: 22pt;
+  font-size: 18pt;
   letter-spacing: 1pt;
   text-transform: uppercase;
   line-height: 28pt;
@@ -1195,7 +1194,7 @@ div[data-type=part] > h1 {
 }
 
 div[data-type=part] > h1[class*=NumberNum] {
-  font-size: 18pt;
+  font-size: 11.2pt;
   text-transform: lowercase;
   font-variant: prince-opentype(smcp, onum);
 }
@@ -1207,8 +1206,8 @@ div[data-type=part] > h1[class*=NumberNum] + div.runfoot + div.runheadright + di
 div[data-type=part] > p[class*=SubtitleSttl] {
   text-indent: 0;
   text-align: center;
-  font-size: 14pt;
-  margin-bottom: 15.5pt;
+  font-size: 13pt;
+  margin-bottom: 15pt;
 }
 
 /* ---------------- TEXT */
@@ -1227,12 +1226,12 @@ div[data-type=part] > p[class*=SubtitleSttl] {
 
 p[class*=Extract] {
   font-family: "ArnoPro-SmText", serif, "Noto";
-  font-size: 10.5pt;
+  font-size: 10pt;
 }
 
 div.computer {
   white-space: normal;
-  margin: 15.5pt;
+  margin: 15pt;
   page-break-inside: auto;
 }
 
@@ -1247,7 +1246,7 @@ div.computer pre.Body-TextTx {
   font-family: "SourceCodePro", monospace, "Noto";
   font-size: 8.5pt;
   white-space: normal;
-  line-height: 15.5pt;
+  line-height: 15pt;
   text-align: justify;
   text-align-last: left;
 }
@@ -1307,10 +1306,10 @@ p.SeparatorSep + div.runfoot + div.runheadright + div.runheadleft + aside {
 }
 
 aside {
-  margin-top: 15.5pt;
-  margin-bottom: 15.5pt;
-  margin-left: 15.5pt;
-  margin-right: 15.5pt;
+  margin-top: 15pt;
+  margin-bottom: 15pt;
+  margin-left: 15pt;
+  margin-right: 15pt;
   page-break-inside: auto;
 }
 
@@ -1325,23 +1324,23 @@ aside > *:first-child {
 aside::after {
   display: block;
   content: " ";
-  font-size: 11.75pt;
+  font-size: 11.2pt;
   border-top: 0.5pt solid cmyk(0%, 0%, 0%, 100%);
-  line-height: 15.5pt;
-  margin-bottom: 15.5pt;
-  min-height: 15.5pt;
+  line-height: 15pt;
+  margin-bottom: 15pt;
+  min-height: 15pt;
 }
 
 aside[data-type=sidebar] > p[class*=A-HeadAhead] {
   page-break-after: avoid;
-  font-size: 11.75pt;
-  line-height: 15.5pt;
+  font-size: 11.2pt;
+  line-height: 15pt;
   font-weight: bold;
   font-style: normal;
   text-transform: uppercase;
   text-align: center;
-  margin-top: 15.5pt;
-  margin-bottom: 15.5pt;
+  margin-top: 15pt;
+  margin-bottom: 15pt;
 }
 
 aside[data-type=sidebar] > p[class*=A-HeadAhead] + p {
@@ -1350,13 +1349,13 @@ aside[data-type=sidebar] > p[class*=A-HeadAhead] + p {
 
 aside[data-type=sidebar] > p[class*=B-HeadBhead] {
   page-break-after: avoid;
-  font-size: 11.75pt;
-  line-height: 15.5pt;
+  font-size: 11.2pt;
+  line-height: 15pt;
   font-weight: bold;
   font-style: italic;
   text-align: center;
-  margin-top: 15.5pt;
-  margin-bottom: 15.5pt;
+  margin-top: 15pt;
+  margin-bottom: 15pt;
 }
 
 aside[data-type=sidebar] > p[class*=B-HeadBhead] + p {
@@ -1368,7 +1367,7 @@ aside[data-type=sidebar] > p[class*=B-HeadBhead] + p[class*=A-HeadAhead] {
 }
 
 aside[data-type=sidebar] p[class*=Body-TextTx] {
-  font-size: 10.5pt;
+  font-size: 10pt;
 }
 
 aside[data-type=sidebar] > p[class*=TitleTtl] + div.runfoot + div.runheadright + div.runheadleft + p[class*=Body-TextTx],
@@ -1378,19 +1377,19 @@ aside[data-type=sidebar] > p[class*=B-HeadBhead] + div.runfoot + div.runheadrigh
 }
 
 aside[data-type=sidebar] *[class*=Bullet-Level-1-ListBl1] {
-  font-size: 10.5pt;
+  font-size: 10pt;
 }
 
 /* ---------------- DEDICATION and EPIGRAPH */
 section[data-type=dedication] p:first-child {
-  margin-top: 15.5pt;
+  margin-top: 15pt;
 }
 
 section[data-type=dedication] blockquote[data-type=epigraph],
 section[data-type=preface].epigraph,
 p[class*=DedicationDed] + p[class*=Epigraph] {
   page-break-before: right;
-  margin-top: 31pt;
+  margin-top: 30pt;
 }
 
 section[data-type=dedication] blockquote[data-type=epigraph],
@@ -1411,10 +1410,10 @@ section[data-type=preface] p[class^=Epigraph-Non-Verse],
 section[data-type=preface].epigraph p[class^=Body-TextTx] {
   font-family: "ArnoPro-SmText", serif, "Noto";
   font-style: normal;
-  font-size: 9pt;
+  font-size: 10pt;
   text-align: left;
-  margin-left: 50.375pt;
-  margin-right: 35.25pt;
+  margin-left: 48.75pt;
+  margin-right: 33.6pt;
   text-indent: -12pt;
 }
 
@@ -1431,11 +1430,11 @@ section[data-type=preface] p[class^=Epigraph-Source],
 p[class^=SourceSrc] {
   font-family: "ArnoPro-SmText", serif, "Noto";
   font-weight: 600;
-  font-size: 9pt;
+  font-size: 10pt;
   font-style: normal;
   text-align: right;
-  margin-left: 35.25pt;
-  margin-right: 35.25pt;
+  margin-left: 33.6pt;
+  margin-right: 33.6pt;
 }
 
 /* FRONTMATTER EPIGRAPH */
@@ -1456,21 +1455,21 @@ div[data-type=part] > blockquote[data-type=epigraph],
 section[data-type=preface] > blockquote[data-type=epigraph],
 section[data-type=foreword] > blockquote[data-type=epigraph],
 section[data-type=introduction] > blockquote[data-type=epigraph] {
-  margin-top: 15.5pt;
-  margin-left: 35.25pt;
-  margin-bottom: 15.5pt;
-  margin-right: 35.25pt;
+  margin-top: 15pt;
+  margin-left: 33.6pt;
+  margin-bottom: 15pt;
+  margin-right: 33.6pt;
 }
 
 blockquote[data-type=epigraph] + blockquote[data-type=epigraph],
 blockquote[data-type=epigraph] + p[class*=-Space-Break] + div.runfoot + div.runheadright + div.runheadleft + blockquote[data-type=epigraph] {
-  margin-top: -46.5pt;
+  margin-top: -45pt;
 }
 
 h1[class*=TitleTtl] + blockquote[data-type=epigraph],
 h1[class*=Main-HeadMHead] + blockquote[data-type=epigraph] {
-  margin-top: 31pt;
-  margin-bottom: 46.5pt;
+  margin-top: 60pt;
+  margin-bottom: 45pt;
 }
 
 section[data-type=chapter] > blockquote[data-type=epigraph] p,
@@ -1479,8 +1478,8 @@ section[data-type=preface] > blockquote[data-type=epigraph] p,
 section[data-type=foreword] > blockquote[data-type=epigraph] p,
 section[data-type=introduction] > blockquote[data-type=epigraph] p {
   font-family: "ArnoPro-SmText", "Noto";
-  font-size: 9pt;
-  line-height: 15.5pt;
+  font-size: 10pt;
+  line-height: 15pt;
   /* text-align: left;  <-- messing with FM epigraph source alignment*/
 }
 
@@ -1492,8 +1491,8 @@ section[data-type=introduction] p[class^=Epigraph-Verse],
 section[data-type=titlepage] p[class^=Epigraph-Verse],
 section[data-type=halftitlepage] p[class^=Epigraph-Verse],
 section[data-type=copyright-page] p[class^=Epigraph-Verse] {
-  margin-left: 15.5pt;
-  text-indent: -15.5pt;
+  margin-left: 15pt;
+  text-indent: -15pt;
   page-break-inside: auto;
 }
 
@@ -1505,7 +1504,7 @@ section[data-type=introduction] blockquote p[class^=Epigraph-Verse]:first-child,
 section[data-type=titlepage] blockquote p[class^=Epigraph-Verse]:first-child,
 section[data-type=halftitlepage] blockquote p[class^=Epigraph-Verse]:first-child,
 section[data-type=copyright-page] blockquote p[class^=Epigraph-Verse]:first-child {
-  text-indent: -15.5pt;
+  text-indent: -15pt;
 }
 
 section[data-type=chapter] p[class^=Epigraph-Non-Verse],
@@ -1533,7 +1532,7 @@ section[data-type=copyright-page] p[class^=Epigraph-Source] {
   /*page-break-before: avoid;*/
   widows: 2;
   orphans: 2;
-  margin-top: 15.5pt;
+  margin-top: 15pt;
 }
 section[data-type=chapter] p[class^=Epigraph-Source] em,
 div[data-type=part] p[class^=Epigraph-Source] em,
@@ -1560,7 +1559,7 @@ p[class^=Epigraph-Source] + div.runfoot + div.runheadright + div.runheadleft + p
 p[class^=Epigraph-Source] + div.runfoot + div.runheadright + div.runheadleft + p[class^=Epigraph-Non-Verse],
 p[class^=Epigraph-Source] + p[class^=Epigraph-Verse],
 p[class^=Epigraph-Source] + p[class^=Epigraph-Non-Verse] {
-  margin-top: 31pt;
+  margin-top: 30pt;
 }
 
 /* RSUITE UPDATES: paused here */
@@ -1568,7 +1567,7 @@ p[class^=Epigraph-Source] + p[class^=Epigraph-Non-Verse] {
 /* need clarification */
 p.Extract-Inscriptionins {
   font-family: "ArnoPro-SmText", serif, "Noto";
-  font-size: 10.5pt;
+  font-size: 10pt;
   font-style: italic;
   text-align: center;
 }
@@ -1576,7 +1575,7 @@ p.Extract-Inscriptionins {
 .Extract-SongLyricextsl {
   font-style: italic;
   text-indent: -12pt;
-  margin-left: 15.5pt;
+  margin-left: 15pt;
   text-align: left;
 }
 .Extract-SongLyricextsl em {
@@ -1593,11 +1592,11 @@ p.Extract-Inscriptionins {
 /* end note */
 div[data-type=note] > p[class*=A-HeadAhead] {
   text-indent: 0;
-  font-size: 14pt;
+  font-size: 13pt;
   font-style: italic;
   text-align: center;
-  margin-top: 31pt;
-  margin-bottom: 15.5pt;
+  margin-top: 30pt;
+  margin-bottom: 15pt;
   page-break-after: avoid;
 }
 div[data-type=note] > p[class*=A-HeadAhead] em {
@@ -1609,13 +1608,13 @@ div[data-type=note] > p[class*=A-HeadAhead] span.itali {
 
 div[data-type=note] > p[class*=B-HeadBhead] {
   text-indent: 0;
-  font-size: 11.75pt;
+  font-size: 11.2pt;
   font-variant: small-caps;
   font-variant: prince-opentype(smcp, onum);
   text-transform: lowercase;
   text-align: center;
-  margin-top: 31pt;
-  margin-bottom: 15.5pt;
+  margin-top: 30pt;
+  margin-bottom: 15pt;
   page-break-after: avoid;
 }
 
@@ -1627,13 +1626,13 @@ blockquote.looseextract > *[class*=Main-HeadMHead] {
 blockquote.looseextract > *[class*=TitleTtl],
 blockquote.looseextract > *[class*=Main-HeadMHead],
 *[class*=HeadlineHdline] {
-  font-size: 11.75pt;
-  line-height: 15.5pt;
+  font-size: 11.2pt;
+  line-height: 15pt;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
-  margin-top: 15.5pt;
-  margin-bottom: 15.5pt;
+  margin-top: 15pt;
+  margin-bottom: 15pt;
 }
 
 blockquote.looseextract > *[class*=TitleTtl] + p,
@@ -1643,11 +1642,11 @@ blockquote.looseextract > *[class*=Main-HeadMHead] + p {
 
 div.verse {
   font-family: "ArnoPro", serif, "Noto";
-  margin: 15.5pt 52pt 15.5pt 36pt;
+  margin: 15pt 52pt 15pt 36pt;
   white-space: pre-wrap;
   padding: 0;
   page-break-inside: auto;
-  line-height: 15.5pt;
+  line-height: 15pt;
 }
 
 div.verse p[class*=TitleTtl],
@@ -1662,14 +1661,14 @@ div.verse p[class*=Verse1Vrs1]:first-of-type,
 div.verse pre[class*=Verse1Vrs1],
 div.verse pre[class*=Verse1Vrs1]:first-of-type {
   font-family: "ArnoPro", serif, "Noto";
-  font-size: 10.5pt;
+  font-size: 10pt;
   font-style: italic;
   text-indent: -12pt;
   margin-left: 0;
   margin-top: 0;
   margin-bottom: 0;
   text-align: left;
-  line-height: 15.5pt;
+  line-height: 15pt;
 }
 div.verse p[class*=Verse1Vrs1] em,
 div.verse p[class*=Verse1Vrs1]:first-of-type em,
@@ -1738,8 +1737,8 @@ blockquote[data-type=letter] p[class*=HeadnoteHdnt] {
 blockquote[data-type=letter] p[class*=SalutationSal] {
   font-style: italic;
   text-indent: 0;
-  margin-top: 15.5pt;
-  margin-bottom: 15.5pt;
+  margin-top: 15pt;
+  margin-bottom: 15pt;
 }
 blockquote[data-type=letter] p[class*=SalutationSal] em {
   font-style: normal;
@@ -1765,7 +1764,7 @@ blockquote[data-type=letter] p[class*=PostscriptPst] span.itali {
 blockquote[data-type=letter] p[class*=ClosingClos] {
   font-style: italic;
   text-indent: 0;
-  margin-top: 15.5pt;
+  margin-top: 15pt;
 }
 blockquote[data-type=letter] p[class*=ClosingClos] em {
   font-style: normal;
@@ -1777,7 +1776,7 @@ blockquote[data-type=letter] p[class*=ClosingClos] span.itali {
 blockquote[data-type=letter] p[class*=SignatureSig] {
   font-style: italic;
   text-indent: 0;
-  margin-bottom: 15.5pt;
+  margin-bottom: 15pt;
 }
 blockquote[data-type=letter] p[class*=SignatureSig] em {
   font-style: normal;
@@ -1793,12 +1792,12 @@ p[class*=ExtractSource] span.itali {
 
 p[class*=Dateline] {
   text-indent: 0;
-  font-size: 9pt;
+  font-size: 10pt;
   font-weight: 600;
   font-style: italic;
   text-transform: uppercase;
-  margin-top: 46.5pt;
-  margin-bottom: 15.5pt;
+  margin-top: 45pt;
+  margin-bottom: 15pt;
   text-align: left;
 }
 p[class*=Dateline] em {
@@ -1809,17 +1808,17 @@ p[class*=Dateline] span.itali {
 }
 
 p[class*=Dateline] + div.runfoot + div.runheadright + div.runheadleft + p[class*=Dateline] {
-  margin-top: -15.5pt;
+  margin-top: -15pt;
 }
 
 blockquote[data-type=letter] p[class*=DatelineDate] {
   font-weight: normal;
-  font-size: 9pt;
+  font-size: 10pt;
   text-indent: 0;
   text-transform: none;
   text-align: left;
-  margin-top: 15.5pt;
-  margin-bottom: 15.5pt;
+  margin-top: 15pt;
+  margin-bottom: 15pt;
   hyphens: none;
 }
 
@@ -1831,7 +1830,7 @@ blockquote[data-type=recipe] {
 /* --------------- LISTS */
 p[class^=List-Head] {
   padding: 0;
-  margin: 15.5pt 0 0 0;
+  margin: 15pt 0 0 0;
 }
 
 p[class*=-Space-Break] + div.runfoot + div.runheadright + div.runheadleft + p[class^=List-Head],
@@ -1842,18 +1841,18 @@ p.SeparatorSep + div.runfoot + div.runheadright + div.runheadleft + p[class^=Lis
 blockquote[data-type=recipe] p[class^=TitleTtl],
 blockquote[data-type=recipe] p[class^=List-Head] {
   padding: 0;
-  margin: 15.5pt 0 0 0;
+  margin: 15pt 0 0 0;
   text-indent: 0;
 }
 
 ul {
   padding-left: 0;
-  margin: 15.5pt 0 15.5pt 1em;
+  margin: 15pt 0 15pt 1em;
 }
 
 ol {
   padding-left: 0;
-  margin: 15.5pt 0 15.5pt 1.2em;
+  margin: 15pt 0 15pt 1.2em;
 }
 
 ol li {
@@ -1897,7 +1896,7 @@ blockquote[data-type=recipe] ol li p {
 
 /* need clarification */
 .ChapterContentscc {
-  font-size: 10.5pt;
+  font-size: 10pt;
 }
 
 /* end note */
@@ -1936,15 +1935,15 @@ section[data-type=copyright-page] p[class*=Credit-LineCrd] a:before {
 figure {
   page-break-inside: avoid;
   margin-top: 27pt;
-  margin-bottom: 31pt;
+  margin-bottom: 30pt;
   text-align: center;
   float: top unless-fit;
 }
 
 figure.customimage {
-  padding: 7.75pt 0;
-  margin-top: 15.5pt;
-  margin-bottom: 9.6875pt;
+  padding: 7.5pt 0;
+  margin-top: 15pt;
+  margin-bottom: 9.375pt;
   float: none;
 }
 
@@ -1956,7 +1955,7 @@ figure.customimage img {
 figure.fullpage {
   float: top unless-fit;
   box-sizing: border-box;
-  width: 5.75in;
+  width: 6.375in;
   margin-top: 0.55in;
   margin-bottom: 0;
   text-align: inside;
@@ -1977,7 +1976,7 @@ h1 + figure {
 figcaption {
   font-family: "AromaNo2LTPro", sans-serif, "Noto";
   font-size: 8.5pt;
-  line-height: 15.5pt;
+  line-height: 15pt;
   text-align: left;
 }
 
@@ -1994,7 +1993,7 @@ img {
 }
 
 section[data-type=appendix].abouttheauthor h1 + figure, .abouttheauthor h1 + figure {
-  margin-top: -31pt;
+  margin-top: -30pt;
   margin-bottom: 27pt;
   max-height: 2in;
 }
@@ -2005,8 +2004,8 @@ section[data-type=appendix].abouttheauthor h1 + figure img, .abouttheauthor figu
 
 img[src*=fullpage] {
   display: block;
-  width: 5.75in;
-  height: 8.75in;
+  width: 6.375in;
+  height: 9.5in;
   margin-top: -1.65in;
 }
 
@@ -2028,15 +2027,15 @@ p.Ornamental-Space-BreakOsbrk,
 p.Blank-Space-BreakBsbrk {
   text-indent: 0;
   content: " ";
-  font-size: 15.5pt;
+  font-size: 15pt;
   text-align: center;
   background-position: 50% 20%;
   background-repeat: no-repeat;
-  margin-top: 15.5pt;
-  margin-bottom: 15.5pt;
+  margin-top: 15pt;
+  margin-bottom: 15pt;
   padding: 0pt;
   width: 100%;
-  height: 15.5pt;
+  height: 15pt;
 }
 
 p.Blank-Space-BreakBsbrk {
@@ -2047,7 +2046,7 @@ p.Blank-Space-BreakBsbrk {
 p.Ornamental-Space-BreakOsbrk {
   background-image: url("https://raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images/generic/orn.jpg");
   background-size: 20.5pt auto;
-  height: 15.5pt;
+  height: 15pt;
 }
 
 div[data-type=part] > p.Ornamental-Space-BreakOsbrk {
@@ -2059,15 +2058,15 @@ div[data-type=part] > p.Ornamental-Space-BreakOsbrk {
 p.SpaceBreakwithALTOrnamentorn2 {
   background-image: url("https://raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images/generic/orn-bull.jpg");
   background-size: 21.6pt auto;
-  height: 15.5pt;
+  height: 15pt;
 }
 
 p.SpaceBreak-PrintOnlypo,
 p.SeparatorSep {
   text-indent: 0;
   content: " ";
-  font-size: 15.5pt;
-  height: 15.5pt;
+  font-size: 15pt;
+  height: 15pt;
 }
 
 /* end note */
@@ -2103,12 +2102,12 @@ p.PageBreakpb + div.runfoot + div.runheadright + div.runheadleft + * {
 /* glossary definition */
 /* need clarification */
 .Definitiondef {
-  font-size: 10.5pt;
-  line-height: 13.8510638298pt;
+  font-size: 10pt;
+  line-height: 13.3928571429pt;
   text-indent: -24pt;
   margin: 0;
   margin-left: 24pt;
-  margin-bottom: 7.75pt;
+  margin-bottom: 7.5pt;
 }
 
 .Definitiondef:first-of-type, *[class*=Definitiondef]:first-of-type {
@@ -2120,8 +2119,8 @@ p.PageBreakpb + div.runfoot + div.runheadright + div.runheadleft + * {
 span[data-type=footnote],
 .endnotetext {
   font-family: "ArnoPro-SmText", serif, "Noto";
-  font-size: 9pt;
-  line-height: 11.75pt;
+  font-size: 8.5pt;
+  line-height: 11.2pt;
   text-indent: 0;
   margin-left: 0;
 }
@@ -2133,7 +2132,7 @@ span[data-type=footnote] {
 
 span[data-type=footnote] > span {
   display: block;
-  text-indent: 11.75pt;
+  text-indent: 11.2pt;
 }
 
 span[data-type=footnote] > span:first-of-type {
@@ -2152,7 +2151,7 @@ span[data-type=footnote] > span:first-of-type {
 }
 
 *[class*=endnotetext] {
-  line-height: 15.5pt;
+  line-height: 15pt;
   counter-increment: endnotes;
 }
 
@@ -2174,12 +2173,12 @@ div > header + blockquote,
 div > header + div.verse,
 div > header + aside,
 div > header + div {
-  margin-top: 77.5pt;
+  margin-top: 75pt;
 }
 
 section > header + div.verse,
 div > header + div.verse {
-  margin-top: 62pt;
+  margin-top: 60pt;
 }
 
 section[data-type=dedication] > header + p,
@@ -2195,7 +2194,7 @@ section[data-type=preface].epigraph > header + blockquote,
 section[data-type=preface].epigraph > header + div.verse,
 section[data-type=preface].epigraph > header + aside,
 section[data-type=preface].epigraph > header + div {
-  margin-top: 15.5pt;
+  margin-top: 15pt;
 }
 
 /* character styles */
@@ -2311,28 +2310,156 @@ header {
   @top-center {
     vertical-align: bottom;
   }
-  @bottom-center {
-    content: normal;
-  }
 }
 @page chapter {
   @top-center {
     vertical-align: bottom;
-  }
-  @bottom-center {
-    content: normal;
   }
 }
 @page front {
   @top-center {
     vertical-align: bottom;
   }
+}
+@page chapter {
+  @top-center {
+    content: normal;
+  }
+  @top-left {
+    font-family: "MinionPro", serif, "Noto";
+    text-align: center;
+    font-style: italic;
+    font-size: 9pt;
+    vertical-align: top;
+    padding: 30pt 0 0 0;
+    margin: 0;
+    text-align: left;
+  }
+  @top-right {
+    font-family: "MinionPro", serif, "Noto";
+    text-align: center;
+    font-style: italic;
+    font-size: 9pt;
+    vertical-align: top;
+    padding: 30pt 0 0 0;
+    margin: 0;
+    text-align: right;
+  }
   @bottom-center {
     content: normal;
   }
 }
-@page copyright {
-  @bottom-center {
+@page chapter:left {
+  @top-center {
+    content: normal;
+  }
+  @top-left {
+    content: flow(runheadleft);
+  }
+}
+@page chapter:right {
+  @top-center {
+    content: normal;
+  }
+  @top-right {
+    content: flow(runheadright);
+  }
+}
+@page chapter:first {
+  @top-center {
+    content: normal;
+  }
+  @top-right {
+    content: normal;
+  }
+  @top-left {
+    content: normal;
+  }
+}
+@page chapter:blank {
+  @top-center {
+    content: normal;
+  }
+  @top-right {
+    content: normal;
+  }
+  @top-left {
+    content: normal;
+  }
+}
+@page part:left {
+  @top-center {
+    content: normal;
+  }
+  @top-left {
+    content: flow(runheadleft);
+  }
+}
+@page part:right {
+  @top-center {
+    content: normal;
+  }
+  @top-right {
+    content: flow(runheadright);
+  }
+}
+@page part:first {
+  @top-center {
+    content: normal;
+  }
+  @top-right {
+    content: normal;
+  }
+  @top-left {
+    content: normal;
+  }
+}
+@page part:blank {
+  @top-center {
+    content: normal;
+  }
+  @top-right {
+    content: normal;
+  }
+  @top-left {
+    content: normal;
+  }
+}
+@page front:left {
+  @top-center {
+    content: normal;
+  }
+  @top-left {
+    content: normal;
+  }
+}
+@page front:right {
+  @top-center {
+    content: normal;
+  }
+  @top-right {
+    content: normal;
+  }
+}
+@page front:first {
+  @top-center {
+    content: normal;
+  }
+  @top-right {
+    content: normal;
+  }
+  @top-left {
+    content: normal;
+  }
+}
+@page front:blank {
+  @top-center {
+    content: normal;
+  }
+  @top-right {
+    content: normal;
+  }
+  @top-left {
     content: normal;
   }
 }
@@ -2378,6 +2505,16 @@ div.runfoot span {
 }
 
 h1[class*=TitleTtl] {
+  font-family: "MinionPro", serif, "Noto";
+}
+
+section[data-type=titlepage] > h1 {
+  font-family: "MinionPro", serif, "Noto";
+}
+
+section[data-type=titlepage] *[class*=CitiesCit],
+section[data-type=titlepage] *[class*=PublisherPub],
+section[data-type=titlepage] *[class*=ImprintImp] {
   font-family: "MinionPro", serif, "Noto";
 }
 
@@ -2448,69 +2585,440 @@ span[data-type=footnote],
   font-family: "MinionPro", serif, "Noto";
 }
 
-section[data-type=titlepage] p[class*=Author],
-section[data-type=titlepage] p[class*=SubtitleSttl],
-section[data-type=titlepage] p {
-  font-family: "ArnoPro", serif, "Noto";
-}
-
 /* adjusting everything else */
 div.runheadleft {
-  font-variant: prince-opentype(onum);
+  content: normal;
+  text-align: left;
 }
 
 div.runheadright {
-  font-variant: prince-opentype(onum);
+  content: normal;
+  text-align: right;
 }
 
-div.runheadleft::before {
+div.runheadleft span:before {
   content: counter(page) " • ";
-  font-style: normal;
 }
 
-div.runheadright::after {
+div.runheadright span:after {
   content: " • " counter(page);
+}
+
+section.adcard[data-type=preface] > h1 {
+  margin-bottom: 15pt;
+  font-weight: normal;
+}
+
+section.adcard ul li {
+  margin-bottom: 11.25pt;
+}
+
+section[data-type=titlepage] > h1 {
+  text-transform: none;
+  margin-top: 60pt;
+  margin-bottom: 0;
+}
+
+section[data-type=titlepage] > h1:first-child {
+  margin-top: 60pt;
+}
+
+section[data-type=titlepage] *[class*=SubtitleSttl] + h1,
+*[class*=TitlepageSeriesTitleser] + h1 {
+  margin-top: 24.375pt;
+}
+
+section[data-type=titlepage] *[class*=SubtitleSttl],
+*[class*=TitlepageSeriesTitleser] {
   font-style: normal;
 }
 
+section[data-type=titlepage] *[class*=Author] {
+  padding-top: 0;
+  background-image: none;
+  margin-top: 105pt;
+  string-set: author content();
+}
+
+section[data-type=titlepage] *[class*="Logo-PlacementLogo)"] {
+  background-image: none;
+}
+
+section[data-type=copyright-page] {
+  background-image: url("https://raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images/holt/HoltLogo30K.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 20pt auto;
+  padding-top: 34pt;
+  float: bottom;
+}
+
+nav[data-type=toc] {
+  counter-reset: part-list-item 0 chapter-list-item 0;
+}
+
+nav[data-type=toc] h1 {
+  font-weight: normal;
+  margin-top: 60pt;
+  margin-bottom: 142pt;
+}
+
+nav[data-type=toc] ol {
+  margin-left: 0;
+}
+
+nav[data-type=toc] li {
+  margin-bottom: 6pt;
+  list-style-type: none;
+}
+
+nav[data-type=toc] li.PartNumberpn,
+nav[data-type=toc] li.TOC-SubheadTocsub {
+  display: none;
+}
+
+nav[data-type=toc] li.TOC-PartTocpt {
+  counter-increment: part-list-item;
+  list-style-position: inside;
+  margin-bottom: 6pt;
+  margin-top: 0;
+  font-style: normal;
+}
+
+nav[data-type=toc] li.TOC-PartTocpt::marker {
+  content: "Part " counters(part-list-item, ".", decimal) ". ";
+}
+
+nav[data-type=toc] li.PartNumberpn + li.TOC-PartTocpt {
+  margin-top: 0;
+}
+
+nav[data-type=toc] li.TOC-ChapterTocch,
+nav[data-type=toc] li.ChapTitleALTact {
+  counter-increment: chapter-list-item;
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+
+nav[data-type=toc] li.TOC-ChapterTocch::marker,
+nav[data-type=toc] li.ChapTitleALTact::marker {
+  content: counters(chapter-list-item, ".", decimal) ". ";
+}
+
+nav[data-type=toc] li.TOC-FrontmatterTocfm {
+  list-style-type: none;
+  display: block;
+}
+
+nav[data-type=toc] li.TOC-BackmatterTocbm {
+  list-style-type: none;
+  margin-left: 0;
+}
+
+nav[data-type=toc] li.TOC-ChapterTocch + li.TOC-BackmatterTocbm,
+nav[data-type=toc] li.ChapTitleALTact + li.TOC-BackmatterTocbm {
+  margin-top: 0;
+}
+
+nav[data-type=toc] li.PartNumberpn ~ li,
+nav[data-type=toc] li.TOC-SubheadTocsub ~ li,
+nav[data-type=toc] li.TOC-PartTocpt ~ li {
+  margin-bottom: 6pt;
+}
+
+nav[data-type=toc] li.PartNumberpn ~ li.PartNumberpn,
+nav[data-type=toc] li.TOC-SubheadTocsub ~ li.TOC-SubheadTocsub,
+nav[data-type=toc] li.TOC-PartTocpt ~ li.TOC-PartTocpt,
+nav[data-type=toc] li.PartNumberpn ~ li.TOC-PartTocpt,
+nav[data-type=toc] li.TOC-SubheadTocsub ~ li.TOC-PartTocpt,
+nav[data-type=toc] li.TOC-PartTocpt ~ li.PartNumberpn,
+nav[data-type=toc] li.TOC-PartTocpt ~ li.TOC-SubheadTocsub {
+  margin-bottom: 6pt;
+}
+
+nav[data-type=toc] li a::before {
+  content: normal;
+}
+
+nav[data-type=toc] li a::after {
+  content: leader(" ") target-counter(attr(href), page);
+  display: inline;
+}
+
+section[data-type=dedication] {
+  margin-top: 60pt;
+}
+
+section[data-type=dedication] p {
+  font-size: 12pt;
+  font-style: italic;
+}
+
+section[data-type=chapter] > p[class*=Dateline] ~ h1[class*=TitleTtl] {
+  text-align: center;
+}
+
+/* Holt-specific overrides */
 figure.fullpage {
-  margin-top: 0.55in;
-  margin-inside: -1in;
-  margin-outside: -0.75in;
+  margin-top: 0.7in;
+  margin-inside: -0.93in;
+  margin-outside: -0.93in;
+  height: 7.25in;
 }
 
 img[src*=fullpage] {
   margin-top: -1.65in;
 }
 
-section[data-type=titlepage] h1[class*=TitleTtl] {
-  background-image: url("https://raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images/generic/tor-rule.png");
-  background-size: 116pt auto;
+@page {
+  @footnotes {
+    background-image: none;
+    margin-top: 15pt;
+  }
+}
+section[data-type=titlepage] *[class*=SubtitleSttl] {
+  padding-top: 15pt;
+  background-image: url("https://raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images/generic/titlepage-rule.jpg");
+  background-size: 60pt auto;
+  background-position: top;
   background-repeat: no-repeat;
-  background-position: center bottom;
-  padding-bottom: 62pt;
-  margin-bottom: 35pt;
-  margin-top: 54pt;
+  margin-top: 15pt;
 }
 
 section[data-type=titlepage] p[class*=Author1Au1] {
-  padding-top: 0;
   background-image: none;
-  margin-top: 15.5pt;
-  margin-bottom: 15.5pt;
+  margin-top: 75pt;
 }
 
-section[data-type=copyright-page] p {
-  line-height: 14pt;
+/* Extract */
+h1[class*=ChapTitleNonprintingctnp] + blockquote {
+  margin-top: 60pt;
 }
 
-section[data-type=chapter] > h1[class*=NumberNum] {
-  margin-top: 15.5pt;
-  margin-bottom: 46.5pt;
+blockquote {
+  margin-left: 27pt;
+  margin-right: 27pt;
 }
 
-section[data-type=chapter] h1[class*=TitleTtl] {
-  margin-top: 15.5pt;
+/* TOC */
+nav[data-type=toc] {
+  counter-reset: part-list-item 0 chapter-list-item 0;
+}
+
+nav[data-type=toc] h1 {
+  font-weight: normal;
+  margin-top: 60pt;
+  margin-bottom: 142pt;
+}
+
+/* Epigraph */
+blockquote[data-type=epigraph] {
+  margin-top: 15pt;
+  margin-bottom: 15pt;
+}
+
+section[data-type=preface].epigraph p {
+  font-style: italic;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+section[data-type=dedication] blockquote[data-type=epigraph],
+section[data-type=preface].epigraph,
+.Dedicationded + p[class*=Epigraph],
+section[data-type=chapter] > blockquote[data-type=epigraph],
+div[data-type=part] > blockquote[data-type=epigraph],
+section[data-type=preface] > blockquote[data-type=epigraph],
+section[data-type=foreword] > blockquote[data-type=epigraph],
+section[data-type=introduction] > blockquote[data-type=epigraph],
+blockquote[data-type=epigraph] {
+  margin-left: 30pt;
+  margin-right: 30pt;
+  padding: 0;
+}
+
+section[data-type=dedication] p[class*=Epigraph-Source],
+section[data-type=preface] p[class*=Epigraph-Source],
+p[class*=Epigraph-Source] {
+  font-style: normal;
+  font-weight: normal;
+}
+
+section[data-type=dedication] p[class*=Epigraph-verse],
+section[data-type=preface] p[class*=Epigraph-verse],
+p.ChapEpigraph-versecepiv,
+p.PartEpigraph-versepepiv,
+p.FMEpigraph-versefmepiv {
+  margin-left: 12pt;
+  text-indent: -12pt;
+}
+
+section[data-type=chapter] p[class^=Epigraph-Non-Verse],
+div[data-type=part] p[class^=Epigraph-Non-Verse],
+section[data-type=chapter] p[class^=Epigraph-Non-Verse],
+section[data-type=foreword] p[class^=Epigraph-Non-Verse],
+section[data-type=introduction] p[class^=Epigraph-Non-Verse],
+section[data-type=titlepage] p[class^=Epigraph-Non-Verse],
+section[data-type=halftitlepage] p[class^=Epigraph-Non-Verse],
+section[data-type=copyright-page] p[class^=Epigraph-Non-Verse],
+section[data-type=preface].epigraph p[class^=Body-TextTx] {
+  font-style: italic;
+  text-align: justify;
+}
+
+section[data-type=chapter] p[class^=Epigraph-Verse],
+div[data-type=part] p[class^=Epigraph-Verse],
+section[data-type=chapter] p[class^=Epigraph-Verse],
+section[data-type=foreword] p[class^=Epigraph-Verse],
+section[data-type=introduction] p[class^=Epigraph-Verse],
+section[data-type=titlepage] p[class^=Epigraph-Verse],
+section[data-type=halftitlepage] p[class^=Epigraph-Verse],
+section[data-type=copyright-page] p[class^=Epigraph-Verse] {
+  font-style: italic;
+}
+
+section[data-type=dedication] p[class*=Epigraph-non-verse],
+section[data-type=preface].epigraph p[class*=Epigraph-non-verse] {
+  margin-left: 0;
+  text-indent: 0;
+}
+
+blockquote p.ChapEpigraph-versecepiv:first-child,
+blockquote p.PartEpigraph-versepepiv:first-child,
+blockquote p.FMEpigraph-versefmepiv:first-child {
+  text-indent: -12pt;
+}
+
+blockquote + blockquote,
+blockquote + p[class*=SpaceBreak] + div.runfoot + div.runheadright + div.runheadleft + blockquote,
+section[data-type=chapter] > blockquote + blockquote[data-type=epigraph],
+div[data-type=part] > blockquote + blockquote[data-type=epigraph],
+section[data-type=preface] > blockquote + blockquote[data-type=epigraph],
+section[data-type=foreword] > blockquote + blockquote[data-type=epigraph],
+section[data-type=introduction] > blockquote + blockquote[data-type=epigraph],
+section[data-type=chapter] > blockquote + p[class*=SpaceBreak] + div.runfoot + div.runheadright + div.runheadleft + blockquote[data-type=epigraph],
+div[data-type=part] > blockquote + p[class*=SpaceBreak] + div.runfoot + div.runheadright + div.runheadleft + blockquote[data-type=epigraph],
+section[data-type=preface] > blockquote + p[class*=SpaceBreak] + div.runfoot + div.runheadright + div.runheadleft + blockquote[data-type=epigraph],
+section[data-type=introduction] > blockquote + p[class*=SpaceBreak] + div.runfoot + div.runheadright + div.runheadleft + blockquote[data-type=epigraph],
+section[data-type=foreword] > blockquote + p[class*=SpaceBreak] + div.runfoot + div.runheadright + div.runheadleft + blockquote[data-type=epigraph] {
+  margin-top: 15pt;
+}
+
+/* parts */
+div[data-type=part] h1 {
+  text-transform: none;
+}
+
+div[data-type=part] h1[class*=NumberNum] {
+  text-transform: none;
+  font-variant: small-caps;
+  font-variant: prince-opentype(smcp, onum);
+  margin-top: 52.5pt;
+  background-image: url("https://raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images/generic/titlepage-rule.jpg");
+  background-size: 60pt auto;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  padding-bottom: 3.75pt;
+  margin-bottom: 15pt;
+}
+
+div[data-type=part] h1[class*=NumberNum] > span {
+  display: inline-block;
+  padding-bottom: 0;
+  border-bottom: 0.5pt solid cmyk(0, 0, 0, 100);
+}
+
+div[data-type=part] *[class*=SubtitleSttl] {
+  font-size: 13pt;
+}
+
+section[data-type=chapter] h1[class*=TitleTtl][data-autolabel=yes]:before,
+h1[class*=ChapTitleALTact][data-autolabel=yes]:before {
+  background-image: none;
+  padding-bottom: 0;
+  margin-bottom: 7.5pt;
+}
+
+section[data-type=chapter] h1[class*=TitleTtl] + p.SubtitleSttl,
+section[data-type=chapter] h1[class*=ChapTitleALTact] + p.SubtitleSttl {
+  font-style: normal;
+  margin-top: 15pt;
+  margin-bottom: 75pt;
+}
+
+section[data-type=bibliography] > h1 {
+  margin-bottom: 135pt;
+}
+
+section[data-type=bibliography] *[class*=Reference-EntryRef],
+section[data-type=bibliography] *[class*=Body-TextTx] {
+  font-size: 9pt;
+  line-height: 11pt;
+  margin-left: 18pt;
+  text-indent: -18pt;
+}
+
+section[data-type=bibliography] *[class*=Reference-EntryRef]:first-of-type,
+section[data-type=bibliography] *[class*=Body-TextTx]:first-of-type {
+  text-indent: -18pt;
+}
+
+section.abouttheauthor {
+  margin-left: 24pt;
+  margin-right: 24pt;
+}
+
+section.abouttheauthor h1 {
+  font-size: 13pt;
+  line-height: 18pt;
+  margin-bottom: 30pt;
+}
+
+section.abouttheauthor p {
+  font-size: 10.5pt;
+  line-height: 18pt;
+}
+
+section[data-type=appendix].notes > h1 {
+  margin-bottom: 150pt;
+}
+
+section[data-type=appendix].notes p {
+  font-size: 9pt;
+  line-height: 11pt;
+  text-indent: 0;
+}
+
+section[data-type=appendix].notes p.MainHeadMHead {
+  text-align: left;
+  font-style: normal;
+  margin-top: 9pt;
+  margin-bottom: 2pt;
+}
+
+*[class*=A-HeadAhead] {
+  font-size: 12pt;
+  font-style: normal;
+  text-align: left;
+  font-weight: bold;
+  margin-top: 15pt;
+  margin-bottom: 15pt;
+}
+
+*[class*=B-HeadBhead] {
+  font-size: 11.2pt;
+  font-style: italic;
+  font-weight: bold;
+  font-variant: normal;
+  text-transform: none;
+  text-align: left;
+  margin-top: 15pt;
+  margin-bottom: 15pt;
+}
+
+*:not(nav) ul ul, *:not(nav) ul ol, *:not(nav) ol ol, *:not(nav) ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 p.Blank-Space-BreakBsbrk,
@@ -2520,12 +3028,18 @@ p.SpaceBreak-Internalint,
 p.PartOrnamentporn,
 p.ChapOrnamentcorn,
 p.ChapOrnamentALTcorn2,
+p.SpaceBreakOrnamentorn,
 p.SpaceBreakwithOrnamentorn,
 p.SpaceBreakwithALTOrnamentorn2 {
-  background-image: url("https://raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images/generic/tor-rule.png");
-  background-size: 116pt auto;
-  margin-top: 7.75pt;
-  margin-bottom: 7.75pt;
+  content: " ";
+  background-image: none;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-/*# sourceMappingURL=pdf.css.map */
+span[data-type=footnote] {
+  footnote-style-position: outside;
+  margin-left: 12pt;
+}
+
+/*# sourceMappingURL=nonfiction-6x9.css.map */

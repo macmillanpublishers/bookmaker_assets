@@ -11,33 +11,33 @@ $normal: 11pt; //sizenormal sizechapnum sizeh2 sizeh3 sizeextracthead DONE
 $small: 10pt; //sizetitlepagetext sizecopyright sizeepigraph sizedateline
 $smaller: 8.5pt; //sizecode sizecaption
 
-$gridheight: 14.4pt; 
+$gridheight: 14.4pt;
 
 $pagewidth: 5.5in;
 $pageheight: 8.25in;
 $bleedwidth: 0.125in;
 $bleedheight: 0.125in;
-$margintop: 33pt; 
-$marginbottom: 54pt; 
-$padding: 21pt 0 0 0; 
-$outsidemargin: 58pt; 
-$insidemargin: 58pt; 
+$margintop: 33pt;
+$marginbottom: 54pt;
+$padding: 21pt 0 0 0;
+$outsidemargin: 58pt;
+$insidemargin: 58pt;
 
 $textindent: 12pt;
 
-$sizetitle: 26pt; 
-$sizesubtitle: 14pt; 
-$sizeau: 22pt; 
-$sizetitlepagetext: 10pt; 
+$sizetitle: 26pt;
+$sizesubtitle: 14pt;
+$sizeau: 22pt;
+$sizetitlepagetext: 10pt;
 $sizefst: $bigger;
 $sizefsqs: 10.5pt; /* normal * o.875 */
-$sizeacmh: 11pt; 
+$sizeacmh: 11pt;
 $sizehalftitle: $biggest;
-$sizetochead: 15pt; 
-$sizetocentry: 11pt; 
+$sizetochead: 15pt;
+$sizetocentry: 11pt;
 $sizefmhead: $bigger;
-$sizepartnum: 11pt; 
-$sizeparttitle: 18pt; 
+$sizepartnum: 11pt;
+$sizeparttitle: 18pt;
 $sizechapnum: 20pt;
 $sizechaptitle: 15pt;
 $sizechapsubtitle: $big;
@@ -54,7 +54,7 @@ $sizedateline: $small;
 $sizeepigraph: $small;
 $sizerunfoot: 9pt;
 $sizerunhead: 9pt;
-$sizecopyright: 8pt; 
+$sizecopyright: 8pt;
 $sizefootnote: 8.5pt;
 $sizecaption: $smaller;
 $sizefigsrc: 7pt;
@@ -71,12 +71,12 @@ $logowidth: 0;
 
 $htmargintop: ($gridheight * 4);
 
-$ctmargintop: ($gridheight * 4); 
-$ctmarginbottom: ($gridheight * 0); 
+$ctmargintop: ($gridheight * 4);
+$ctmarginbottom: ($gridheight * 0);
 $comargintop: ($gridheight * 5); //DONE
 $cemargintop: ($gridheight * 4);
 $cemarginbottom: ($gridheight * 3);
-$prmargintop: ($gridheight * 4); 
+$prmargintop: ($gridheight * 4);
 
 $spacebreakheight: $gridheight;
 
@@ -103,7 +103,7 @@ $spacebreakheight: $gridheight;
 figure.fullpage {
   margin-top: 0.7in;
   margin-inside: -0.93in;
-  margin-outside: -0.93in; 
+  margin-outside: -0.93in;
   height: 6.25in; }
 
 img[src*="fullpage"] {
@@ -133,7 +133,7 @@ section[data-type="titlepage"] p[class*="Author1Au1"] {
 /* Extract */
 
 h1[class*="ChapTitleNonprintingctnp"] + blockquote {
-  margin-top: $ctmargintop
+  margin-top: $ctmargintop;
 }
 
 blockquote {
@@ -223,7 +223,7 @@ section[data-type="copyright-page"] p[class^="Epigraph-Verse"] {
 section[data-type="dedication"] p[class*="Epigraph-non-verse"],
 section[data-type="preface"].epigraph p[class*="Epigraph-non-verse"]  {
   margin-left: 0;
-  text-indent: 0; 
+  text-indent: 0;
 }
 
 blockquote p.ChapEpigraph-versecepiv:first-child,
