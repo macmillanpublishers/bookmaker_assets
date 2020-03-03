@@ -38,7 +38,7 @@ function addRunningElements() {
     var runHeadLeft = document.createElement("div");
     var runHeadLeftSpan = document.createElement("span");
     runHeadLeft.setAttribute("class", "runheadleft");
-    var textnode = document.createTextNode("BKMKRINSERTBKTITLE");
+    var textnode = document.createTextNode(BKMKRINSERTBKTITLE);
 
     while (section.tagName != "SECTION" && section.tagName != "NAV" && section.tagName != "DIV" && i < 10) {
       var section = section.parentNode;
@@ -62,7 +62,6 @@ function addRunningElements() {
       if (sectionHead.length < 4 && sectionHead.match(/^[0-9]+$/) != null) {
         sectionHead = "Chapter " + sectionHead;
       };
-      textnode = document.createTextNode(" ");
     };
 
     if (sectionType == "part") {
@@ -74,7 +73,6 @@ function addRunningElements() {
       if (sectionHead.length < 4 && sectionHead.match(/^[0-9]+$/) != null) {
         sectionHead = "Part " + sectionHead;
       };
-      textnode = document.createTextNode(" ");
     };
 
     runHeadLeftSpan.appendChild(textnode);
