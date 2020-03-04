@@ -832,7 +832,7 @@ nav[data-type=toc] li.TOC-ChapterTocch + li.TOC-BackmatterTocbm {
   margin-top: 14.4pt;
 }
 
-nav[data-type=toc] li.TOC-PartTocpt ~ li {
+nav[data-type=toc] li.TOC-PartTocpt ~ li.TOC-ChapterTocch {
   margin-bottom: 0;
 }
 
