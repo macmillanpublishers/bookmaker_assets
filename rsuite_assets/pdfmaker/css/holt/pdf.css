@@ -2722,7 +2722,8 @@ nav[data-type=toc] li.ChapTitleALTact + li.TOC-BackmatterTocbm {
 
 nav[data-type=toc] li.PartNumberpn ~ li,
 nav[data-type=toc] li.TOC-SubheadTocsub ~ li,
-nav[data-type=toc] li.TOC-PartTocpt ~ li {
+nav[data-type=toc] li.TOC-PartTocpt ~ li,
+nav[data-type=toc] li.TOC-PartTocpt ~ li.TOC-ChapterTocch {
   margin-bottom: 6pt;
 }
 

@@ -216,8 +216,8 @@ section[data-type="titlepage"] > h1 {
   font-family: "MinionPro", serif, "Noto";
 }
 
-section[data-type="titlepage"] *[class*="CitiesCit"], 
-section[data-type="titlepage"] *[class*="PublisherPub"], 
+section[data-type="titlepage"] *[class*="CitiesCit"],
+section[data-type="titlepage"] *[class*="PublisherPub"],
 section[data-type="titlepage"] *[class*="ImprintImp"] {
   font-family: "MinionPro", serif, "Noto";
 }
@@ -427,7 +427,9 @@ nav[data-type="toc"] li.ChapTitleALTact + li.TOC-BackmatterTocbm {
 
 nav[data-type="toc"] li.PartNumberpn ~ li,
 nav[data-type="toc"] li.TOC-SubheadTocsub ~ li,
-nav[data-type="toc"] li.TOC-PartTocpt ~ li {
+nav[data-type="toc"] li.TOC-PartTocpt ~ li,
+nav[data-type="toc"] li.TOC-PartTocpt ~ li.TOC-ChapterTocch
+ {
   margin-bottom: 6pt;
 }
 
