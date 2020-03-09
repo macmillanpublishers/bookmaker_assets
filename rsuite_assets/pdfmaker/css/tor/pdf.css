@@ -2484,7 +2484,7 @@ img[src*=fullpage] {
 }
 
 section[data-type=titlepage] h1[class*=TitleTtl] {
-  background-image: url("https://raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images/generic/tor-rule.png");
+  background-image: url("https://raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images/tor/tor-rule.png");
   background-size: 116pt auto;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -2522,7 +2522,7 @@ p.ChapOrnamentcorn,
 p.ChapOrnamentALTcorn2,
 p.SpaceBreakwithOrnamentorn,
 p.SpaceBreakwithALTOrnamentorn2 {
-  background-image: url("https://raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images/generic/tor-rule.png");
+  background-image: url("https://raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images/tor/tor-rule.png");
   background-size: 116pt auto;
   margin-top: 7.75pt;
   margin-bottom: 7.75pt;

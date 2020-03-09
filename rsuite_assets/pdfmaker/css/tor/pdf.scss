@@ -284,7 +284,7 @@ img[src*="fullpage"] {
   margin-top: -1.65in; }
 
 section[data-type="titlepage"] h1[class*="TitleTtl"] {
-  background-image: url('#{$ornpath}/tor-rule.png');
+  background-image: url('#{$ornbasepath}/tor/tor-rule.png');
   background-size: 116pt auto;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -322,7 +322,7 @@ p.ChapOrnamentcorn,
 p.ChapOrnamentALTcorn2,
 p.SpaceBreakwithOrnamentorn,
 p.SpaceBreakwithALTOrnamentorn2 {
-  background-image: url('#{$ornpath}/tor-rule.png');
+  background-image: url('#{$ornbasepath}/tor/tor-rule.png');
   background-size: 116pt auto;
   margin-top: ($gridheight / 2);
   margin-bottom: ($gridheight / 2);
