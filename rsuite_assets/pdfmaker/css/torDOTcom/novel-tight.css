@@ -632,6 +632,7 @@ section.adcard > p[class*=List-HeadLhead] {
   margin-bottom: 0;
 }
 
+section.adcard[data-type=preface] > h1 + p[class*=SubtitleSttl],
 section.adcard > p.SeparatorSep + p[class*=SubtitleSttl],
 section.adcard > p.SeparatorSep + p[class*=List-HeadLhead],
 section.adcard > p.SeparatorSep + div.runfoot + div.runheadright + div.runheadleft + p[class*=SubtitleSttl],
