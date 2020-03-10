@@ -11,33 +11,33 @@ $normal: 11.2pt; //sizenormal sizechapnum sizeh2 sizeh3 sizeextracthead DONE
 $small: 10pt; //sizetitlepagetext sizecopyright sizeepigraph sizedateline
 $smaller: 8.5pt; //sizecode sizecaption
 
-$gridheight: 14.4pt; 
+$gridheight: 14.4pt;
 
 $pagewidth: 6.125in;
 $pageheight: 9.25in;
 $bleedwidth: 0.125in;
 $bleedheight: 0.125in;
-$margintop: 42pt; 
-$marginbottom: 57pt; 
-$padding: 18pt 0 0 0; 
-$outsidemargin: 63pt; 
-$insidemargin: 63pt; 
+$margintop: 42pt;
+$marginbottom: 57pt;
+$padding: 18pt 0 0 0;
+$outsidemargin: 63pt;
+$insidemargin: 63pt;
 
 $textindent: 12pt;
 
-$sizetitle: 26pt; 
-$sizesubtitle: 14pt; 
-$sizeau: 22pt; 
-$sizetitlepagetext: 10pt; 
+$sizetitle: 26pt;
+$sizesubtitle: 14pt;
+$sizeau: 22pt;
+$sizetitlepagetext: 10pt;
 $sizefst: $bigger;
 $sizefsqs: 10.5pt; /* normal * o.875 */
-$sizeacmh: 11.2pt; 
+$sizeacmh: 11.2pt;
 $sizehalftitle: $biggest;
-$sizetochead: 15pt; 
-$sizetocentry: 11pt; 
+$sizetochead: 15pt;
+$sizetocentry: 11pt;
 $sizefmhead: $bigger;
-$sizepartnum: 11pt; 
-$sizeparttitle: 16pt; 
+$sizepartnum: 11pt;
+$sizeparttitle: 16pt;
 $sizechapnum: 20pt;
 $sizechaptitle: 15pt;
 $sizechapsubtitle: $big;
@@ -54,7 +54,7 @@ $sizedateline: $small;
 $sizeepigraph: $small;
 $sizerunfoot: 9pt;
 $sizerunhead: 9pt;
-$sizecopyright: 9pt; 
+$sizecopyright: 9pt;
 $sizefootnote: 9pt;
 $sizecaption: $smaller;
 $sizefigsrc: 7pt;
@@ -71,12 +71,12 @@ $logowidth: 0;
 
 $htmargintop: ($gridheight * 4);
 
-$ctmargintop: ($gridheight * 4); 
-$ctmarginbottom: ($gridheight * 0); 
-$comargintop: ($gridheight * 6); 
+$ctmargintop: ($gridheight * 4);
+$ctmarginbottom: ($gridheight * 0);
+$comargintop: ($gridheight * 6);
 $cemargintop: ($gridheight * 2);
 $cemarginbottom: ($gridheight * 3);
-$prmargintop: ($gridheight * 4); 
+$prmargintop: ($gridheight * 4);
 
 $spacebreakheight: $gridheight;
 
@@ -145,7 +145,7 @@ section[data-type="chapter"] > blockquote[data-type="epigraph"],
 div[data-type="part"] > blockquote[data-type="epigraph"],
 section[data-type="preface"] > blockquote[data-type="epigraph"],
 section[data-type="foreword"] > blockquote[data-type="epigraph"],
-section[data-type="introduction"] > blockquote[data-type="epigraph"], 
+section[data-type="introduction"] > blockquote[data-type="epigraph"],
 blockquote[data-type="epigraph"] {
   margin-left: 0.425in;
   margin-right: 0.425in;
@@ -207,8 +207,7 @@ div[data-type="part"] h1[class*="NumberNum"] {
   margin-bottom: $gridheight;
 }
 
-section[data-type="chapter"] h1[class*="TitleTtl"][data-autolabel="yes"]:before,
-h1[class*="ChapTitleALTact"][data-autolabel="yes"]:before {
+section[data-type="chapter"] h1[class*="TitleTtl"][data-autolabel="yes"]:before {
   background-image: url('#{$ornpath}/orn.jpg');
   background-size: 21.5pt auto;
   background-repeat: no-repeat;
@@ -235,13 +234,7 @@ section.abouttheauthor p {
 
 p.Blank-Space-BreakBsbrk,
 p.Ornamental-Space-BreakOsbrk,
-p.SpaceBreak-1-Linels1,
-p.SpaceBreak-Internalint,
-p.PartOrnamentporn,
-p.ChapOrnamentcorn,
-p.ChapOrnamentALTcorn2,
-p.SpaceBreakwithOrnamentorn,
-p.SpaceBreakwithALTOrnamentorn2 {
+p.Ornamental-Space-Break2Osbrk2 {
   content: "* * *";
   background-image: none;
 }

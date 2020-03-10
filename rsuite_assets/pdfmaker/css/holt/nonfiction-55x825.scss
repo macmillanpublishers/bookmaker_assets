@@ -204,7 +204,7 @@ section[data-type="introduction"] p[class^="Epigraph-Non-Verse"],
 section[data-type="titlepage"] p[class^="Epigraph-Non-Verse"],
 section[data-type="halftitlepage"] p[class^="Epigraph-Non-Verse"],
 section[data-type="copyright-page"] p[class^="Epigraph-Non-Verse"],
-section[data-type="preface"].epigraph p[class^="Body-TextTx"] {
+section[data-type="preface"].epigraph p[class*="Body-Text"] {
   font-style: italic;
   text-align: justify;
 }
@@ -233,17 +233,17 @@ blockquote p.FMEpigraph-versefmepiv:first-child {
 }
 
 blockquote + blockquote,
-blockquote + p[class*="SpaceBreak"] + div.runfoot + div.runheadright + div.runheadleft + blockquote,
+blockquote + p[class*="Space-Break"] + div.runfoot + div.runheadright + div.runheadleft + blockquote,
 section[data-type="chapter"] > blockquote + blockquote[data-type="epigraph"],
 div[data-type="part"] > blockquote + blockquote[data-type="epigraph"],
 section[data-type="preface"] > blockquote + blockquote[data-type="epigraph"],
 section[data-type="foreword"] > blockquote + blockquote[data-type="epigraph"],
 section[data-type="introduction"] > blockquote + blockquote[data-type="epigraph"],
-section[data-type="chapter"] > blockquote + p[class*="SpaceBreak"] + div.runfoot + div.runheadright + div.runheadleft + blockquote[data-type="epigraph"],
-div[data-type="part"] > blockquote + p[class*="SpaceBreak"] + div.runfoot + div.runheadright + div.runheadleft + blockquote[data-type="epigraph"],
-section[data-type="preface"] > blockquote + p[class*="SpaceBreak"] + div.runfoot + div.runheadright + div.runheadleft + blockquote[data-type="epigraph"],
-section[data-type="introduction"] > blockquote + p[class*="SpaceBreak"] + div.runfoot + div.runheadright + div.runheadleft + blockquote[data-type="epigraph"],
-section[data-type="foreword"] > blockquote + p[class*="SpaceBreak"] + div.runfoot + div.runheadright + div.runheadleft + blockquote[data-type="epigraph"] {
+section[data-type="chapter"] > blockquote + p[class*="Space-Break"] + div.runfoot + div.runheadright + div.runheadleft + blockquote[data-type="epigraph"],
+div[data-type="part"] > blockquote + p[class*="Space-Break"] + div.runfoot + div.runheadright + div.runheadleft + blockquote[data-type="epigraph"],
+section[data-type="preface"] > blockquote + p[class*="Space-Break"] + div.runfoot + div.runheadright + div.runheadleft + blockquote[data-type="epigraph"],
+section[data-type="introduction"] > blockquote + p[class*="Space-Break"] + div.runfoot + div.runheadright + div.runheadleft + blockquote[data-type="epigraph"],
+section[data-type="foreword"] > blockquote + p[class*="Space-Break"] + div.runfoot + div.runheadright + div.runheadleft + blockquote[data-type="epigraph"] {
   margin-top: $gridheight;
 }
 
@@ -276,15 +276,13 @@ div[data-type="part"] *[class*="SubtitleSttl"] {
   font-size: $bigger;
 }
 
-section[data-type="chapter"] h1[class*="TitleTtl"][data-autolabel="yes"]:before,
-h1[class*="ChapTitleALTact"][data-autolabel="yes"]:before {
+section[data-type="chapter"] h1[class*="TitleTtl"][data-autolabel="yes"]:before {
   background-image: none;
   padding-bottom: 0;
   margin-bottom: ($gridheight * 0.5);
 }
 
-section[data-type="chapter"] h1[class*="TitleTtl"] + p.SubtitleSttl,
-section[data-type="chapter"] h1[class*="ChapTitleALTact"] + p.SubtitleSttl {
+section[data-type="chapter"] h1[class*="TitleTtl"] + p.SubtitleSttl {
   font-style: normal;
   margin-top: $gridheight;
   margin-bottom: ($gridheight * 5);
@@ -295,7 +293,7 @@ section[data-type="bibliography"] > h1 {
 }
 
 section[data-type="bibliography"] *[class*="Reference-EntryRef"],
-section[data-type="bibliography"] *[class*="Body-TextTx"] {
+section[data-type="bibliography"] *[class*="Body-Text"] {
   font-size: 9pt;
   line-height: 11pt;
   margin-left: 18pt;
@@ -303,7 +301,7 @@ section[data-type="bibliography"] *[class*="Body-TextTx"] {
 }
 
 section[data-type="bibliography"] *[class*="Reference-EntryRef"]:first-of-type,
-section[data-type="bibliography"] *[class*="Body-TextTx"]:first-of-type {
+section[data-type="bibliography"] *[class*="Body-Text"]:first-of-type {
   text-indent: -18pt;
 }
 
@@ -367,14 +365,7 @@ section[data-type="appendix"].notes p.MainHeadMHead {
 
 p.Blank-Space-BreakBsbrk,
 p.Ornamental-Space-BreakOsbrk,
-p.SpaceBreak-1-Linels1,
-p.SpaceBreak-Internalint,
-p.PartOrnamentporn,
-p.ChapOrnamentcorn,
-p.ChapOrnamentALTcorn2,
-p.SpaceBreakOrnamentorn,
-p.SpaceBreakwithOrnamentorn,
-p.SpaceBreakwithALTOrnamentorn2 {
+p.Ornamental-Space-Break2Osbrk2 {
   content: " ";
   background-image: none;
   margin-top: 0;
