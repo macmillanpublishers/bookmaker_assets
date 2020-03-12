@@ -13,8 +13,8 @@ $smaller: 8.5pt; //sizecode sizecaption // DONE
 
 $gridheight: 15.5pt; // DONE
 
-$pagewidth: 5.5in;
-$pageheight: 8.5in;
+$pagewidth: 5.625in;
+$pageheight: 8.25in;
 $bleedwidth: 0.125in;
 $bleedheight: 0.125in;
 $margintop: 39pt; // DONE
@@ -277,23 +277,23 @@ div.runheadright::after {
 
 figure.fullpage {
   margin-top: 0.55in;
-  margin-inside: -1in;
-  margin-outside: -0.75in; }
+  margin-inside: -0.7in;
+  margin-outside: -0.67in; }
 
 img[src*="fullpage"] {
   margin-top: -1.65in; }
 
-section[data-type="titlepage"] > h1:first-child {
+section[data-type="titlepage"] > h1:first-of-type {
   margin-top: $gridheight * 3.25;
 }
 
 section[data-type=titlepage] p[class*=Author1Au1] {
   margin-top: $gridheight * 3.75;
-  background-image: url("tor-rule.png");
+  background-image: url("#{$ornbasepath}/tor/tor-rule.png");
   background-size: 116pt .25pt;
 }
 
-section[data-type="titlepage"] > p:last-child {
+section[data-type="titlepage"] > p:last-of-type {
   margin-bottom: $gridheight * 2;
 }
 
@@ -313,7 +313,7 @@ section[data-type="chapter"] h1[class*="TitleTtl"] {
 p.Blank-Space-BreakBsbrk,
 p.Ornamental-Space-BreakOsbrk,
 p.Ornamental-Space-Break2Osbrk2 {
-  background-image: url('#{$ornbasepath}/tor/tor-rule.png');
+  background-image: url("#{$ornbasepath}/tor/tor-rule.png");
   background-size: 116pt .25pt;
   margin-top: ($gridheight / 2);
   margin-bottom: ($gridheight / 2);
