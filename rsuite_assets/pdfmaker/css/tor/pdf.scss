@@ -67,7 +67,7 @@ $hanging: -5pt;
 $chapterstart: right;
 
 $logoheight: auto;
-$logowidth: 0.58in;
+$logowidth: 0.65in;
 
 $htmargintop: 182pt; // DONE
 
@@ -283,21 +283,18 @@ figure.fullpage {
 img[src*="fullpage"] {
   margin-top: -1.65in; }
 
-section[data-type="titlepage"] h1[class*="TitleTtl"] {
-  background-image: url('#{$ornbasepath}/tor/tor-rule.png');
-  background-size: 116pt auto;
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  padding-bottom: 62pt;
-  margin-bottom: 35pt;
-  margin-top: 54pt;
+section[data-type="titlepage"] > h1:first-child {
+  margin-top: $gridheight * 3.25;
 }
 
-section[data-type="titlepage"] p[class*="Author1Au1"] {
-  padding-top: 0;
-  background-image: none;
-  margin-top: $gridheight;
-  margin-bottom: $gridheight;
+section[data-type=titlepage] p[class*=Author1Au1] {
+  margin-top: $gridheight * 3.75;
+  background-image: url("tor-rule.png");
+  background-size: 116pt .25pt;
+}
+
+section[data-type="titlepage"] > p:last-child {
+  margin-bottom: $gridheight * 2;
 }
 
 section[data-type="copyright-page"] p {
@@ -315,15 +312,9 @@ section[data-type="chapter"] h1[class*="TitleTtl"] {
 
 p.Blank-Space-BreakBsbrk,
 p.Ornamental-Space-BreakOsbrk,
-p.SpaceBreak-1-Linels1,
-p.SpaceBreak-Internalint,
-p.PartOrnamentporn,
-p.ChapOrnamentcorn,
-p.ChapOrnamentALTcorn2,
-p.SpaceBreakwithOrnamentorn,
-p.SpaceBreakwithALTOrnamentorn2 {
+p.Ornamental-Space-Break2Osbrk2 {
   background-image: url('#{$ornbasepath}/tor/tor-rule.png');
-  background-size: 116pt auto;
+  background-size: 116pt .25pt;
   margin-top: ($gridheight / 2);
   margin-bottom: ($gridheight / 2);
 }

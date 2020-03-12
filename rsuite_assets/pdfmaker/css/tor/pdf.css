@@ -732,7 +732,7 @@ section[data-type=titlepage] *[class*=Logo-PlacementLogo] {
   content: " ";
   background-image: url("https://raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images/torDOTcom/logo.jpg");
   background-position: center bottom;
-  background-size: 0.58in auto;
+  background-size: 0.65in auto;
   background-repeat: no-repeat;
   display: block;
   float: bottom;
@@ -2484,21 +2484,18 @@ img[src*=fullpage] {
   margin-top: -1.65in;
 }
 
-section[data-type=titlepage] h1[class*=TitleTtl] {
-  background-image: url("https://raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images/tor/tor-rule.png");
-  background-size: 116pt auto;
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  padding-bottom: 62pt;
-  margin-bottom: 35pt;
-  margin-top: 54pt;
+section[data-type=titlepage] > h1:first-child {
+  margin-top: 50.375pt;
 }
 
 section[data-type=titlepage] p[class*=Author1Au1] {
-  padding-top: 0;
-  background-image: none;
-  margin-top: 15.5pt;
-  margin-bottom: 15.5pt;
+  margin-top: 58.125pt;
+  background-image: url("tor-rule.png");
+  background-size: 116pt 0.25pt;
+}
+
+section[data-type=titlepage] > p:last-child {
+  margin-bottom: 31pt;
 }
 
 section[data-type=copyright-page] p {
@@ -2516,15 +2513,9 @@ section[data-type=chapter] h1[class*=TitleTtl] {
 
 p.Blank-Space-BreakBsbrk,
 p.Ornamental-Space-BreakOsbrk,
-p.SpaceBreak-1-Linels1,
-p.SpaceBreak-Internalint,
-p.PartOrnamentporn,
-p.ChapOrnamentcorn,
-p.ChapOrnamentALTcorn2,
-p.SpaceBreakwithOrnamentorn,
-p.SpaceBreakwithALTOrnamentorn2 {
+p.Ornamental-Space-Break2Osbrk2 {
   background-image: url("https://raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images/tor/tor-rule.png");
-  background-size: 116pt auto;
+  background-size: 116pt 0.25pt;
   margin-top: 7.75pt;
   margin-bottom: 7.75pt;
 }
