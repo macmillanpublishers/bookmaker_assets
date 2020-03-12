@@ -2,6 +2,11 @@
 
 This repository contains all the assets that Bookmaker uses when converting EPUB and PDF files. Files are archived according to the process that uses them: pdfmaker or epubmaker.
 
+## rsuite_assets vs legacy assets
+In an effort to support new our new RSuite style-set, a new top level folder has been added to the repo: *rsuite_assets*. Within that folder, the whole bookmaker_assets folder tree has been recreated for css and javascript files, for use with new rsuite-styled documents.
+
+Images and other style-agnostic assets (add-ons etc) are still maintained in non- *rsuite_assets* folder hierarchy.
+
 ## epubmaker
 
 This subfolder contains files used during the EPUB conversion process. This includes: logo images, interior image placeholders, CSS templates for each imprint.
@@ -26,8 +31,15 @@ Most imprints are based on a core template called core_tor.css. This is the orig
 
 The SCSS components include a base.scss file that contains all the main definitions, separate files for each font, files for some layout tools (like adding baseline gridlines to check the design), and then separate files where all sizes and measurements are defined (like the gridheight, base font size, and so on). These variables are used in the base.scss file instead of hard-coded measurements, so that if we ever need to create a new variation on the template, we can simply redefine the size variables, and generate a new CSS file with a different name (e.g., novel.css).
 
-**To add a new global style**:
+**To add a new global style (rsuite_assets)**:
+1. Update the base.scss or given template .scss file(s) as needed.
+2. If you added a new scss file, add it to the compile_css.sh file located here: *bookmaker_assets/rsuite_assets/pdfmaker/compile_css.sh.*
+3. run the compile_ssh.sh file like so:
+  * `sh compile_css.sh`
+4. git commit, push, merge etc.
 
+
+**To add a new global style (legacy asset)**:
 1. In the _modules subfolder, open the base.scss file.
 1. Search the file to see if any rules exist for the class or element that you are adding a style for.
 1. Add your new style either in the same location as the existing rules for that element, or in a new line in the file if no other rules exist.

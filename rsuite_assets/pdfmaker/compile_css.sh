@@ -21,5 +21,5 @@ sass fiction-55x825.scss fiction-55x825.css
 sass fiction-6x9.scss fiction-6x9.css
 cd ../tor
 sass pdf.scss pdf.css
-# cd ../flatiron
-# sass pdf.scss pdf.css
+cd ../flatiron
+sass flatiron.scss pdf.css
