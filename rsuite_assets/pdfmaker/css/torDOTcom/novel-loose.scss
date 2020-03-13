@@ -152,14 +152,7 @@ img[src*="fullpage"] {
 
 p.Blank-Space-BreakBsbrk,
 p.Ornamental-Space-BreakOsbrk,
-p.SpaceBreak-1-Linels1,
-p.SpaceBreak-Internalint,
-p.PartOrnamentporn,
-p.ChapOrnamentcorn,
-p.ChapOrnamentALTcorn2,
-p.SpaceBreakOrnamentorn,
-p.SpaceBreakwithOrnamentorn,
-p.SpaceBreakwithALTOrnamentorn2 {
+p.Ornamental-Space-Break2Osbrk2 {
   margin-top: ($gridheight / 2);
   margin-bottom: ($gridheight / 2);
 }
@@ -171,13 +164,11 @@ section.adcard h1 {
   margin-bottom: $gridheight;
 }
 
-section[data-type="chapter"] h1[class*="TitleTtl"][data-autolabel="yes"]:before,
-h1[class*="ChapTitleALTact"][data-autolabel="yes"]:before {
+section[data-type="chapter"] h1[class*="TitleTtl"][data-autolabel="yes"]:before {
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
-section[data-type="chapter"] h1[class*="TitleTtl"][data-autolabel="yes"],
-section[data-type="chapter"] h1[class*="ChapTitleALTact"][data-autolabel="yes"] {
+section[data-type="chapter"] h1[class*="TitleTtl"][data-autolabel="yes"] {
   margin-top: $gridheight;
 }

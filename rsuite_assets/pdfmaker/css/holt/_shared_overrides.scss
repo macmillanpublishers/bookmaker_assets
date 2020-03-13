@@ -420,6 +420,8 @@ nav[data-type="toc"] li.TOC-BackmatterTocbm {
   margin-left: 0;
 }
 
+/* currently we don't support li.ChapTitleALTact (or equivalent for 'Section-Chapter2')
+  in generateTOC.js. Leaving this rule in place for potential future support */
 nav[data-type="toc"] li.TOC-ChapterTocch + li.TOC-BackmatterTocbm,
 nav[data-type="toc"] li.ChapTitleALTact + li.TOC-BackmatterTocbm {
   margin-top: 0;

@@ -151,8 +151,12 @@ pre.verse p.Verse1Vrs1:first-of-type,
 blockquote p:first-child,
 blockquote[data-type=letter] p.SalutationSal + p.Body-TextTx,
 p.Blank-Space-BreakBsbrk + p,
+p.Blank-Space-Break2Bsbrk2 + p,
 p.Ornamental-Space-BreakOsbrk + p,
+p.Ornamental-Space-Break2Osbrk2 + p,
 aside > p.HeadnoteHdnt,
+p.Body-Text-ContinuedTxc,
+p.Body-Text2-ContinuedTx2c,
 .NoIndent {
   text-indent: 0;
 }
@@ -626,7 +630,7 @@ PART OPENERS
 */
 
 div[data-type=part] > p.Ornamental-Space-BreakOsbrk,
-div[data-type=part] > p.SpaceBreakwithALTOrnamentorn2,
+div[data-type=part] > p.Ornamental-Space-Break2Osbrk2,
 *[class^="PartContentsMainHead"],
 *[class^="PartContentsHead"] {
   text-indent: 0;
@@ -634,14 +638,14 @@ div[data-type=part] > p.SpaceBreakwithALTOrnamentorn2,
   margin: 1em 0;
   }
 div[data-type=part] > p.Ornamental-Space-BreakOsbrk:before,
-div[data-type=part] > p.SpaceBreakwithALTOrnamentorn2:before {
+div[data-type=part] > p.Ornamental-Space-Break2Osbrk2:before {
   display: block;
   font-size: 1.125em;
   }
 /*div[data-type=part] > p.Ornamental-Space-BreakOsbrk:before {
   content: "\2766";
   }
-div[data-type=part] > p.SpaceBreakwithALTOrnamentorn2:before {
+div[data-type=part] > p.Ornamental-Space-Break2Osbrk2:before {
   content: "\2756";
   }*/
 
@@ -654,20 +658,20 @@ CHAPTER OPENERS
 div.chapter > p.Author1Au1,
 div.chapter > p.DatelineDate,
 div.chapter > p.Ornamental-Space-BreakOsbrk,
-div.chapter > p.SpaceBreakwithALTOrnamentorn2 {
+div.chapter > p.Ornamental-Space-Break2Osbrk2 {
   text-align: center;
   text-indent: 0;
   margin: 1em 0;
   }
 div.chapter > p.Ornamental-Space-BreakOsbrk:before,
-div.chapter > p.SpaceBreakwithALTOrnamentorn2:before {
+div.chapter > p.Ornamental-Space-Break2Osbrk2:before {
   display: block;
   font-size: 1.125em;
   }
 /*div.chapter > p.Ornamental-Space-BreakOsbrk:before {
   content: "\2766";
   }
-div.chapter > p.SpaceBreakwithALTOrnamentorn2:before {
+div.chapter > p.Ornamental-Space-Break2Osbrk2:before {
   content: "\2756";
   }*/
 .TeaserOpeningTexttotx, .TeaserOpeningTextNo-Indenttotx1 {
@@ -688,17 +692,17 @@ p.Computer-TextComp,
 span.cs-computerccom {
   font-family: "Courier New",monospace,Georgia,"Times New Roman",sans-serif;
   }
-.Text-StandardALTatx,
-.Text-StdNo-IndentALTatx1 {
+.Body-Text2Tx2,
+.Body-Text2-ContinuedTx2c {
   font-family: Helvetica,Arial,sans-serif;
   font-size: 0.9em;
   margin-top: 1em;
   }
 
-.Text-StandardALTatx + .Text-StandardALTatx,
-.Text-StandardALTatx + .Text-StdNo-IndentALTatx1,
-.Text-StdNo-IndentALTatx1 + .Text-StandardALTatx,
-.Text-StdNo-IndentALTatx1 + .Text-StdNo-IndentALTatx1 {
+.Body-Text2Tx2 + .Body-Text2Tx2,
+.Body-Text2Tx2 + .Body-Text2-ContinuedTx2c,
+.Body-Text2-ContinuedTx2c + .Body-Text2Tx2,
+.Body-Text2-ContinuedTx2c + .Body-Text2-ContinuedTx2c {
   margin-top: 0;
   }
 
@@ -735,14 +739,20 @@ SPACE BREAKS
 
 .Blank-Space-BreakBsbrk,
 .Ornamental-Space-BreakOsbrk,
-.SeparatorSep
+.Ornamental-Space-Break2Osbrk2,
+.SeparatorSep,
 .PageBreakpb {
   text-indent: 0;
   text-align: center;
   margin: 1em 0;
   }
 
-.Ornamental-Space-BreakOsbrk {
+.Blank-Space-Break2Bsbrk2 {
+  margin: 1em 0 2em 0;
+  }
+
+.Ornamental-Space-BreakOsbrk,
+.Ornamental-Space-Break2Osbrk2 {
   display: block;
   font-size: 1.125em;
   }
@@ -771,6 +781,9 @@ EXTRACTS
 
 blockquote.looseextract *,
 p.Extract1Ext1,
+p.Extract2Ext2,
+p.Extract3Ext3,
+p.Extract4Ext4,
 p.HeadlineHdline {
   font-style: italic;
 }
@@ -786,7 +799,10 @@ blockquote.looseextract > .Verse1Vrs1 {
 }
 
 blockquote.looseextract em,
-p.Extract1Ext1 em {
+p.Extract1Ext1 em,
+p.Extract2Ext2 em,
+p.Extract3Ext3 em,
+p.Extract4Ext4 em {
   font-style: normal;
 }
 
