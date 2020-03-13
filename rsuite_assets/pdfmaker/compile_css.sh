@@ -19,7 +19,7 @@ sass nonfiction-55x825.scss nonfiction-55x825.css
 sass nonfiction-6x9.scss nonfiction-6x9.css # using this scss for default 'pdf.css' as well as its own named template
 sass fiction-55x825.scss fiction-55x825.css
 sass fiction-6x9.scss fiction-6x9.css
-cd ../tor
-sass pdf.scss pdf.css
+# cd ../tor
+# sass pdf.scss pdf.css
 cd ../flatiron
 sass flatiron.scss pdf.css
