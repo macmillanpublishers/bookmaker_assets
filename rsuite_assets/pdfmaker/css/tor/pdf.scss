@@ -1,0 +1,320 @@
+/* TO COMPILE: $ sass novella.scss pdf.css */
+
+/* GLOBAL VARIABLES */
+@import "../_modules/vars_global.scss";
+
+/* LOCAL VARIABLES */
+$biggest: 18pt; //sizehalftitle sizepartnum
+$bigger: 16pt; //sizefst sizesubtitle sizeau sizetochead sizefmhead sizechaptitle DONE
+$big: 14pt; //sizeacmh sizechapsubtitle sizeh1
+$normal: 11.75pt; //sizenormal sizechapnum sizeh2 sizeh3 sizeextracthead DONE
+$small: 9pt; //sizetitlepagetext sizecopyright sizeepigraph sizedateline
+$smaller: 8.5pt; //sizecode sizecaption // DONE
+
+$gridheight: 15.5pt; // DONE
+
+$pagewidth: 5.625in;
+$pageheight: 8.25in;
+$bleedwidth: 0.125in;
+$bleedheight: 0.125in;
+$margintop: 39pt; // DONE
+$marginbottom: 42pt; // DONE
+$padding: 16pt 0 0 0;// DONE
+$outsidemargin: 40pt; // DONE
+$insidemargin: 50pt; // DONE
+
+$textindent: 12pt;
+
+$sizetitle: 25pt; // DONE
+$sizesubtitle: $bigger; /*$big2 * 1.625*/
+$sizeau: $bigger;
+$sizetitlepagetext: 10pt; // DONE
+$sizefst: $bigger;
+$sizefsqs: 10.5pt; /* normal * o.875 */
+$sizeacmh: $big;
+$sizehalftitle: $bigger; // DONE
+$sizetochead: $bigger;
+$sizetocentry: 11pt;
+$sizefmhead: $bigger;
+$sizepartnum: $biggest;
+$sizeparttitle: 22pt;
+$sizechapnum: $normal;
+$sizechaptitle: $bigger;
+$sizechapsubtitle: $big;
+$sizeh1: $big;
+$sizeh2: $normal;
+$sizeh3: $normal;
+$sizenormal: $normal;
+$sizenormalalt: 9.75pt;
+$sizecode: $smaller;
+$sizepoetry: 10.5pt; //sizeextract
+$sizeextract: 10.5pt;
+$sizeextracthead: $normal;
+$sizedateline: $small;
+$sizeepigraph: $small;
+$sizerunfoot: $smaller; // DONE
+$sizerunhead: $smaller; // DONE
+$sizecopyright: $small;
+$sizefootnote: 9pt;
+$sizecaption: $smaller;
+$sizefigsrc: 7pt;
+$sizesuperscript: 6pt;
+$sizehwritingprint: 12.75pt;
+$sizehwritingnormal: 11pt;
+
+$hanging: -5pt;
+
+$chapterstart: right;
+
+$logoheight: auto;
+$logowidth: 0.65in;
+
+$htmargintop: 182pt; // DONE
+
+$ctmargintop: ($gridheight * 1); // DONE
+$ctmarginbottom: ($gridheight * 3); // DONE
+$comargintop: ($gridheight); // DONE
+$cemargintop: ($gridheight * 2);
+$cemarginbottom: ($gridheight * 3);
+$prmargintop: 16pt;
+
+$spacebreakheight: $gridheight;
+
+$familyrunhead: "ArnoPro-Caption", serif;
+$familybody: "ArnoPro", serif;
+$familyfootnote: "ArnoPro-SmText", serif;
+
+
+@import "../_modules/font_arnopro.scss";
+@import "../_modules/font_aroma.scss";
+@import "../_modules/font_minionpro.scss";
+@import "../_modules/font_myriadpro.scss";
+@import "../_modules/font_sourcecodepro.scss";
+@import "../_modules/font_timesnewroman.scss";
+@import "../_modules/font_noto.scss";
+@import "../_modules/font_berrangerhanditc.scss";
+@import "../_modules/font_feltpencom.scss";
+
+@import "../_modules/base.scss";
+
+/*@import "../_modules/gridlines.scss";
+*/
+@page part {
+  @top-center {
+    vertical-align: bottom;
+  }
+  @bottom-center {
+    content: normal;
+  }
+}
+
+@page chapter {
+  @top-center {
+    vertical-align: bottom;
+  }
+  @bottom-center {
+    content: normal;
+  }
+}
+
+@page front {
+  @top-center {
+    vertical-align: bottom;
+  }
+  @bottom-center {
+    content: normal;
+  }
+}
+
+@page copyright {
+  @bottom-center {
+    content: normal;
+  }
+}
+
+/* adjusting fonts */
+
+@page part {
+  @bottom-center {
+    font-family: "MinionPro", serif, "Noto";
+  }
+}
+
+@page chapter {
+  @bottom-center {
+    font-family: "MinionPro", serif, "Noto";
+  }
+}
+
+@page front {
+  @bottom-center {
+    font-family: "MinionPro", serif, "Noto";
+  }
+}
+
+@page copyright {
+  @bottom-center {
+    font-family: "MinionPro", serif, "Noto";
+  }
+}
+
+body {
+  font-family: "MinionPro", serif, "Noto";
+}
+
+div.runheadleft {
+  font-family: "MinionPro", serif, "Noto";
+}
+
+div.runheadright {
+  font-family: "MinionPro", serif, "Noto";
+}
+
+div.runfoot {
+  font-family: "MinionPro", serif, "Noto";
+}
+
+div.runfoot span {
+  font-family: "MinionPro", serif, "Noto";
+}
+
+h1[class*="TitleTtl"] {
+  font-family: "MinionPro", serif, "Noto";
+}
+
+section[data-type="copyright-page"] p {
+  font-family: "MinionPro", serif, "Noto";
+}
+
+*[class*="FrontSalesQuoteSourcefsqs"] {
+  font-family: "MinionPro", serif, "Noto";
+}
+
+section[data-type="dedication"] p[class*="Epigraph-SourceEpisrc"],
+section[data-type="preface"] p[class*="Epigraph-SourceEpisrc"],
+p[class*="EpigraphSource"] {
+  font-family: "MinionPro", serif, "Noto";
+}
+
+section[data-type="dedication"] p[class^="Epigraph-Verse"],
+section[data-type="preface"] p[class^="Epigraph-Verse"],
+section[data-type="dedication"] p[class^="Epigraph-Non-Verse"],
+section[data-type="preface"] p[class^="Epigraph-Non-Verse"],
+section[data-type="preface"].epigraph p[class^="Body-TextTx"] {
+  font-family: "MinionPro", serif, "Noto";
+}
+
+section[data-type="chapter"] > blockquote[data-type="epigraph"] p,
+div[data-type="part"] > blockquote[data-type="epigraph"] p,
+section[data-type="preface"] > blockquote[data-type="epigraph"] p,
+section[data-type="foreword"] > blockquote[data-type="epigraph"] p,
+section[data-type="introduction"] > blockquote[data-type="epigraph"] p {
+  font-family: "MinionPro", serif, "Noto";
+}
+
+p[class*="Extract"] {
+  font-family: "MinionPro", serif, "Noto";
+}
+
+p.Extract-Inscriptionins {
+  font-family: "MinionPro", serif, "Noto";
+}
+
+div.verse {
+  font-family: "MinionPro", serif, "Noto";
+}
+
+div.verse p[class*="TitleTtl"],
+div.verse pre[class*="TitleTtl"] {
+  font-family: "MinionPro", serif, "Noto";
+}
+
+div.verse p[class*="Verse1Vrs1"],
+div.verse p[class*="Verse1Vrs1"]:first-of-type,
+div.verse pre[class*="Verse1Vrs1"],
+div.verse pre[class*="Verse1Vrs1"]:first-of-type {
+  font-family: "MinionPro", serif, "Noto";
+}
+
+span[data-type="footnote"],
+.endnotetext {
+  font-family: "MinionPro", serif, "Noto";
+}
+
+::footnote-marker {
+  font-family: "MinionPro", serif, "Noto";
+}
+
+*[class*="endnotetext"] p:first-of-type:before {
+  font-family: "MinionPro", serif, "Noto";
+}
+
+section[data-type="titlepage"] p[class*="Author"],
+section[data-type="titlepage"] p[class*="SubtitleSttl"],
+section[data-type="titlepage"] p {
+  font-family: "ArnoPro", serif, "Noto";
+}
+
+/* adjusting everything else */
+
+div.runheadleft {
+  font-variant: prince-opentype(onum);
+}
+
+div.runheadright {
+  font-variant: prince-opentype(onum);
+}
+
+div.runheadleft::before {
+  content: counter(page)" • ";
+  font-style: normal;
+}
+
+div.runheadright::after {
+  content: " • "counter(page);
+  font-style: normal;
+}
+
+figure.fullpage {
+  margin-top: 0.55in;
+  margin-inside: -0.7in;
+  margin-outside: -0.67in; }
+
+img[src*="fullpage"] {
+  margin-top: -1.65in; }
+
+section[data-type="titlepage"] > h1:first-of-type {
+  margin-top: $gridheight * 3.25;
+}
+
+section[data-type=titlepage] p[class*=Author1Au1] {
+  margin-top: $gridheight * 3.75;
+  background-image: url("#{$ornbasepath}/tor/tor-rule.png");
+  background-size: 116pt .25pt;
+}
+
+section[data-type="titlepage"] > p:last-of-type {
+  margin-bottom: $gridheight * 2;
+}
+
+section[data-type="copyright-page"] p {
+  line-height: 14pt;
+}
+
+section[data-type="chapter"] > h1[class*="NumberNum"] {
+  margin-top: $ctmargintop;
+  margin-bottom: $ctmarginbottom;
+}
+
+section[data-type="chapter"] h1[class*="TitleTtl"] {
+  margin-top: $ctmargintop;
+}
+
+p.Blank-Space-BreakBsbrk,
+p.Ornamental-Space-BreakOsbrk,
+p.Ornamental-Space-Break2Osbrk2 {
+  background-image: url("#{$ornbasepath}/tor/tor-rule.png");
+  background-size: 116pt .25pt;
+  margin-top: ($gridheight / 2);
+  margin-bottom: ($gridheight / 2);
+}
