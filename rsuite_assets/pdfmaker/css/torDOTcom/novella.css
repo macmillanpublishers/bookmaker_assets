@@ -2243,6 +2243,32 @@ header {
   text-indent: 0;
 }
 
+/* tables */
+table {
+  margin: 16pt auto;
+  width: 95%;
+  page-break-inside: avoid;
+}
+
+table, th, td {
+  border: 0.5px solid cmyk(0%, 0%, 0%, 100%);
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0 0.3em;
+  word-wrap: break-word;
+}
+
+td p {
+  font-size: 10.8pt;
+}
+
+td p ~ p {
+  margin-top: 8pt;
+  text-indent: 0;
+}
+
 /*@import "../_modules/gridlines.scss";
 */
 @page part {

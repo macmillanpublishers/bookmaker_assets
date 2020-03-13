@@ -1252,8 +1252,9 @@ table {
   }
 th,
 td {
-  padding: .5em;
+  padding: .3em;
   border: 1px solid #ccc;
+  word-wrap: break-word;
   }
 *[class^="TableColumnHead"],
 *[class^="TableSourceNote"],
@@ -1268,6 +1269,7 @@ td {
 *[class^="FigureFootnote"] {
   text-indent: 0;
   }
+th,
 *[class^="TableColumnHead"],
 *[class^="ChartColumnHead"],
 *[class^="FigureColumnHead"] {
@@ -1282,7 +1284,14 @@ td {
   font-size: .75em;
   margin: 1em 0;
   }
-
+td p,
+th p {
+ font-size: .9em;
+  }
+td p ~ p {
+  margin-top: .5em;
+  text-indent: 0;
+  }  
 /*
 --------------------------------------------------
 GENERAL BACKMATTER HEADS
