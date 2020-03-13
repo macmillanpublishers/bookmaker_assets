@@ -1,3 +1,4 @@
 // $fontpath: "/Users/matthew.retzer/bookmaker-dev/bookmakerfonts";
 $fontpath: "S#{':'}/resources/bookmaker_scripts/bookmakerfonts";
-$ornpath: "https#{':'}//raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images/generic";
+$ornbasepath: "https#{':'}//raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images";
+$ornpath: "#{$ornbasepath}/generic";
