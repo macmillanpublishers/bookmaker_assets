@@ -492,6 +492,9 @@ section[data-type="copyright-page"] p {
   text-indent: 0;
   }
 
+section[data-type="copyright-page"] p.SeparatorSep {
+  margin: 0;
+  }
 /*
 --------------------------------------------------
 DEDICATION PAGE
@@ -1291,7 +1294,7 @@ th p {
 td p ~ p {
   margin-top: .5em;
   text-indent: 0;
-  }  
+  }
 /*
 --------------------------------------------------
 GENERAL BACKMATTER HEADS
