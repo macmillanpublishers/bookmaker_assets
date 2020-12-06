@@ -1809,6 +1809,14 @@ li[class^=Alpha-Level-] {
   list-style-type: lower-alpha;
 }
 
+ul li[class^=Unnum-Level-] {
+  list-style-type: none;
+}
+
+li[class*=List-Paragraph] {
+  list-style-type: none;
+}
+
 blockquote[data-type=recipe] ol,
 blockquote[data-type=recipe] ul {
   margin-top: 0;
