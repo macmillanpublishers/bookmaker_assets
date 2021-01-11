@@ -774,7 +774,8 @@ section[data-type="acknowledgments"] > h1 {
   text-align: center;
 }
 
-section.adcard[data-type="preface"] > h1 {
+section.adcard[data-type="preface"] > h1,
+section.adcard > p[class*=A-HeadAhead] {
   text-transform: lowercase;
   font-variant: small-caps;
   font-variant: prince-opentype(smcp, onum);
