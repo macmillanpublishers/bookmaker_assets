@@ -481,7 +481,7 @@ section[data-type="copyright-page"] {
 section[data-type="halftitlepage"] > h1 {
   font-size: $sizehalftitle;
   font-weight: normal;
-  line-height: $gridheight;
+  line-height: $sizehalftitle * 1.2;
   margin-top: $htmargintop;
   text-align: center;
 }
@@ -879,7 +879,7 @@ section[data-type="dedication"] h1[class*="ChapTitleNonprintingctnp"] + * {
 
 section[data-type="chapter"] h1[class*="TitleTtl"] {
   font-size: $sizechaptitle;
-  line-height: $gridheight;
+  line-height: $sizechaptitle * 1.2;
   font-weight: normal;
   margin-top: $prmargintop;
   text-align: center;

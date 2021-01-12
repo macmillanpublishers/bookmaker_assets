@@ -617,7 +617,7 @@ section[data-type=copyright-page] {
 section[data-type=halftitlepage] > h1 {
   font-size: 18pt;
   font-weight: normal;
-  line-height: 15pt;
+  line-height: 21.6pt;
   margin-top: 60pt;
   text-align: center;
 }
@@ -1035,7 +1035,7 @@ section[data-type=dedication] h1[class*=ChapTitleNonprintingctnp] + * {
 
 section[data-type=chapter] h1[class*=TitleTtl] {
   font-size: 13pt;
-  line-height: 15pt;
+  line-height: 15.6pt;
   font-weight: normal;
   margin-top: 60pt;
   text-align: center;
