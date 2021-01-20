@@ -470,6 +470,8 @@ h1 + p,
 h1 + div.runfoot + div.runheadright + div.runheadleft + p,
 p[class*=Author1Au1] + p[class*=Body-Text],
 p[class*=Author1Au1] + div.runfoot + div.runheadright + div.runheadleft + p[class*=Body-Text],
+p[class*=BylineByline] + p[class*=Body-Text],
+p[class*=BylineByline] + div.runfoot + div.runheadright + div.runheadleft + p[class*=Body-Text],
 p[class*=SubtitleSttl] + p[class*=Body-Text],
 p[class*=SubtitleSttl] + div.runfoot + div.runheadright + div.runheadleft + p[class*=Body-Text] {
   text-indent: 0;
@@ -1226,6 +1228,11 @@ div[data-type=part] > p[class*=SubtitleSttl] {
   font-size: 8pt;
 }
 
+*[class*=Text-MessageTmg] {
+  font-family: "SourceCodePro", sans-serif, "Noto";
+  font-size: 9pt;
+}
+
 p[class*=Extract] {
   font-family: "ArnoPro-SmText", serif, "Noto";
   font-size: 10pt;
@@ -1240,8 +1247,11 @@ div.computer * {
   font-family: "SourceCodePro", monospace, "Noto";
   white-space: normal;
   line-height: 15pt;
-  text-align: justify;
-  text-align-last: left;
+}
+
+/* make sure pre's break when they need to */
+pre {
+  word-break: break-word;
 }
 
 div.computer p:first-child,
@@ -1387,7 +1397,7 @@ section[data-type=preface].epigraph p[class^=Body-TextTx] {
 
 section[data-type=dedication] p[class^=Epigraph-Source],
 section[data-type=preface] p[class^=Epigraph-Source],
-p[class^=SourceSrc] {
+*[class^=SourceSrc] {
   font-family: "ArnoPro-SmText", serif, "Noto";
   font-weight: 600;
   font-size: 10pt;
@@ -1405,8 +1415,8 @@ section[data-type=preface].epigraph {
 }
 
 p[class^=Epigraph-Source] em, p[class^=Epigraph-Source] span.itali,
-p[class^=SourceSrc] em,
-p[class^=SourceSrc] span.itali {
+*[class^=SourceSrc] em,
+*[class^=SourceSrc] span.itali {
   break-inside: avoid;
 }
 
@@ -1551,11 +1561,19 @@ div[data-type=note] > p[class*=B-HeadBhead] {
   page-break-after: avoid;
 }
 
+blockquote[class*=EXTRACT-] > *[class*=TitleTtl],
+blockquote[class*=EXTRACT-] > *[class*=Main-HeadMHead],
+aside[data-type=sidebar] > *[class*=TitleTtl],
+aside[data-type=sidebar] > *[class*=Main-HeadMHead],
 blockquote.looseextract > *[class*=TitleTtl],
 blockquote.looseextract > *[class*=Main-HeadMHead] {
   page-break-after: avoid;
 }
 
+blockquote[class*=EXTRACT-] > *[class*=TitleTtl],
+blockquote[class*=EXTRACT-] > *[class*=Main-HeadMHead],
+aside[data-type=sidebar] > *[class*=TitleTtl],
+aside[data-type=sidebar] > *[class*=Main-HeadMHead],
 blockquote.looseextract > *[class*=TitleTtl],
 blockquote.looseextract > *[class*=Main-HeadMHead],
 *[class*=HeadlineHdline] {
@@ -1568,9 +1586,28 @@ blockquote.looseextract > *[class*=Main-HeadMHead],
   margin-bottom: 15pt;
 }
 
+blockquote[class*=EXTRACT-] > *[class*=TitleTtl] + p,
+blockquote[class*=EXTRACT-] > *[class*=Main-HeadMHead] + p,
+aside[data-type=sidebar] > *[class*=TitleTtl] + p,
+aside[data-type=sidebar] > *[class*=Main-HeadMHead] + p,
 blockquote.looseextract > *[class*=TitleTtl] + p,
 blockquote.looseextract > *[class*=Main-HeadMHead] + p {
   text-indent: 0;
+}
+
+*[class*=TitleTtl] + div.runfoot + div.runheadright + div.runheadleft + p[class*=BylineByline],
+*[class*=Head] + div.runfoot + div.runheadright + div.runheadleft + p[class*=BylineByline],
+*[class*=TitleTtl] + p[class*=BylineByline],
+*[class*=Head] + p[class*=BylineByline] {
+  margin-top: -15pt;
+  margin-bottom: 15pt;
+}
+
+*[class*=BylineByline] {
+  text-align: center;
+  text-align-last: center;
+  text-indent: 0;
+  font-style: italic;
 }
 
 div.verse {
@@ -1622,6 +1659,31 @@ div.verse pre[class*=Verse]:first-of-type span.itali {
   font-style: normal;
 }
 
+/* verse2 font switch */
+div.verse p[class*=Verse2],
+div.verse p[class*=Verse2]:first-of-type,
+div.verse pre[class*=Verse2],
+div.verse pre[class*=Verse2]:first-of-type {
+  font-family: "AromaNo2LTPro", sans-serif, "Noto";
+  font-size: 9.75pt;
+}
+
+/* verse indents */
+div.verse pre[class*=-indent1Vrs]:first-of-type,
+div.verse pre[class*=-indent1Vrs] {
+  text-indent: 0;
+}
+
+div.verse pre[class*=-indent2Vrs]:first-of-type,
+div.verse pre[class*=-indent2Vrs] {
+  text-indent: 12pt;
+}
+
+div.verse pre[class*=-indent3Vrs]:first-of-type,
+div.verse pre[class*=-indent3Vrs] {
+  text-indent: 24pt;
+}
+
 /*pre.verse div.runfoot + div.runheadright + div.runheadleft + p[class*="Verse"],
 pre.verse div.runfoot + div.runheadright + div.runheadleft + p.SeparatorSep {
   margin-top: $gridheight * -1;
@@ -1652,13 +1714,13 @@ span.spanaltfont2span2 {
   font-size: 10.75pt;
 }
 
-blockquote[data-type=letter] p[class*=Body-Text] {
+blockquote[data-type=letter] p {
   font-style: italic;
 }
-blockquote[data-type=letter] p[class*=Body-Text] em {
+blockquote[data-type=letter] p em {
   font-style: normal;
 }
-blockquote[data-type=letter] p[class*=Body-Text] span.itali {
+blockquote[data-type=letter] p span.itali {
   font-style: normal;
 }
 
@@ -1674,54 +1736,24 @@ blockquote[data-type=letter] p[class*=HeadnoteHdnt] {
 }
 
 blockquote[data-type=letter] p[class*=SalutationSal] {
-  font-style: italic;
   text-indent: 0;
   margin-top: 15pt;
   margin-bottom: 15pt;
-}
-blockquote[data-type=letter] p[class*=SalutationSal] em {
-  font-style: normal;
-}
-blockquote[data-type=letter] p[class*=SalutationSal] span.itali {
-  font-style: normal;
 }
 
 blockquote[data-type=letter] p[class*=AddressAdd],
 blockquote[data-type=letter] p[class*=PostscriptPst] {
-  font-style: italic;
   text-indent: 0;
-}
-blockquote[data-type=letter] p[class*=AddressAdd] em,
-blockquote[data-type=letter] p[class*=PostscriptPst] em {
-  font-style: normal;
-}
-blockquote[data-type=letter] p[class*=AddressAdd] span.itali,
-blockquote[data-type=letter] p[class*=PostscriptPst] span.itali {
-  font-style: normal;
 }
 
 blockquote[data-type=letter] p[class*=ClosingClos] {
-  font-style: italic;
   text-indent: 0;
   margin-top: 15pt;
 }
-blockquote[data-type=letter] p[class*=ClosingClos] em {
-  font-style: normal;
-}
-blockquote[data-type=letter] p[class*=ClosingClos] span.itali {
-  font-style: normal;
-}
 
 blockquote[data-type=letter] p[class*=SignatureSig] {
-  font-style: italic;
   text-indent: 0;
   margin-bottom: 15pt;
-}
-blockquote[data-type=letter] p[class*=SignatureSig] em {
-  font-style: normal;
-}
-blockquote[data-type=letter] p[class*=SignatureSig] span.itali {
-  font-style: normal;
 }
 
 p[class*=ExtractSource] em,
@@ -1767,13 +1799,13 @@ blockquote[data-type=recipe] {
 }
 
 /* --------------- LISTS */
-p[class^=List-Head] {
+*[class^=List-Head] {
   padding: 0;
   margin: 15pt 0 0 0;
 }
 
-p[class*=-Space-Break] + div.runfoot + div.runheadright + div.runheadleft + p[class^=List-Head],
-p.SeparatorSep + div.runfoot + div.runheadright + div.runheadleft + p[class^=List-Head] {
+*[class*=-Space-Break] + div.runfoot + div.runheadright + div.runheadleft + *[class^=List-Head],
+.SeparatorSep + div.runfoot + div.runheadright + div.runheadleft + *[class^=List-Head] {
   margin-top: 0;
 }
 
@@ -1802,6 +1834,12 @@ ol li {
 ul li {
   margin-left: 0;
   padding-left: 0.3em;
+}
+
+li ul,
+li ol {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 li p {
@@ -2151,6 +2189,65 @@ section[data-type=preface].epigraph > header + div {
   margin-top: 15pt;
 }
 
+/* DIALOGUE + SPEAKER */
+.Speaker1Sp1,
+.Speaker2Sp2,
+.Stage-DirectionsStdir,
+.Dialogue1Dia1,
+.Dialogue2Dia2 {
+  margin-left: 15pt;
+  margin-right: 15pt;
+  text-indent: 0;
+}
+
+.Speaker1Sp1,
+.Speaker2Sp2 {
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 15pt;
+}
+
+.Stage-DirectionsStdir {
+  text-indent: 0;
+  font-style: italic;
+  margin-top: 15pt;
+  margin-bottom: 15pt;
+}
+
+.Speaker1Sp1 + .Dialogue1Dia1,
+.Speaker2Sp2 + .Dialogue2Dia2,
+.Speaker2Sp2 + .Dialogue1Dia1,
+.Speaker1Sp1 + .Dialogue2Dia2,
+.Speaker1Sp1 + div.runfoot + div.runheadright + div.runheadleft + .Dialogue1Dia1,
+.Speaker2Sp2 + div.runfoot + div.runheadright + div.runheadleft + .Dialogue2Dia2,
+.Speaker2Sp2 + div.runfoot + div.runheadright + div.runheadleft + .Dialogue1Dia1,
+.Speaker1Sp1 + div.runfoot + div.runheadright + div.runheadleft + .Dialogue2Dia2 {
+  margin-top: 0;
+}
+
+.Speaker2Sp2,
+.Dialogue2Dia2 {
+  margin-left: 30pt;
+}
+
+.Dialogue1Dia1 + *,
+.Dialogue2Dia2 + *,
+.Dialogue1Dia1 + div.runfoot + div.runheadright + div.runheadleft + *,
+.Dialogue2Dia2 + div.runfoot + div.runheadright + div.runheadleft + * {
+  margin-top: 15pt;
+}
+
+.Dialogue1Dia1 + .Speaker1Sp1,
+.Dialogue2Dia2 + .Speaker2Sp2,
+.Dialogue1Dia1 + .Speaker2Sp2,
+.Dialogue2Dia2 + .Speaker1Sp1,
+.Dialogue1Dia1 + div.runfoot + div.runheadright + div.runheadleft + .Speaker1Sp1,
+.Dialogue2Dia2 + div.runfoot + div.runheadright + div.runheadleft + .Speaker2Sp2,
+.Dialogue1Dia1 + div.runfoot + div.runheadright + div.runheadleft + .Speaker2Sp2,
+.Dialogue2Dia2 + div.runfoot + div.runheadright + div.runheadleft + .Speaker1Sp1 {
+  margin-top: 7.5pt;
+}
+
 /* character styles */
 span[class^=smallcaps] {
   font-variant: small-caps;
@@ -2175,7 +2272,8 @@ span[class^=smallcaps] {
   font-weight: bold;
 }
 
-.itali {
+.itali,
+.super-italsupi {
   font-style: italic;
 }
 
@@ -2189,30 +2287,46 @@ span[class^=smallcaps] {
 }
 
 .supersup,
-.subsub {
+.subsub,
+.super-italsupi {
   font-size: 6pt;
   vertical-align: top;
   position: relative;
-  top: -0.6em;
 }
 
 .subsub {
   top: 0.1em;
-  font-size: 6pt;
-  vertical-align: top;
-  position: relative;
 }
 
-.supersup {
-  font-size: 6pt;
-  vertical-align: top;
-  position: relative;
+.supersup,
+.super-italsupi {
   top: -0.6em;
+}
+
+.strikestr {
+  text-decoration: line-through;
+}
+
+.redacted-textred {
+  color: black;
+  background-color: black;
+}
+
+.cs-headcshd,
+.cs-speakercsp {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 10.0625pt;
 }
 
 *[class*=cs-computerccom] {
   font-family: "SourceCodePro", monospace, "Noto";
   font-size: 8pt;
+}
+
+*[class*=cs-text-messagectm] {
+  font-family: "SourceCodePro", sans-serif, "Noto";
+  font-size: 9pt;
 }
 
 *[class*=cs-design-notecdn],
