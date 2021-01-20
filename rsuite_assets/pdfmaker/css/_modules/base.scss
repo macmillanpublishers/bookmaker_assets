@@ -783,7 +783,7 @@ section.adcard > p[class*=A-HeadAhead] {
   font-variant: prince-opentype(smcp, onum);
   font-size: $sizeacmh;
   margin-top: $gridheight;
-  // margin-bottom: $gridheight / 2;
+  margin-bottom: 0;
   text-align: center;
   text-indent: 0;
 }
@@ -1114,6 +1114,7 @@ div.computer > pre[class*=Main-HeadMHead],
 div.computer > p[class*=A-HeadAhead],
 div.computer > pre[class*=A-HeadAhead] {
   page-break-after: avoid;
+  page-break-inside: avoid;
   font-size: $sizecode*1.2;
   font-weight: bold;
   font-style: normal;
@@ -1184,6 +1185,7 @@ aside[data-type="box"] > p[class*="A-HeadAhead"],
 aside[data-type="sidebar"] > p[class*="TitleTtl"],
 aside[data-type="sidebar"] > p[class*="Main-HeadMHead"],
 aside[data-type="sidebar"] > p[class*="A-HeadAhead"] {
+  page-break-inside: avoid;
   page-break-after: avoid;
   font-size: $sizeextracthead;
   line-height: $gridheight;
@@ -1242,8 +1244,8 @@ aside[data-type="sidebar"] *[class*="Bullet-Level-1-ListBl1"] {
 
 /* ---------------- DEDICATION and EPIGRAPH */
 
-section[data-type="dedication"] p:first-child {
-  margin-top: $gridheight * 4;
+section[data-type="dedication"] p:first-of-type {
+  margin-top: $gridheight * 2;
 }
 
 section[data-type="dedication"] blockquote[data-type="epigraph"],
@@ -1447,6 +1449,7 @@ blockquote[class*="EXTRACT-"] > *[class*="Main-HeadMHead"],
 blockquote.looseextract > *[class*="TitleTtl"],
 blockquote.looseextract > *[class*="Main-HeadMHead"] {
   page-break-after: avoid;
+  page-break-inside: avoid;
 }
 
 blockquote[class*="EXTRACT-"] > *[class*="TitleTtl"],
