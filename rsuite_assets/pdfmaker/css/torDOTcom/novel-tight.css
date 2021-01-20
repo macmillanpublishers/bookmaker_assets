@@ -914,7 +914,7 @@ section.adcard > p[class*=A-HeadAhead] {
   font-variant: prince-opentype(smcp, onum);
   font-size: 14pt;
   margin-top: 15pt;
-  margin-bottom: 15pt;
+  margin-bottom: 7.5pt;
   text-align: center;
   text-indent: 0;
 }
@@ -1249,9 +1249,25 @@ div.computer * {
   line-height: 15pt;
 }
 
+div.computer > p[class*=TitleTtl],
+div.computer > pre[class*=TitleTtl],
+div.computer > p[class*=Main-HeadMHead],
+div.computer > pre[class*=Main-HeadMHead],
+div.computer > p[class*=A-HeadAhead],
+div.computer > pre[class*=A-HeadAhead] {
+  page-break-after: avoid;
+  font-size: 9.6pt;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
+  margin-top: 15pt;
+  margin-bottom: 15pt;
+}
+
 /* make sure pre's break when they need to */
 pre {
   word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 div.computer p:first-child,
@@ -1260,8 +1276,9 @@ p.Design-NoteDn + div.runfoot + div.runheadright + div.runheadleft + p {
   text-indent: 0;
 }
 
-div.computer p.Body-TextTx,
-div.computer pre.Body-TextTx {
+div.computer p,
+div.computer li,
+div.computer pre {
   font-size: 8pt;
 }
 
@@ -1269,7 +1286,7 @@ section[data-type=appendix].abouttheauthor p[class*=Body-Text]:first-of-type {
   text-indent: 0;
 }
 
-/* ---------------- SIDEBARS */
+/* ---------------- SIDEBARS, BOXES */
 p[class*=-Space-Break] + div.runfoot + div.runheadright + div.runheadleft + aside,
 p.SeparatorSep + div.runfoot + div.runheadright + div.runheadleft + aside {
   margin-top: 0pt;
@@ -1301,6 +1318,11 @@ aside::after {
   min-height: 15pt;
 }
 
+aside[data-type=box] > p[class*=TitleTtl],
+aside[data-type=box] > p[class*=Main-HeadMHead],
+aside[data-type=box] > p[class*=A-HeadAhead],
+aside[data-type=sidebar] > p[class*=TitleTtl],
+aside[data-type=sidebar] > p[class*=Main-HeadMHead],
 aside[data-type=sidebar] > p[class*=A-HeadAhead] {
   page-break-after: avoid;
   font-size: 11.5pt;
@@ -1313,10 +1335,7 @@ aside[data-type=sidebar] > p[class*=A-HeadAhead] {
   margin-bottom: 15pt;
 }
 
-aside[data-type=sidebar] > p[class*=A-HeadAhead] + p {
-  text-indent: 0;
-}
-
+aside[data-type=box] > p[class*=B-HeadBhead],
 aside[data-type=sidebar] > p[class*=B-HeadBhead] {
   page-break-after: avoid;
   font-size: 11.5pt;
@@ -1328,19 +1347,29 @@ aside[data-type=sidebar] > p[class*=B-HeadBhead] {
   margin-bottom: 15pt;
 }
 
-aside[data-type=sidebar] > p[class*=B-HeadBhead] + p {
-  text-indent: 0;
-}
-
+aside[data-type=box] > p[class*=B-HeadBhead] + p[class*=A-HeadAhead],
 aside[data-type=sidebar] > p[class*=B-HeadBhead] + p[class*=A-HeadAhead] {
   margin-bottom: 0;
 }
 
+aside[data-type=box] p[class*=Body-Text],
 aside[data-type=sidebar] p[class*=Body-Text] {
   font-size: 10pt;
 }
 
+aside[data-type=box] > p[class*=TitleTtl] + p[class*=Body-Text],
+aside[data-type=box] > p[class*=Main-HeadMHead] + p[class*=Body-Text],
+aside[data-type=box] > p[class*=A-HeadAhead] + p[class*=Body-Text],
+aside[data-type=box] > p[class*=B-HeadBhead] + p[class*=Body-Text],
+aside[data-type=box] > p[class*=TitleTtl] + div.runfoot + div.runheadright + div.runheadleft + p[class*=Body-Text],
+aside[data-type=box] > p[class*=Main-HeadMHead] + div.runfoot + div.runheadright + div.runheadleft + p[class*=Body-Text],
+aside[data-type=box] > p[class*=A-HeadAhead] + div.runfoot + div.runheadright + div.runheadleft + p[class*=Body-Text],
+aside[data-type=box] > p[class*=B-HeadBhead] + div.runfoot + div.runheadright + div.runheadleft + p[class*=Body-Text] aside[data-type=sidebar] > p[class*=TitleTtl] + p[class*=Body-Text],
+aside[data-type=sidebar] > p[class*=Main-HeadMHead] + p[class*=Body-Text],
+aside[data-type=sidebar] > p[class*=A-HeadAhead] + p[class*=Body-Text],
+aside[data-type=sidebar] > p[class*=B-HeadBhead] + p[class*=Body-Text],
 aside[data-type=sidebar] > p[class*=TitleTtl] + div.runfoot + div.runheadright + div.runheadleft + p[class*=Body-Text],
+aside[data-type=sidebar] > p[class*=Main-HeadMHead] + div.runfoot + div.runheadright + div.runheadleft + p[class*=Body-Text],
 aside[data-type=sidebar] > p[class*=A-HeadAhead] + div.runfoot + div.runheadright + div.runheadleft + p[class*=Body-Text],
 aside[data-type=sidebar] > p[class*=B-HeadBhead] + div.runfoot + div.runheadright + div.runheadleft + p[class*=Body-Text] {
   text-indent: 0;
@@ -1352,7 +1381,7 @@ aside[data-type=sidebar] *[class*=Bullet-Level-1-ListBl1] {
 
 /* ---------------- DEDICATION and EPIGRAPH */
 section[data-type=dedication] p:first-child {
-  margin-top: 15pt;
+  margin-top: 30pt;
 }
 
 section[data-type=dedication] blockquote[data-type=epigraph],
@@ -1563,8 +1592,6 @@ div[data-type=note] > p[class*=B-HeadBhead] {
 
 blockquote[class*=EXTRACT-] > *[class*=TitleTtl],
 blockquote[class*=EXTRACT-] > *[class*=Main-HeadMHead],
-aside[data-type=sidebar] > *[class*=TitleTtl],
-aside[data-type=sidebar] > *[class*=Main-HeadMHead],
 blockquote.looseextract > *[class*=TitleTtl],
 blockquote.looseextract > *[class*=Main-HeadMHead] {
   page-break-after: avoid;
@@ -1572,8 +1599,6 @@ blockquote.looseextract > *[class*=Main-HeadMHead] {
 
 blockquote[class*=EXTRACT-] > *[class*=TitleTtl],
 blockquote[class*=EXTRACT-] > *[class*=Main-HeadMHead],
-aside[data-type=sidebar] > *[class*=TitleTtl],
-aside[data-type=sidebar] > *[class*=Main-HeadMHead],
 blockquote.looseextract > *[class*=TitleTtl],
 blockquote.looseextract > *[class*=Main-HeadMHead],
 *[class*=HeadlineHdline] {
@@ -1588,8 +1613,6 @@ blockquote.looseextract > *[class*=Main-HeadMHead],
 
 blockquote[class*=EXTRACT-] > *[class*=TitleTtl] + p,
 blockquote[class*=EXTRACT-] > *[class*=Main-HeadMHead] + p,
-aside[data-type=sidebar] > *[class*=TitleTtl] + p,
-aside[data-type=sidebar] > *[class*=Main-HeadMHead] + p,
 blockquote.looseextract > *[class*=TitleTtl] + p,
 blockquote.looseextract > *[class*=Main-HeadMHead] + p {
   text-indent: 0;
@@ -1671,17 +1694,27 @@ div.verse pre[class*=Verse2]:first-of-type {
 /* verse indents */
 div.verse pre[class*=-indent1Vrs]:first-of-type,
 div.verse pre[class*=-indent1Vrs] {
+  margin-left: 0;
   text-indent: 0;
 }
 
 div.verse pre[class*=-indent2Vrs]:first-of-type,
 div.verse pre[class*=-indent2Vrs] {
-  text-indent: 12pt;
+  margin-left: 12pt;
+  text-indent: 0;
 }
 
 div.verse pre[class*=-indent3Vrs]:first-of-type,
 div.verse pre[class*=-indent3Vrs] {
-  text-indent: 24pt;
+  margin-left: 24pt;
+  text-indent: 0;
+}
+
+*[class*=SourceSrc] + pre,
+*[class*=SourceSrc] + p,
+*[class*=SourceSrc] + div.runfoot + div.runheadright + div.runheadleft + pre,
+*[class*=SourceSrc] + div.runfoot + div.runheadright + div.runheadleft + p {
+  margin-top: 15pt;
 }
 
 /*pre.verse div.runfoot + div.runheadright + div.runheadleft + p[class*="Verse"],
