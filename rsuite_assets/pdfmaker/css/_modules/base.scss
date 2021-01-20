@@ -783,7 +783,7 @@ section.adcard > p[class*=A-HeadAhead] {
   font-variant: prince-opentype(smcp, onum);
   font-size: $sizeacmh;
   margin-top: $gridheight;
-  margin-bottom: $gridheight / 2;
+  // margin-bottom: $gridheight / 2;
   text-align: center;
   text-indent: 0;
 }
@@ -1104,6 +1104,7 @@ div.computer * {
   font-family: "SourceCodePro", monospace, "Noto";
   white-space: normal;
   line-height: $gridheight;
+  text-align: justify;
   }
 
 div.computer > p[class*=TitleTtl],
@@ -1242,7 +1243,7 @@ aside[data-type="sidebar"] *[class*="Bullet-Level-1-ListBl1"] {
 /* ---------------- DEDICATION and EPIGRAPH */
 
 section[data-type="dedication"] p:first-child {
-  margin-top: $gridheight * 2;
+  margin-top: $gridheight * 4;
 }
 
 section[data-type="dedication"] blockquote[data-type="epigraph"],
@@ -1596,7 +1597,8 @@ span.spanaltfont2span2 {
   	font-family: BerrangerHandITCStd;
   	font-size: $sizehwritingnormal; }
 
-blockquote[data-type="letter"] p {
+blockquote[data-type="letter"] p,
+blockquote[data-type="letter"] li {
   font-style: italic;
 
   em {

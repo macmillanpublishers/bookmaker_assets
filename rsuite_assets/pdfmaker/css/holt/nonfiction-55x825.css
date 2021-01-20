@@ -915,7 +915,6 @@ section.adcard > p[class*=A-HeadAhead] {
   font-variant: prince-opentype(smcp, onum);
   font-size: 11pt;
   margin-top: 14.4pt;
-  margin-bottom: 7.2pt;
   text-align: center;
   text-indent: 0;
 }
@@ -1248,6 +1247,7 @@ div.computer * {
   font-family: "SourceCodePro", monospace, "Noto";
   white-space: normal;
   line-height: 14.4pt;
+  text-align: justify;
 }
 
 div.computer > p[class*=TitleTtl],
@@ -1382,7 +1382,7 @@ aside[data-type=sidebar] *[class*=Bullet-Level-1-ListBl1] {
 
 /* ---------------- DEDICATION and EPIGRAPH */
 section[data-type=dedication] p:first-child {
-  margin-top: 28.8pt;
+  margin-top: 57.6pt;
 }
 
 section[data-type=dedication] blockquote[data-type=epigraph],
@@ -1748,13 +1748,16 @@ span.spanaltfont2span2 {
   font-size: 11pt;
 }
 
-blockquote[data-type=letter] p {
+blockquote[data-type=letter] p,
+blockquote[data-type=letter] li {
   font-style: italic;
 }
-blockquote[data-type=letter] p em {
+blockquote[data-type=letter] p em,
+blockquote[data-type=letter] li em {
   font-style: normal;
 }
-blockquote[data-type=letter] p span.itali {
+blockquote[data-type=letter] p span.itali,
+blockquote[data-type=letter] li span.itali {
   font-style: normal;
 }
 
