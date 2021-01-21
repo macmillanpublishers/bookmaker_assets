@@ -333,6 +333,8 @@ h1 + p,
 h1 + div.runfoot + div.runheadright + div.runheadleft + p,
 p[class*="Author1Au1"] + p[class*="Body-Text"],
 p[class*="Author1Au1"] + div.runfoot + div.runheadright + div.runheadleft + p[class*="Body-Text"],
+p[class*="BylineByline"] + p[class*="Body-Text"],
+p[class*="BylineByline"] + div.runfoot + div.runheadright + div.runheadleft + p[class*="Body-Text"],
 p[class*="SubtitleSttl"] + p[class*="Body-Text"],
 p[class*="SubtitleSttl"] + div.runfoot + div.runheadright + div.runheadleft + p[class*="Body-Text"] {
   text-indent: 0;
@@ -481,7 +483,7 @@ section[data-type="copyright-page"] {
 section[data-type="halftitlepage"] > h1 {
   font-size: $sizehalftitle;
   font-weight: normal;
-  line-height: $gridheight;
+  line-height: $sizehalftitle * 1.2;
   margin-top: $htmargintop;
   text-align: center;
 }
@@ -774,13 +776,14 @@ section[data-type="acknowledgments"] > h1 {
   text-align: center;
 }
 
-section.adcard[data-type="preface"] > h1 {
+section.adcard[data-type="preface"] > h1,
+section.adcard > p[class*=A-HeadAhead] {
   text-transform: lowercase;
   font-variant: small-caps;
   font-variant: prince-opentype(smcp, onum);
   font-size: $sizeacmh;
   margin-top: $gridheight;
-  margin-bottom: $gridheight;
+  margin-bottom: 0;
   text-align: center;
   text-indent: 0;
 }
@@ -878,7 +881,7 @@ section[data-type="dedication"] h1[class*="ChapTitleNonprintingctnp"] + * {
 
 section[data-type="chapter"] h1[class*="TitleTtl"] {
   font-size: $sizechaptitle;
-  line-height: $gridheight;
+  line-height: $sizechaptitle * 1.2;
   font-weight: normal;
   margin-top: $prmargintop;
   text-align: center;
@@ -1079,6 +1082,11 @@ div[data-type="part"] > p[class*="SubtitleSttl"] {
   font-size: $sizecode;
 }
 
+*[class*="Text-MessageTmg"] {
+  font-family: "SourceCodePro", sans-serif, "Noto";
+  font-size: $sizecode + 1;
+}
+
 p[class*="Extract"] {
   font-family: "ArnoPro-SmText", serif, "Noto";
   font-size: $sizeextract;
@@ -1097,8 +1105,30 @@ div.computer * {
   white-space: normal;
   line-height: $gridheight;
   text-align: justify;
-  text-align-last: left;
   }
+
+div.computer > p[class*=TitleTtl],
+div.computer > pre[class*=TitleTtl],
+div.computer > p[class*=Main-HeadMHead],
+div.computer > pre[class*=Main-HeadMHead],
+div.computer > p[class*=A-HeadAhead],
+div.computer > pre[class*=A-HeadAhead] {
+  page-break-after: avoid;
+  page-break-inside: avoid;
+  font-size: $sizecode*1.2;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
+  margin-top: $gridheight;
+  margin-bottom: $gridheight;
+}
+/* make sure pre's break when they need to */
+// prince does not respect: word-break: break-word;,
+//  but respects overflow-wrap: break-word;
+pre {
+   word-break: break-word;
+   overflow-wrap: break-word;
+}
 
 div.computer p:first-child,
 div.computer pre:first-child,
@@ -1106,8 +1136,9 @@ p.Design-NoteDn + div.runfoot + div.runheadright + div.runheadleft + p {
   text-indent: 0;
 }
 
-div.computer p.Body-TextTx,
-div.computer pre.Body-TextTx {
+div.computer p,
+div.computer li,
+div.computer pre {
   font-size: $sizecode;
 }
 
@@ -1115,7 +1146,7 @@ section[data-type="appendix"].abouttheauthor p[class*="Body-Text"]:first-of-type
   text-indent: 0;
 }
 
-/* ---------------- SIDEBARS */
+/* ---------------- SIDEBARS, BOXES */
 
 p[class*="-Space-Break"] + div.runfoot + div.runheadright + div.runheadleft + aside,
 p.SeparatorSep + div.runfoot + div.runheadright + div.runheadleft + aside {
@@ -1148,7 +1179,13 @@ aside::after {
   min-height: $gridheight;
 }
 
+aside[data-type="box"] > p[class*="TitleTtl"],
+aside[data-type="box"] > p[class*="Main-HeadMHead"],
+aside[data-type="box"] > p[class*="A-HeadAhead"],
+aside[data-type="sidebar"] > p[class*="TitleTtl"],
+aside[data-type="sidebar"] > p[class*="Main-HeadMHead"],
 aside[data-type="sidebar"] > p[class*="A-HeadAhead"] {
+  page-break-inside: avoid;
   page-break-after: avoid;
   font-size: $sizeextracthead;
   line-height: $gridheight;
@@ -1160,10 +1197,7 @@ aside[data-type="sidebar"] > p[class*="A-HeadAhead"] {
   margin-bottom: $gridheight;
 }
 
-aside[data-type="sidebar"] > p[class*="A-HeadAhead"] + p {
-  text-indent: 0;
-}
-
+aside[data-type="box"] > p[class*="B-HeadBhead"],
 aside[data-type="sidebar"] > p[class*="B-HeadBhead"] {
   page-break-after: avoid;
   font-size: $sizeextracthead;
@@ -1175,19 +1209,30 @@ aside[data-type="sidebar"] > p[class*="B-HeadBhead"] {
   margin-bottom: $gridheight;
 }
 
-aside[data-type="sidebar"] > p[class*="B-HeadBhead"] + p {
-  text-indent: 0;
-}
-
+aside[data-type="box"] > p[class*="B-HeadBhead"] + p[class*="A-HeadAhead"],
 aside[data-type="sidebar"] > p[class*="B-HeadBhead"] + p[class*="A-HeadAhead"] {
   margin-bottom: 0;
 }
 
+aside[data-type="box"] p[class*="Body-Text"],
 aside[data-type="sidebar"] p[class*="Body-Text"] {
   font-size: $sizeextract;
 }
 
+aside[data-type="box"] > p[class*="TitleTtl"] + p[class*="Body-Text"],
+aside[data-type="box"] > p[class*="Main-HeadMHead"] + p[class*="Body-Text"],
+aside[data-type="box"] > p[class*="A-HeadAhead"] + p[class*="Body-Text"],
+aside[data-type="box"] > p[class*="B-HeadBhead"] + p[class*="Body-Text"],
+aside[data-type="box"] > p[class*="TitleTtl"] + div.runfoot + div.runheadright + div.runheadleft + p[class*="Body-Text"],
+aside[data-type="box"] > p[class*="Main-HeadMHead"] + div.runfoot + div.runheadright + div.runheadleft + p[class*="Body-Text"],
+aside[data-type="box"] > p[class*="A-HeadAhead"] + div.runfoot + div.runheadright + div.runheadleft + p[class*="Body-Text"],
+aside[data-type="box"] > p[class*="B-HeadBhead"] + div.runfoot + div.runheadright + div.runheadleft + p[class*="Body-Text"]
+aside[data-type="sidebar"] > p[class*="TitleTtl"] + p[class*="Body-Text"],
+aside[data-type="sidebar"] > p[class*="Main-HeadMHead"] + p[class*="Body-Text"],
+aside[data-type="sidebar"] > p[class*="A-HeadAhead"] + p[class*="Body-Text"],
+aside[data-type="sidebar"] > p[class*="B-HeadBhead"] + p[class*="Body-Text"],
 aside[data-type="sidebar"] > p[class*="TitleTtl"] + div.runfoot + div.runheadright + div.runheadleft + p[class*="Body-Text"],
+aside[data-type="sidebar"] > p[class*="Main-HeadMHead"] + div.runfoot + div.runheadright + div.runheadleft + p[class*="Body-Text"],
 aside[data-type="sidebar"] > p[class*="A-HeadAhead"] + div.runfoot + div.runheadright + div.runheadleft + p[class*="Body-Text"],
 aside[data-type="sidebar"] > p[class*="B-HeadBhead"] + div.runfoot + div.runheadright + div.runheadleft + p[class*="Body-Text"] {
   text-indent: 0;
@@ -1199,8 +1244,9 @@ aside[data-type="sidebar"] *[class*="Bullet-Level-1-ListBl1"] {
 
 /* ---------------- DEDICATION and EPIGRAPH */
 
-section[data-type="dedication"] p:first-child {
-  margin-top: $gridheight;
+section[data-type="dedication"] p:first-of-type,
+section[data-type="dedication"] h1[class*="Nonprinting"] + p[class*="Body-Text"] {
+  margin-top: $gridheight * 2;
 }
 
 section[data-type="dedication"] blockquote[data-type="epigraph"],
@@ -1243,7 +1289,7 @@ section[data-type="preface"].epigraph p[class^="Body-TextTx"] { /*edit 7*/
 
 section[data-type="dedication"] p[class^="Epigraph-Source"],
 section[data-type="preface"] p[class^="Epigraph-Source"],
-p[class^="SourceSrc"] {
+*[class^="SourceSrc"] {
   font-family: "ArnoPro-SmText", serif, "Noto";
   font-weight: 600;
   font-size: $sizeepigraph;
@@ -1261,7 +1307,7 @@ section[data-type="preface"].epigraph {
   margin-right: 0; }
 
 p[class^="Epigraph-Source"],
-p[class^="SourceSrc"] {
+*[class^="SourceSrc"] {
   em, span.itali {
     break-inside: avoid;
   }
@@ -1399,11 +1445,16 @@ div[data-type="note"] > p[class*="B-HeadBhead"] {
   page-break-after: avoid;
 }
 
+blockquote[class*="EXTRACT-"] > *[class*="TitleTtl"],
+blockquote[class*="EXTRACT-"] > *[class*="Main-HeadMHead"],
 blockquote.looseextract > *[class*="TitleTtl"],
 blockquote.looseextract > *[class*="Main-HeadMHead"] {
   page-break-after: avoid;
+  page-break-inside: avoid;
 }
 
+blockquote[class*="EXTRACT-"] > *[class*="TitleTtl"],
+blockquote[class*="EXTRACT-"] > *[class*="Main-HeadMHead"],
 blockquote.looseextract > *[class*="TitleTtl"],
 blockquote.looseextract > *[class*="Main-HeadMHead"],
 *[class*="HeadlineHdline"] {
@@ -1416,9 +1467,26 @@ blockquote.looseextract > *[class*="Main-HeadMHead"],
   margin-bottom: $gridheight;
 }
 
+blockquote[class*="EXTRACT-"] > *[class*="TitleTtl"] + p,
+blockquote[class*="EXTRACT-"] > *[class*="Main-HeadMHead"] + p,
 blockquote.looseextract > *[class*="TitleTtl"] + p,
 blockquote.looseextract > *[class*="Main-HeadMHead"] + p {
   text-indent: 0;
+}
+
+*[class*="TitleTtl"] + div.runfoot + div.runheadright + div.runheadleft + p[class*=BylineByline],
+*[class*="Head"] + div.runfoot + div.runheadright + div.runheadleft + p[class*=BylineByline],
+*[class*="TitleTtl"] + p[class*=BylineByline],
+*[class*="Head"] + p[class*=BylineByline] {
+  margin-top: -$gridheight;
+  margin-bottom: $gridheight;
+}
+
+*[class*=BylineByline] {
+  text-align: center;
+  text-align-last: center;
+  text-indent: 0;
+  font-style: italic;
 }
 
 div.verse {
@@ -1468,7 +1536,37 @@ div.verse pre[class*="Verse"]:first-of-type {
     font-style: normal;
   }
 }
+/* verse2 font switch */
+div.verse p[class*=Verse2],
+div.verse p[class*=Verse2]:first-of-type,
+div.verse pre[class*=Verse2],
+div.verse pre[class*=Verse2]:first-of-type {
+  font-family: "AromaNo2LTPro", sans-serif, "Noto";
+  font-size: 9.75pt;
+}
+/* verse indents */
+div.verse pre[class*=-indent1Vrs]:first-of-type,
+div.verse pre[class*=-indent1Vrs] {
+  margin-left: 0;
+  text-indent: 0;
+}
+div.verse pre[class*=-indent2Vrs]:first-of-type,
+div.verse pre[class*=-indent2Vrs] {
+  margin-left: $textindent;
+  text-indent: 0;
+}
+div.verse pre[class*=-indent3Vrs]:first-of-type,
+div.verse pre[class*=-indent3Vrs] {
+  margin-left: 2*$textindent;
+  text-indent: 0;
+}
 
+*[class*=SourceSrc] + pre,
+*[class*=SourceSrc] + p,
+*[class*=SourceSrc] + div.runfoot + div.runheadright + div.runheadleft + pre,
+*[class*=SourceSrc] + div.runfoot + div.runheadright + div.runheadleft + p {
+  margin-top: $gridheight;
+}
 /*pre.verse div.runfoot + div.runheadright + div.runheadleft + p[class*="Verse"],
 pre.verse div.runfoot + div.runheadright + div.runheadleft + p.SeparatorSep {
   margin-top: $gridheight * -1;
@@ -1503,7 +1601,8 @@ span.spanaltfont2span2 {
   	font-family: BerrangerHandITCStd;
   	font-size: $sizehwritingnormal; }
 
-blockquote[data-type="letter"] p[class*="Body-Text"] {
+blockquote[data-type="letter"] p,
+blockquote[data-type="letter"] li {
   font-style: italic;
 
   em {
@@ -1527,60 +1626,24 @@ blockquote[data-type="letter"] p[class*="HeadnoteHdnt"] {
 }
 
 blockquote[data-type="letter"] p[class*="SalutationSal"] {
-  font-style: italic;
   text-indent: 0;
   margin-top: $gridheight;
   margin-bottom: $gridheight;
-
-  em {
-    font-style: normal;
-  }
-
-  span.itali {
-    font-style: normal;
-  }
 }
 
 blockquote[data-type="letter"] p[class*="AddressAdd"],
 blockquote[data-type="letter"] p[class*="PostscriptPst"] {
-  font-style: italic;
   text-indent: 0;
-
-  em {
-    font-style: normal;
-  }
-
-  span.itali {
-    font-style: normal;
-  }
 }
 
 blockquote[data-type="letter"] p[class*="ClosingClos"] {
-  font-style: italic;
   text-indent: 0;
   margin-top: $gridheight;
-
-  em {
-    font-style: normal;
-  }
-
-  span.itali {
-    font-style: normal;
-  }
 }
 
 blockquote[data-type="letter"] p[class*="SignatureSig"] {
-  font-style: italic;
   text-indent: 0;
   margin-bottom: $gridheight;
-
-  em {
-    font-style: normal;
-  }
-
-  span.itali {
-    font-style: normal;
-  }
 }
 
 p[class*="ExtractSource"] em,
@@ -1607,8 +1670,16 @@ p[class*="Dateline"] {
   }
 }
 
+p[class*="Dateline"] + p[class*="Dateline"],
 p[class*="Dateline"] + div.runfoot + div.runheadright + div.runheadleft + p[class*="Dateline"] {
   margin-top: -$gridheight;
+  page-break-before: avoid;
+  page-break-inside: avoid;
+}
+
+section[data-type="chapter"] > p[class*="Dateline"] + p[class*="Body-Text"],
+section[data-type="chapter"] > p[class*="Dateline"] + div.runfoot + div.runheadright + div.runheadleft + p[class*="Body-Text"] {
+  text-indent: 0;
 }
 
 blockquote[data-type="letter"] p[class*="DatelineDate"] {
@@ -1629,13 +1700,13 @@ blockquote[data-type="recipe"] {
 
 /* --------------- LISTS */
 
-p[class^="List-Head"] {
+*[class^="List-Head"] {
   padding: 0;
   margin: $gridheight 0 0 0;
 }
 
-p[class*="-Space-Break"] + div.runfoot + div.runheadright + div.runheadleft + p[class^="List-Head"],
-p.SeparatorSep + div.runfoot + div.runheadright + div.runheadleft + p[class^="List-Head"] {
+*[class*="-Space-Break"] + div.runfoot + div.runheadright + div.runheadleft + *[class^="List-Head"],
+.SeparatorSep + div.runfoot + div.runheadright + div.runheadleft + *[class^="List-Head"] {
   margin-top: 0;
 }
 
@@ -1664,6 +1735,12 @@ ol li {
 ul li {
   margin-left: 0;
   padding-left: 0.3em;
+}
+
+li ul,
+li ol {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 li p {
@@ -2011,6 +2088,68 @@ section[data-type="preface"].epigraph > header + div {
   margin-top: $gridheight;
 }
 
+/* DIALOGUE + SPEAKER */
+
+.Speaker1Sp1,
+.Speaker2Sp2,
+.Stage-DirectionsStdir,
+.Dialogue1Dia1,
+.Dialogue2Dia2 {
+  margin-left: $gridheight;
+  margin-right: $gridheight;
+  text-indent: 0;
+}
+
+.Speaker1Sp1,
+.Speaker2Sp2 {
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: $gridheight;
+}
+
+.Stage-DirectionsStdir {
+  text-indent: 0;
+  font-style: italic;
+  margin-top: $gridheight;
+  margin-bottom: $gridheight;
+}
+
+.Speaker1Sp1 + .Dialogue1Dia1,
+.Speaker2Sp2 + .Dialogue2Dia2,
+.Speaker2Sp2 + .Dialogue1Dia1,
+.Speaker1Sp1 + .Dialogue2Dia2,
+.Speaker1Sp1 + div.runfoot + div.runheadright + div.runheadleft + .Dialogue1Dia1,
+.Speaker2Sp2 + div.runfoot + div.runheadright + div.runheadleft + .Dialogue2Dia2,
+.Speaker2Sp2 + div.runfoot + div.runheadright + div.runheadleft + .Dialogue1Dia1,
+.Speaker1Sp1 + div.runfoot + div.runheadright + div.runheadleft + .Dialogue2Dia2 {
+  margin-top: 0;
+}
+
+.Speaker2Sp2,
+.Dialogue2Dia2 {
+  margin-left: $gridheight * 2;
+}
+
+// the next two rules allow us to half-space between dialogue / speaker lines.
+// if we want to switch to full space, scrap these rules and use .Dialogue1Dia1,.Dialogue2Dia2 { margin-bottom: 16pt; }
+.Dialogue1Dia1 + *,
+.Dialogue2Dia2 + *,
+.Dialogue1Dia1 + div.runfoot + div.runheadright + div.runheadleft + *,
+.Dialogue2Dia2 + div.runfoot + div.runheadright + div.runheadleft + * {
+  margin-top: $gridheight;
+}
+
+.Dialogue1Dia1 + .Speaker1Sp1,
+.Dialogue2Dia2 + .Speaker2Sp2,
+.Dialogue1Dia1 + .Speaker2Sp2,
+.Dialogue2Dia2 + .Speaker1Sp1,
+.Dialogue1Dia1 + div.runfoot + div.runheadright + div.runheadleft  + .Speaker1Sp1,
+.Dialogue2Dia2 + div.runfoot + div.runheadright + div.runheadleft  + .Speaker2Sp2,
+.Dialogue1Dia1 + div.runfoot + div.runheadright + div.runheadleft  + .Speaker2Sp2,
+.Dialogue2Dia2 + div.runfoot + div.runheadright + div.runheadleft  + .Speaker1Sp1 {
+  margin-top: $gridheight / 2;
+}
+
 /* character styles */
 
 span[class^="smallcaps"] {
@@ -2036,7 +2175,8 @@ span[class^="smallcaps"] {
   font-weight: bold;
 }
 
-.itali {
+.itali,
+.super-italsupi {
   font-style: italic;
 }
 
@@ -2050,25 +2190,36 @@ span[class^="smallcaps"] {
 }
 
 .supersup,
-.subsub {
+.subsub,
+.super-italsupi {
   font-size: $sizesuperscript;
     vertical-align: top;
     position: relative;
-    top: -0.6em;
 }
 
 .subsub {
   top: 0.1em;
-  font-size: $sizesuperscript;
-  vertical-align: top;
-  position: relative;
 }
 
-.supersup {
-  font-size: $sizesuperscript;
-  vertical-align: top;
-    position: relative;
+.supersup,
+.super-italsupi {
     top: -0.6em;
+}
+
+.strikestr {
+  text-decoration: line-through;
+}
+
+.redacted-textred {
+    color: black;
+    background-color: black;
+}
+
+.cs-headcshd,
+.cs-speakercsp {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: $sizenormal * .875;
 }
 
 *[class*="symbolssym"] {}
@@ -2078,6 +2229,11 @@ span[class^="smallcaps"] {
 *[class*="cs-computerccom"] {
   font-family: "SourceCodePro", monospace, "Noto";
   font-size: $sizecode;
+}
+
+*[class*="cs-text-messagectm"] {
+  font-family: "SourceCodePro", sans-serif, "Noto";
+  font-size: $sizecode + 1;
 }
 
 *[class*="cs-design-notecdn"],
