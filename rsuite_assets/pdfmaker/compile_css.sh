@@ -11,8 +11,10 @@ sass novel-loose.scss novel-loose.css
 sass novel-tight.scss novel-tight.css
 sass novella.scss pdf.css
 sass novella.scss novella.css # using this scss for default 'pdf.css' as well as its own named template
-sass novella.scss core_tor.css # also using this as a default base for other imprints etc
-mv core_tor.css ../core_tor.css
+# sass novella.scss core_tor.css # formerly using this as a default base for other imprints etc
+cd ../generic
+sass default_core.scss default_core.css  # using this as a default base css for other imprints
+mv default_core.css ../default_core.css
 cd ../holt
 sass nonfiction-6x9.scss pdf.css
 sass nonfiction-55x825.scss nonfiction-55x825.css
