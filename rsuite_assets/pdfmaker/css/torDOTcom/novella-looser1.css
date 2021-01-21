@@ -767,10 +767,10 @@ section[data-type=copyright-page] p:first-child {
 
 section[data-type=copyright-page] p {
   font-family: "ArnoPro-SmText", serif, "Noto";
-  font-size: 10pt;
+  font-size: 9pt;
   text-align: center;
   text-indent: 0;
-  line-height: 14pt;
+  line-height: 12.6pt;
 }
 
 /* This style no longer exists in RSuite styles. Leaving in, just in case. */
@@ -2466,6 +2466,11 @@ td p ~ p {
     vertical-align: bottom;
   }
 }
+section[data-type=preface],
+section[data-type=foreword] {
+  page: front;
+}
+
 figure.fullpage {
   margin-top: 0.55in;
   margin-inside: -1in;
@@ -2474,6 +2479,31 @@ figure.fullpage {
 
 img[src*=fullpage] {
   margin-top: -1.65in;
+}
+
+section[data-type=copyright-page] p {
+  line-height: 13pt;
+}
+
+section[data-type=dedication] p:first-of-type,
+section[data-type=dedication] h1[class*=Nonprinting] + p[class*=Body-Text],
+section[data-type=dedication] h1[class*=ChapTitleNonprintingctnp] + * {
+  margin-top: 68pt;
+}
+
+p[class*=Dateline] {
+  font-weight: normal;
+  font-style: normal;
+  font-variant: small-caps;
+  font-variant: prince-opentype(smcp, onum);
+  text-align: center;
+  text-align-last: center;
+}
+p[class*=Dateline] em {
+  font-style: italic;
+}
+p[class*=Dateline] span.itali {
+  font-style: italic;
 }
 
 /*# sourceMappingURL=novella-looser1.css.map */
