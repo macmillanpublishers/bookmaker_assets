@@ -4,6 +4,7 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 cd $DIR/css/torDOTcom
 sass novella-looser1.scss novella-looser1.css
+sass novella-looser2.scss novella-looser2.css
 sass novella-tighter1.scss novella-tighter1.css
 sass novella-tighter2.scss novella-tighter2.css
 sass novel.scss novel.css
