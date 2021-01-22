@@ -547,7 +547,7 @@ blockquote {
 }
 
 blockquote p {
-  font-size: 10pt;
+  font-size: 10.5pt;
 }
 
 blockquote p:first-child {
@@ -1237,7 +1237,7 @@ div[data-type=part] > p[class*=SubtitleSttl] {
 
 p[class*=Extract] {
   font-family: "ArnoPro-SmText", serif, "Noto";
-  font-size: 10pt;
+  font-size: 10.5pt;
 }
 
 div.computer {
@@ -1359,7 +1359,7 @@ aside[data-type=sidebar] > p[class*=B-HeadBhead] + p[class*=A-HeadAhead] {
 
 aside[data-type=box] p[class*=Body-Text],
 aside[data-type=sidebar] p[class*=Body-Text] {
-  font-size: 10pt;
+  font-size: 10.5pt;
 }
 
 aside[data-type=box] > p[class*=TitleTtl] + p[class*=Body-Text],
@@ -1381,7 +1381,7 @@ aside[data-type=sidebar] > p[class*=B-HeadBhead] + div.runfoot + div.runheadrigh
 }
 
 aside[data-type=sidebar] *[class*=Bullet-Level-1-ListBl1] {
-  font-size: 10pt;
+  font-size: 10.5pt;
 }
 
 /* ---------------- DEDICATION and EPIGRAPH */
@@ -1415,7 +1415,7 @@ section[data-type=preface] p[class^=Epigraph-Non-Verse],
 section[data-type=preface].epigraph p[class^=Body-TextTx] {
   font-family: "ArnoPro-SmText", serif, "Noto";
   font-style: normal;
-  font-size: 10pt;
+  font-size: 10.5pt;
   text-align: left;
   margin-left: 49.4pt;
   margin-right: 34.5pt;
@@ -1435,7 +1435,7 @@ section[data-type=preface] p[class^=Epigraph-Source],
 *[class^=SourceSrc] {
   font-family: "ArnoPro-SmText", serif, "Noto";
   font-weight: 600;
-  font-size: 10pt;
+  font-size: 10.5pt;
   font-style: normal;
   text-align: right;
   margin-left: 34.5pt;
@@ -1483,7 +1483,7 @@ section[data-type=preface] > blockquote[data-type=epigraph] p,
 section[data-type=foreword] > blockquote[data-type=epigraph] p,
 section[data-type=introduction] > blockquote[data-type=epigraph] p {
   font-family: "ArnoPro-SmText", "Noto";
-  font-size: 10pt;
+  font-size: 10.5pt;
   line-height: 15.2pt;
   /* text-align: left;  <-- messing with FM epigraph source alignment*/
 }
@@ -1932,7 +1932,7 @@ blockquote[data-type=recipe] ol li p {
 
 /* need clarification */
 .ChapterContentscc {
-  font-size: 10pt;
+  font-size: 10.5pt;
 }
 
 /* end note */
@@ -2145,8 +2145,8 @@ p.PageBreakpb + div.runfoot + div.runheadright + div.runheadleft + * {
 /* glossary definition */
 /* need clarification */
 .Definitiondef {
-  font-size: 10pt;
-  line-height: 13.2173913043pt;
+  font-size: 10.5pt;
+  line-height: 13.8782608696pt;
   text-indent: -24pt;
   margin: 0;
   margin-left: 24pt;

@@ -1415,7 +1415,7 @@ section[data-type=preface] p[class^=Epigraph-Non-Verse],
 section[data-type=preface].epigraph p[class^=Body-TextTx] {
   font-family: "ArnoPro-SmText", serif, "Noto";
   font-style: normal;
-  font-size: 10pt;
+  font-size: 10.5pt;
   text-align: left;
   margin-left: 52pt;
   margin-right: 36pt;
@@ -1435,7 +1435,7 @@ section[data-type=preface] p[class^=Epigraph-Source],
 *[class^=SourceSrc] {
   font-family: "ArnoPro-SmText", serif, "Noto";
   font-weight: 600;
-  font-size: 10pt;
+  font-size: 10.5pt;
   font-style: normal;
   text-align: right;
   margin-left: 36pt;
@@ -1483,7 +1483,7 @@ section[data-type=preface] > blockquote[data-type=epigraph] p,
 section[data-type=foreword] > blockquote[data-type=epigraph] p,
 section[data-type=introduction] > blockquote[data-type=epigraph] p {
   font-family: "ArnoPro-SmText", "Noto";
-  font-size: 10pt;
+  font-size: 10.5pt;
   line-height: 16pt;
   /* text-align: left;  <-- messing with FM epigraph source alignment*/
 }
