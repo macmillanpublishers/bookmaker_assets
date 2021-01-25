@@ -1219,18 +1219,18 @@ div[data-type=part] > p[class*=SubtitleSttl] {
 *[class*=Body-Text2Tx2],
 *[class*=Body-Text2-ContinuedTx2c] {
   font-family: "AromaNo2LTPro", sans-serif, "Noto";
-  font-size: 9.75pt;
+  font-size: 9.546875pt;
 }
 
 /* end note */
 *[class*=Computer-TextComp] {
   font-family: "SourceCodePro", monospace, "Noto";
-  font-size: 8.5pt;
+  font-size: 8.3425pt;
 }
 
 *[class*=Text-MessageTmg] {
   font-family: "SourceCodePro", sans-serif, "Noto";
-  font-size: 9.5pt;
+  font-size: 9.3425pt;
 }
 
 p[class*=Extract] {
@@ -1258,7 +1258,7 @@ div.computer > p[class*=A-HeadAhead],
 div.computer > pre[class*=A-HeadAhead] {
   page-break-after: avoid;
   page-break-inside: avoid;
-  font-size: 10.2pt;
+  font-size: 10.011pt;
   font-weight: bold;
   font-style: normal;
   text-align: center;
@@ -1281,7 +1281,7 @@ p.Design-NoteDn + div.runfoot + div.runheadright + div.runheadleft + p {
 div.computer p,
 div.computer li,
 div.computer pre {
-  font-size: 8.5pt;
+  font-size: 8.3425pt;
 }
 
 section[data-type=appendix].abouttheauthor p[class*=Body-Text]:first-of-type {
@@ -2370,12 +2370,12 @@ span[class^=smallcaps] {
 
 *[class*=cs-computerccom] {
   font-family: "SourceCodePro", monospace, "Noto";
-  font-size: 8.5pt;
+  font-size: 8.3425pt;
 }
 
 *[class*=cs-text-messagectm] {
   font-family: "SourceCodePro", sans-serif, "Noto";
-  font-size: 9.5pt;
+  font-size: 9.3425pt;
 }
 
 *[class*=cs-design-notecdn],
