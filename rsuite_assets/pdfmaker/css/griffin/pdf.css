@@ -2,5 +2,7 @@
 
 section[data-type="titlepage"] *[class*="Logo-PlacementLogo"] {
   background-image: url("https://raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images/griffin/logo.jpg");
-  background-size: 1in auto;
+  background-size: auto 0.75in;
+  height: 1in;
+  margin-bottom: auto;
 }
