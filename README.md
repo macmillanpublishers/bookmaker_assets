@@ -27,7 +27,7 @@ This subfolder contains files used during the PDF conversion process. This inclu
 
 ### css
 
-Most imprints are based on a core template called core_tor.css. This is the original template developed for the Tor.com novellas, that has been repurposed as the generic book template. When adding style support, you should determine if the style is specific to one imprint, in which case it would be added to the pdf.css file for that imprint, below the @import rule that imports the core_tor.css file; or, if the style should be applied to all imprints, then it should be added to core_tor.css via the SCSS subfiles.
+Most imprints are based on a core template called default_core.css (for pre-rsuite css, it's core_tor.css). This is the original template developed for the Tor.com novellas, that has been repurposed as the generic book template. When adding style support, you should determine if the style is specific to one imprint, in which case it would be added to the pdf.css file for that imprint, below the @import rule that imports the default_core.css file; or, if the style should be applied to all imprints, then it should be added to default_core.css via the SCSS subfiles.
 
 The SCSS components include a base.scss file that contains all the main definitions, separate files for each font, files for some layout tools (like adding baseline gridlines to check the design), and then separate files where all sizes and measurements are defined (like the gridheight, base font size, and so on). These variables are used in the base.scss file instead of hard-coded measurements, so that if we ever need to create a new variation on the template, we can simply redefine the size variables, and generate a new CSS file with a different name (e.g., novel.css).
 

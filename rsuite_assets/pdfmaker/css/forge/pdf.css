@@ -1,4 +1,4 @@
-@import url('../core_tor.css');
+@import url('../default_core.css');
 
 section[data-type="titlepage"] *[class*="Logo-PlacementLogo"] {
   background-image: url("https://raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images/forge/logo.jpg");

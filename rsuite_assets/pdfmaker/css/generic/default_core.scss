@@ -7,11 +7,11 @@
 $biggest: 18pt; //sizehalftitle sizepartnum
 $bigger: 16pt; //sizefst sizesubtitle sizeau sizetochead sizefmhead sizechaptitle
 $big: 14pt; //sizeacmh sizechapsubtitle sizeh1
-$normal: 12.25pt; //sizenormal sizechapnum sizeh2 sizeh3 sizeextracthead
+$normal: 12pt; //sizenormal sizechapnum sizeh2 sizeh3 sizeextracthead
 $small: 10pt; //sizetitlepagetext sizecopyright sizeepigraph sizedateline
 $smaller: 8.5pt; //sizecode sizecaption
 
-$gridheight: 16.5pt;
+$gridheight: 16pt;
 
 $pagewidth: 5in;
 $pageheight: 8in;
@@ -45,16 +45,16 @@ $sizeh1: $big;
 $sizeh2: $normal;
 $sizeh3: $normal;
 $sizenormal: $normal;
-$sizenormalalt: $normal * .8125;
-$sizecode: $normal * .71;
-$sizepoetry: $small; //sizeextract
-$sizeextract: 10.75pt;
+$sizenormalalt: 9.75pt;
+$sizecode: $smaller;
+$sizepoetry: 10.5pt; //sizeextract
+$sizeextract: 10.5pt;
 $sizeextracthead: $normal;
 $sizedateline: $small;
-$sizeepigraph: 10.75pt;
+$sizeepigraph: $small;
 $sizerunfoot: 9pt;
 $sizerunhead: $smaller;
-$sizecopyright: 9pt;
+$sizecopyright: $small;
 $sizefootnote: 9pt;
 $sizecaption: $smaller;
 $sizefigsrc: 7pt;
@@ -71,18 +71,19 @@ $logowidth: auto;
 
 $htmargintop: ($gridheight * 1);
 
-$ctmargintop: ($gridheight * 0.6875);
-$ctmarginbottom: ($gridheight * 3.8125);
+$ctmargintop: 11pt;
+$ctmarginbottom: 61pt;
 $comargintop: ($gridheight * 4);
 $cemargintop: ($gridheight * 2);
 $cemarginbottom: ($gridheight * 3);
-$prmargintop: $gridheight; //preface/frontmatter top margin
+$prmargintop: 16pt;
 
 $spacebreakheight: $gridheight;
 
 $familyrunhead: "ArnoPro-Caption", serif;
 $familybody: "ArnoPro", serif;
 $familyfootnote: "ArnoPro-SmText", serif;
+
 
 @import "../_modules/font_arnopro.scss";
 @import "../_modules/font_aroma.scss";
@@ -116,10 +117,6 @@ $familyfootnote: "ArnoPro-SmText", serif;
   }
 }
 
-section[data-type=preface],
-section[data-type=foreword] {
-  page: front; }
-
 figure.fullpage {
   margin-top: 0.55in;
   margin-inside: -1in;
@@ -127,28 +124,3 @@ figure.fullpage {
 
 img[src*="fullpage"] {
   margin-top: -1.65in; }
-
-section[data-type="copyright-page"] p {
-  line-height: $sizecopyright + 4;
-}
-
-section[data-type="dedication"] p:first-of-type,
-section[data-type="dedication"] h1[class*="Nonprinting"] + p[class*="Body-Text"],
-section[data-type="dedication"] h1[class*="ChapTitleNonprintingctnp"] + * {
-  margin-top: $gridheight * 4; }
-
-p[class*="Dateline"] {
-  font-weight: normal;
-  font-style: normal;
-  font-variant: small-caps;
-  font-variant: prince-opentype(smcp, onum);
-  text-align: center;
-  text-align-last: center;
-  em {
-    font-style: italic;
-  }
-
-  span.itali {
-    font-style: italic;
-  }
-}
