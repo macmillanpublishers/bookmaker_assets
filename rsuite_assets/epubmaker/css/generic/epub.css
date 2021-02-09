@@ -372,7 +372,8 @@ aside p.Main-HeadMHead,
 aside .A-HeadAhead,
 div.verse .TitleTtl,
 blockquote p.TitleTtl,
-blockquote p.Main-HeadMHead {
+blockquote p.Main-HeadMHead,
+.Verse-HeadVhead {
   text-indent: 0;
   font-style: italic;
   margin: 1em 0 0 0;
@@ -383,7 +384,8 @@ aside p.Main-HeadMHead,
 aside .A-HeadAhead,
 div.verse .TitleTtl,
 blockquote p.TitleTtl,
-blockquote p.Main-HeadMHead {
+blockquote p.Main-HeadMHead,
+.Verse-HeadVhead {
   font-size: 1em;
   background: #ccc;
   }
@@ -542,7 +544,8 @@ p.Epigraph-Non-VerseEpi {
   }
 
 p.Epigraph-SourceEpisrc,
-.SourceSrc {
+.SourceSrc,
+div.verse pre.Verse-SourceVsrc {
   text-align: right;
   text-indent: 0;
   font-style: normal;
@@ -707,6 +710,21 @@ span.cs-computerccom {
 .Body-Text2-ContinuedTx2c + .Body-Text2Tx2,
 .Body-Text2-ContinuedTx2c + .Body-Text2-ContinuedTx2c {
   margin-top: 0;
+  }
+
+.QuestionQues,
+.AnswerAns {
+  text-indent: 0;
+  margin-left: 1em;
+  }
+
+.QuestionQues {
+  margin-top: 1em;
+  font-weight: bold;
+  }
+
+.AnswerAns {
+  margin-bottom: 1em;
   }
 
 /*
@@ -1229,7 +1247,8 @@ div.verse .SubtitleSttl,
 blockquote .SubtitleSttl,
 aside .SubtitleSttl,
 table .SubtitleSttl,
-figure .SubtitleSttl {
+figure .SubtitleSttl,
+.Verse-HeadVhead {
   text-align: center;
   padding: .5em 0;
   }
@@ -1238,7 +1257,8 @@ aside .Main-HeadMHead,
 aside .A-HeadAhead,
 div.verse .TitleTtl,
 blockquote .TitleTtl,
-blockquote .Main-HeadMHead {
+blockquote .Main-HeadMHead,
+.Verse-HeadVhead {
   margin-top: 1em;
   margin-bottom: 1em;
   }
