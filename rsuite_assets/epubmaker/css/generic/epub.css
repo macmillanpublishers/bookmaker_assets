@@ -373,7 +373,7 @@ aside .A-HeadAhead,
 div.verse .TitleTtl,
 blockquote p.TitleTtl,
 blockquote p.Main-HeadMHead,
-.Verse-HeadVhead {
+div.verse .Verse-HeadVhead {
   text-indent: 0;
   font-style: italic;
   margin: 1em 0 0 0;
@@ -385,7 +385,7 @@ aside .A-HeadAhead,
 div.verse .TitleTtl,
 blockquote p.TitleTtl,
 blockquote p.Main-HeadMHead,
-.Verse-HeadVhead {
+div.verse .Verse-HeadVhead {
   font-size: 1em;
   background: #ccc;
   }
@@ -1248,7 +1248,7 @@ blockquote .SubtitleSttl,
 aside .SubtitleSttl,
 table .SubtitleSttl,
 figure .SubtitleSttl,
-.Verse-HeadVhead {
+div.verse .Verse-HeadVhead {
   text-align: center;
   padding: .5em 0;
   }
@@ -1258,7 +1258,7 @@ aside .A-HeadAhead,
 div.verse .TitleTtl,
 blockquote .TitleTtl,
 blockquote .Main-HeadMHead,
-.Verse-HeadVhead {
+div.verse .Verse-HeadVhead {
   margin-top: 1em;
   margin-bottom: 1em;
   }
