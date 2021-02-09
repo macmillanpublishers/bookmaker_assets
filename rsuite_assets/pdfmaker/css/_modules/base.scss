@@ -1534,6 +1534,7 @@ div.verse p[class*="Verse-Head"] {
   font-size: $sizeextracthead;
   margin-top: $gridheight;
   margin-bottom: $gridheight;
+  text-align: center;
   font-family: "ArnoPro", serif, "Noto";
   margin-left: -$textindent;
   text-indent: 0;
@@ -1597,8 +1598,8 @@ div.verse p[class*="Verse-Source"] {
   font-size: $sizepoetry;
   font-style: normal;
   text-align: right;
-  margin-left: $sizenormal * 3;
-  margin-right: $sizenormal * 3;
+  margin-left: $sizenormal * 6;
+  margin-right: 0;
   em, span.itali {
     break-inside: avoid;
   }
@@ -2133,8 +2134,12 @@ section[data-type="preface"].epigraph > header + div {
 .Speaker2Sp2,
 .QuestionQues {
   font-weight: 600;
-  text-transform: uppercase;
   margin-top: $gridheight;
+}
+
+.Speaker1Sp1,
+.Speaker2Sp2 {
+  text-transform: uppercase;
 }
 
 .Stage-DirectionsStdir {

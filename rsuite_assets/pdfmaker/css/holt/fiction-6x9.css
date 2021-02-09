@@ -1681,6 +1681,7 @@ div.verse p[class*=Verse-Head] {
   font-size: 11.2pt;
   margin-top: 14.4pt;
   margin-bottom: 14.4pt;
+  text-align: center;
   font-family: "ArnoPro", serif, "Noto";
   margin-left: -12pt;
   text-indent: 0;
@@ -1760,8 +1761,8 @@ div.verse p[class*=Verse-Source] {
   font-size: 10pt;
   font-style: normal;
   text-align: right;
-  margin-left: 33.6pt;
-  margin-right: 33.6pt;
+  margin-left: 67.2pt;
+  margin-right: 0;
 }
 div.verse pre[class*=Verse-Source] em, div.verse pre[class*=Verse-Source] span.itali,
 div.verse p[class*=Verse-Source] em,
@@ -2295,8 +2296,12 @@ section[data-type=preface].epigraph > header + div {
 .Speaker2Sp2,
 .QuestionQues {
   font-weight: 600;
-  text-transform: uppercase;
   margin-top: 14.4pt;
+}
+
+.Speaker1Sp1,
+.Speaker2Sp2 {
+  text-transform: uppercase;
 }
 
 .Stage-DirectionsStdir {

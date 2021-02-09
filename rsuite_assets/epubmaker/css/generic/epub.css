@@ -555,6 +555,10 @@ div.verse pre.Verse-SourceVsrc {
   margin-bottom: 1em;
   }
 
+div.verse pre.Verse-SourceVsrc {
+  margin-top: 1em;
+  }
+
 /*
 --------------------------------------------------
 CONTENTS PAGE
