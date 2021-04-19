@@ -766,8 +766,6 @@ section[data-type="glossary"] > h1,
 section[data-type="index"] > h1,
 section[data-type="bibliography"] > h1,
 section[data-type="conclusion"] > h1,
-section[data-type="illustration-credits"] > h1,
-section[data-type="permissions"] > h1,
 section[data-type="acknowledgments"] > h1 {
   font-size: $sizefmhead;
   line-height: $gridheight;
@@ -795,8 +793,6 @@ section[data-type="foreword"] > p[class*="SubtitleSttl"],
 section[data-type="introduction"] > p[class*="SubtitleSttl"],
 section[data-type="chapter"] > p[class*="SubtitleSttl"],
 section[data-type="appendix"] > p[class*="SubtitleSttl"],
-section[data-type="illustration-credits"] > p[class*="SubtitleSttl"],
-section[data-type="permissions"] > p[class*="SubtitleSttl"],
 section[data-type="afterword"] > p[class*="SubtitleSttl"],
 section[data-type="glossary"] > p[class*="SubtitleSttl"],
 section[data-type="index"] > p[class*="SubtitleSttl"],
@@ -828,8 +824,6 @@ section[data-type="preface"] > p[class*="SubtitleSttl"]:first-of-type,
 section[data-type="foreword"] > p[class*="SubtitleSttl"]:first-of-type,
 section[data-type="introduction"] > p[class*="SubtitleSttl"]:first-of-type,
 section[data-type="appendix"] > p[class*="SubtitleSttl"]:first-of-type,
-section[data-type="illustration-credits"] > p[class*="SubtitleSttl"]:first-of-type,
-section[data-type="permissions"] > p[class*="SubtitleSttl"]:first-of-type,
 section[data-type="afterword"] > p[class*="SubtitleSttl"]:first-of-type,
 section[data-type="glossary"] > p[class*="SubtitleSttl"]:first-of-type,
 section[data-type="index"] > p[class*="SubtitleSttl"]:first-of-type,
@@ -859,8 +853,6 @@ section[data-type="halftitlepage"] + section[data-type="chapter"],
 section[data-type="copyright-page"] + section[data-type="chapter"],
 section[data-type="dedication"] + section[data-type="chapter"],
 section[data-type="acknowledgments"] + section[data-type="chapter"],
-section[data-type="illustration-credits"] + section[data-type="chapter"],
-section[data-type="permissions"] + section[data-type="chapter"],
 nav[data-type="toc"] + section[data-type="chapter"],
 div[data-type="part"] + section[data-type="chapter"] {
   page-break-before: right;
@@ -924,8 +916,6 @@ section[data-type="glossary"],
 section[data-type="index"],
 section[data-type="bibliography"],
 section[data-type="conclusion"],
-section[data-type="illustration-credits"],
-section[data-type="permissions"],
 section[data-type="acknowledgments"] {
   page-break-before: right;
   counter-reset: footnote;
@@ -941,8 +931,6 @@ section[data-type="glossary"]:first-of-type,
 section[data-type="index"]:first-of-type,
 section[data-type="bibliography"]:first-of-type,
 section[data-type="conclusion"]:first-of-type,
-section[data-type="illustration-credits"]:first-of-type,
-section[data-type="permissions"]:first-of-type,
 section[data-type="acknowledgments"]:first-of-type {
   page-break-before: right;
 }
@@ -1154,8 +1142,7 @@ div.computer pre {
   font-size: $sizecode;
 }
 
-section[data-type="appendix"].abouttheauthor p[class*="Body-Text"]:first-of-type,
-section[data-type="illustration-credits"] p[class*="Body-Text"]:first-of-type {
+section[data-type="appendix"].abouttheauthor p[class*="Body-Text"]:first-of-type {
   text-indent: 0;
 }
 
@@ -1928,7 +1915,6 @@ img {
 }
 
 section[data-type="appendix"].abouttheauthor h1 + figure,
-section[data-type="illustration-credits"] h1 + figure,
 .abouttheauthor h1 + figure {
   margin-top: -($gridheight * 2);
   margin-bottom: 27pt;
@@ -1936,7 +1922,6 @@ section[data-type="illustration-credits"] h1 + figure,
 }
 
 section[data-type="appendix"].abouttheauthor h1 + figure img,
-section[data-type="illustration-credits"] h1 + figure img,
 .abouttheauthor figure img {
   max-height: 2in;
 }
