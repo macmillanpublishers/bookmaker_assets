@@ -2088,8 +2088,19 @@ span[data-type="footnote"] > span:first-of-type {
 *[class*="endnotetext"] p:first-of-type:before {
   content: counter(endnotes)"\2003";
   font-family: "ArnoPro", "Noto";
-    font-weight: 600;
-    display: inline-block;
+  font-weight: 600;
+  display: inline-block;
+  font-size: $sizesuperscript;
+  top: -0.6em;
+  vertical-align: top;
+  position: relative;
+}
+
+span.endnotereference {
+  font-size: $sizesuperscript;
+  top: -0.6em;
+  vertical-align: top;
+  position: relative;
 }
 
 /* chapter starts */
