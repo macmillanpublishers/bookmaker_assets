@@ -1484,6 +1484,7 @@ p[data-type="footnote"] {
   margin: 1em 0;
   }
 
+span.EndnoteReference,
 span.endnotereference {
   vertical-align: super;
   font-size: smaller;
