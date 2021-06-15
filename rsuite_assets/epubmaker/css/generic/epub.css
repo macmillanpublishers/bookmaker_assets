@@ -997,11 +997,14 @@ div.verse .Dedicationded {
     margin-left: 6em;
     text-indent: 0;
   }
-  div.verse pre[class*=-indent5Vrs],
-  div.verse pre.Verse1-DroplineV1drop,
-  div.verse pre.Verse2-DroplineV2drop {
+  div.verse pre[class*=-indent5Vrs] {
     margin-left: 7.5em;
     text-indent: 0;
+  }
+
+  div.verse pre.Verse1-DroplineV1drop,
+  div.verse pre.Verse2-DroplineV2drop {
+    text-indent: 7.5em;
   }
 /*
 --------------------------------------------------

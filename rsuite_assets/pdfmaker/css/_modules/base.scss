@@ -1452,6 +1452,8 @@ blockquote.looseextract > *[class*="Main-HeadMHead"],
 .Extract-HeadExthead {
   page-break-after: avoid;
   page-break-inside: avoid;
+  hyphens: none;
+  overflow-wrap: break-word;
 }
 
 blockquote[class*="EXTRACT-"] > *[class*="TitleTtl"],
@@ -1599,11 +1601,14 @@ div.verse pre[class*=-indent4Vrs] {
   text-indent: 0;
 }
 div.verse pre[class*=-indent5Vrs]:first-of-type,
-div.verse pre[class*=-indent5Vrs],
-div.verse pre.Verse1-DroplineV1drop,
-div.verse pre.Verse2-DroplineV2drop {
+div.verse pre[class*=-indent5Vrs] {
   margin-left: 4*$textindent;
   text-indent: 0;
+}
+
+div.verse pre.Verse1-DroplineV1drop,
+div.verse pre.Verse2-DroplineV2drop {
+  text-indent: 4*$textindent;
 }
 
 div.verse pre[class*="Verse-Source"],
