@@ -1448,15 +1448,19 @@ div[data-type="note"] > p[class*="B-HeadBhead"] {
 blockquote[class*="EXTRACT-"] > *[class*="TitleTtl"],
 blockquote[class*="EXTRACT-"] > *[class*="Main-HeadMHead"],
 blockquote.looseextract > *[class*="TitleTtl"],
-blockquote.looseextract > *[class*="Main-HeadMHead"] {
+blockquote.looseextract > *[class*="Main-HeadMHead"],
+.Extract-HeadExthead {
   page-break-after: avoid;
   page-break-inside: avoid;
+  hyphens: none;
+  overflow-wrap: break-word;
 }
 
 blockquote[class*="EXTRACT-"] > *[class*="TitleTtl"],
 blockquote[class*="EXTRACT-"] > *[class*="Main-HeadMHead"],
 blockquote.looseextract > *[class*="TitleTtl"],
 blockquote.looseextract > *[class*="Main-HeadMHead"],
+.Extract-HeadExthead,
 *[class*="HeadlineHdline"] {
   font-size: $sizeextracthead;
   line-height: $gridheight;
@@ -1470,7 +1474,8 @@ blockquote.looseextract > *[class*="Main-HeadMHead"],
 blockquote[class*="EXTRACT-"] > *[class*="TitleTtl"] + p,
 blockquote[class*="EXTRACT-"] > *[class*="Main-HeadMHead"] + p,
 blockquote.looseextract > *[class*="TitleTtl"] + p,
-blockquote.looseextract > *[class*="Main-HeadMHead"] + p {
+blockquote.looseextract > *[class*="Main-HeadMHead"] + p,
+.Extract-HeadExthead + p {
   text-indent: 0;
 }
 
@@ -1599,6 +1604,11 @@ div.verse pre[class*=-indent5Vrs]:first-of-type,
 div.verse pre[class*=-indent5Vrs] {
   margin-left: 4*$textindent;
   text-indent: 0;
+}
+
+div.verse pre.Verse1-DroplineV1drop,
+div.verse pre.Verse2-DroplineV2drop {
+  text-indent: 4*$textindent;
 }
 
 div.verse pre[class*="Verse-Source"],
