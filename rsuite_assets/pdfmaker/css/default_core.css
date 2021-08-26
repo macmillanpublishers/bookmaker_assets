@@ -1029,13 +1029,6 @@ section[data-type=chapter] > h1[class*=NumberNum] + p {
   margin-bottom: 7pt;
 }
 
-/* remove top margins from Dedication, FM Epigraph, and Copyright inserted CTNP */
-section[data-type=preface].epigraph h1[class*=ChapTitleNonprintingctnp] + *,
-section[data-type=copyright-page] h1[class*=ChapTitleNonprintingctnp] + *,
-section[data-type=dedication] h1[class*=ChapTitleNonprintingctnp] + * {
-  margin-top: 0;
-}
-
 section[data-type=chapter] h1[class*=TitleTtl] {
   font-size: 16pt;
   line-height: 19.2pt;
@@ -1061,6 +1054,17 @@ h1[class*=TitleTtl][data-autolabel=yes]:before {
 
 section[data-type=chapter] h1[class*=TitleTtl] + p {
   margin-top: 64pt;
+}
+
+section h1[class=Nonprinting] + *,
+div[data-type=part] h1[class=Nonprinting] + * {
+  margin-top: 80pt;
+}
+
+/* remove top margins from FM Epigraph, and Copyright */
+section[data-type=preface].epigraph h1[class=Nonprinting] + *,
+section[data-type=copyright-page] h1[class*=Nonprinting] + * {
+  margin-top: 0;
 }
 
 *[class*=Nonprinting] {
@@ -1386,7 +1390,7 @@ aside[data-type=sidebar] *[class*=Bullet-Level-1-ListBl1] {
 
 /* ---------------- DEDICATION and EPIGRAPH */
 section[data-type=dedication] p:first-of-type,
-section[data-type=dedication] h1[class*=Nonprinting] + p[class*=Body-Text] {
+section[data-type=dedication] h1[class=Nonprinting] + p[class*=Body-Text] {
   margin-top: 32pt;
 }
 
