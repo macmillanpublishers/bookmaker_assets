@@ -902,7 +902,12 @@ section[data-type="chapter"] h1[class*="TitleTtl"] + p {
 
 section h1[class="Nonprinting"] + *,
 div[data-type="part"] h1[class="Nonprinting"] + * {
-  margin-top: $gridheight * 5;
+  margin-top: $gridheight * 6;
+}
+
+section h1[class=Nonprinting] + figure,
+div[data-type=part] h1[class=Nonprinting] + figure {
+  margin-top: $gridheight * 4;
 }
 
 /* remove top margins from FM Epigraph, and Copyright */

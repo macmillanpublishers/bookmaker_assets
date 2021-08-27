@@ -1057,7 +1057,12 @@ section[data-type=chapter] h1[class*=TitleTtl] + p {
 
 section h1[class=Nonprinting] + *,
 div[data-type=part] h1[class=Nonprinting] + * {
-  margin-top: 75pt;
+  margin-top: 90pt;
+}
+
+section h1[class=Nonprinting] + figure,
+div[data-type=part] h1[class=Nonprinting] + figure {
+  margin-top: 60pt;
 }
 
 /* remove top margins from FM Epigraph, and Copyright */
