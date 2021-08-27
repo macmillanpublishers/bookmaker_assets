@@ -1055,7 +1055,9 @@ section[data-type=chapter] h1[class*=TitleTtl] + p {
 }
 
 section h1[class=Nonprinting] + *,
-div[data-type=part] h1[class=Nonprinting] + * {
+section h1[class=Nonprinting] + blockquote[data-type=epigraph],
+div[data-type=part] h1[class=Nonprinting] + *,
+div[data-type=part] h1[class=Nonprinting] + blockquote[data-type=epigraph] {
   margin-top: 93pt;
 }
 
