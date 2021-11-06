@@ -47,7 +47,7 @@ $sizeh3: $normal;
 $sizenormal: $normal;
 $sizenormalalt: $normal * .8125;
 $sizecode: $normal * .71;
-$sizepoetry: $small;
+$sizepoetry: 10.5pt;
 $sizeextract: 10.5pt;
 $sizeextracthead: $normal;
 
@@ -146,11 +146,17 @@ div.runheadright::after {
   font-style: normal;
 }
 
+.fullpage div.runheadleft::before,
+.fullpage div.runheadright::after {
+  content: "";
+}
+
 figure.fullpage {
   margin-top: 0.55in;
   margin-inside: -0.81in;
-  margin-outside: -0.69in; }
-
+  margin-outside: -0.69in;
+  height: 6in; }
+  
 img[src*="fullpage"] {
   margin-top: -1.4in; }
 
@@ -188,4 +194,9 @@ p[class*="Dateline"] {
   span.itali {
     font-style: italic;
   }
+}
+
+.Speaker2Sp2,
+.Dialogue2Dia2 {
+  margin-left: $gridheight;
 }
