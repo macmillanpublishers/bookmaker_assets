@@ -80,7 +80,7 @@ BASE STYLES
 */
 
 body {
-  font-size: medium;
+  font-size: 1em;
   line-height: 1.2em;
   margin-top: 1em;
   margin-left: 1em;
@@ -194,12 +194,12 @@ strong,
 sup,
 .supersup {
   vertical-align: super;
-  font-size: smaller;
+  font-size: .8333em;
   }
 sub,
 .subsub {
   vertical-align: sub;
-  font-size: smaller;
+  font-size: .8333em;
   }
 
 .spanstrikethroughcharactersstr {
@@ -1498,7 +1498,7 @@ p[data-type="footnote"] {
 span.EndnoteReference,
 span.endnotereference {
   vertical-align: super;
-  font-size: smaller;
+  font-size: .8333em;
   }
 
 /*
