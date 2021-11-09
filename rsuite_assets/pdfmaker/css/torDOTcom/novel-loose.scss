@@ -153,12 +153,12 @@ div.runheadright::after {
 
 figure.fullpage {
   margin-top: 0.55in;
-  margin-inside: -0.81in;
+  margin-inside: -0.82in;
   margin-outside: -0.69in;
   height: 6in; }
 
 // reverse engineered this measurement:
-//  -(margin-top + padding-top + .fullpage margin-top + mystery extra '9.7 pts') 
+//  -(margin-top + padding-top + .fullpage margin-top + mystery extra '9.7 pts')
 img[src*="fullpage"] {
   margin-top: -1.42in; }
 
