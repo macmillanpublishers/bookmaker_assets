@@ -1340,10 +1340,10 @@ section[data-type="preface"].epigraph {
 p[class^="Epigraph-Source"],
 *[class^="SourceSrc"],
 *[class^="Verse-SourceVsrc"] {
+  page-break-before: avoid;  
   em, span.itali {
     break-inside: avoid;
     page-break-inside: avoid;
-    page-break-before: avoid;
   }
 }
 
@@ -2399,18 +2399,26 @@ header {
   page-break-before: avoid;
 }
 
-.left {
+.left,
+p.left,
+pre.left {
   text-align: left;
   text-indent: 0;
 }
 
-.center {
+.center,
+p.center,
+pre.center {
   text-align: center;
+  text-align-last: center;
   text-indent: 0;
 }
 
-.right {
+.right,
+p.right,
+pre.right {
   text-align: right;
+  text-align-last: right;
   text-indent: 0;
 }
 
