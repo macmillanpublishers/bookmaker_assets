@@ -47,7 +47,7 @@ $sizeh3: $normal;
 $sizenormal: $normal;
 $sizenormalalt: $normal * .8125;
 $sizecode: $normal * .71;
-$sizepoetry: $small; //sizeextract
+$sizepoetry: 10.75pt;
 $sizeextract: 10.75pt;
 $sizeextracthead: $normal;
 $sizedateline: $small;
@@ -151,4 +151,9 @@ p[class*="Dateline"] {
   span.itali {
     font-style: italic;
   }
+}
+
+.Speaker2Sp2,
+.Dialogue2Dia2 {
+  margin-left: $gridheight;
 }
