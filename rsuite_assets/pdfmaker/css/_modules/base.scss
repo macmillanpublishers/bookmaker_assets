@@ -1256,7 +1256,7 @@ aside[data-type="box"] > p[class*="B-HeadBhead"] + p[class*="Body-Text"],
 aside[data-type="box"] > p[class*="TitleTtl"] + div.runfoot + div.runheadright + div.runheadleft + p[class*="Body-Text"],
 aside[data-type="box"] > p[class*="Main-HeadMHead"] + div.runfoot + div.runheadright + div.runheadleft + p[class*="Body-Text"],
 aside[data-type="box"] > p[class*="A-HeadAhead"] + div.runfoot + div.runheadright + div.runheadleft + p[class*="Body-Text"],
-aside[data-type="box"] > p[class*="B-HeadBhead"] + div.runfoot + div.runheadright + div.runheadleft + p[class*="Body-Text"]
+aside[data-type="box"] > p[class*="B-HeadBhead"] + div.runfoot + div.runheadright + div.runheadleft + p[class*="Body-Text"],
 aside[data-type="sidebar"] > p[class*="TitleTtl"] + p[class*="Body-Text"],
 aside[data-type="sidebar"] > p[class*="Main-HeadMHead"] + p[class*="Body-Text"],
 aside[data-type="sidebar"] > p[class*="A-HeadAhead"] + p[class*="Body-Text"],
@@ -1340,7 +1340,7 @@ section[data-type="preface"].epigraph {
 p[class^="Epigraph-Source"],
 *[class^="SourceSrc"],
 *[class^="Verse-SourceVsrc"] {
-  page-break-before: avoid;  
+  page-break-before: avoid;
   em, span.itali {
     break-inside: avoid;
     page-break-inside: avoid;
