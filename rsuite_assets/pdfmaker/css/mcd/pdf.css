@@ -2,7 +2,7 @@
 
 section[data-type="titlepage"] *[class*="Logo-PlacementLogo"] {
   background-image: url("https://raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images/mcd/logo.jpg");
-  background-size: auto 0.7in;
-  height: 0.75in;
+  background-size: auto 0.6in;
+  height: 0.65in;
   background-position: center center;
 }
