@@ -2,8 +2,8 @@
 
 section[data-type="titlepage"] *[class*="Logo-PlacementLogo"] {
   background-image: url("https://raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images/wednesday/logo.jpg");
-  background-size: auto 0.46in;
-  height: 0.50in;
+  background-size: auto 0.35in;
+  height: 0.40in;
   background-position: center center;
   margin-bottom: auto;
 }
