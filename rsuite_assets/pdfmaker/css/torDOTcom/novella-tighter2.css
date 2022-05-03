@@ -813,8 +813,9 @@ nav[data-type=toc] h1 {
   text-align: center;
 }
 
-nav[data-type=toc] ol {
+nav[data-type=toc] ol.toc {
   margin-left: 0;
+  margin-top: 23pt;
 }
 
 nav[data-type=toc] li {
@@ -825,16 +826,18 @@ nav[data-type=toc] li {
   list-style-type: none;
 }
 
-nav[data-type=toc] li.TOC-FrontmatterTocfm {
-  display: none;
-}
-
+nav[data-type=toc] li.TOC-FrontmatterTocfm,
 nav[data-type=toc] li.TOC-BackmatterTocbm {
   margin-left: 23pt;
   font-weight: normal;
   text-align: left;
 }
 
+nav[data-type=toc] li.TOC-FrontmatterTocfm {
+  margin-bottom: 7.6pt;
+}
+
+nav[data-type=toc] li.TOC-FrontmatterTocfm + li.TOC-ChapterTocch,
 nav[data-type=toc] li.TOC-ChapterTocch + li.TOC-BackmatterTocbm {
   margin-top: 15.2pt;
 }
@@ -848,6 +851,10 @@ nav[data-type=toc] a {
   color: cmyk(0%, 0%, 0%, 100%);
 }
 
+nav[data-type=toc] li a span[data-autolabel=yes]:before {
+  content: attr(data-labeltext) ". ";
+}
+
 nav[data-type=toc] li a:before {
   content: target-counter(attr(href), page);
   display: inline-block;
@@ -855,6 +862,7 @@ nav[data-type=toc] li a:before {
   text-align: left;
 }
 
+nav[data-type=toc] li.TOC-FrontmatterTocfm a:before,
 nav[data-type=toc] li.TOC-BackmatterTocbm a:before {
   content: normal;
 }
