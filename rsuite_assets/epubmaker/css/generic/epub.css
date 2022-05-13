@@ -209,9 +209,6 @@ sub,
 .chapopener {
   text-transform: uppercase;
 }
-.cs-computerccom {
-  font-family: "Courier New",monospace,Georgia,"Times New Roman",sans-serif;
-  }
 
 /*
 --------------------------------------------------
@@ -702,7 +699,9 @@ TEXT
 
 div.computer,
 p.Computer-TextComp,
-span.cs-computerccom {
+*[class^="Text-Message"],
+.cs-computerccom,
+.cs-text-messagectm {
   font-family: "Courier New",monospace,Georgia,"Times New Roman",sans-serif;
   }
 .Body-Text2Tx2,
@@ -732,6 +731,21 @@ span.cs-computerccom {
 
 .AnswerAns {
   margin-bottom: 1em;
+  }
+
+*[class*="Text-Message"] {
+  text-indent: 0;
+  margin-top: 1.2em;
+  }
+
+.Text-MessageTmg,
+.Text-Message1Tmg1 {
+  margin-right: 3.6em;
+  }
+
+.Text-Message2Tmg2 {
+  text-align: right;
+  margin-left: 4.8em;
   }
 
 /*

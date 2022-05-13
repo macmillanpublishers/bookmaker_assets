@@ -1252,9 +1252,24 @@ div[data-type=part] > p[class*=SubtitleSttl] {
   font-size: 8.5pt;
 }
 
-*[class*=Text-MessageTmg] {
+*[class*=Text-Message] {
   font-family: "SourceCodePro", sans-serif, "Noto";
   font-size: 9.5pt;
+  text-indent: 0;
+  margin-top: 15pt;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.Text-MessageTmg,
+.Text-Message1Tmg1 {
+  margin-right: 45pt;
+}
+
+.Text-Message2Tmg2 {
+  text-align: right;
+  text-align-last: right;
+  margin-left: 60pt;
 }
 
 p[class*=Extract] {
