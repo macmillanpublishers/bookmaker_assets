@@ -350,7 +350,7 @@ section[data-type="titlepage"] *[class*="Logo-PlacementLogo)"] {
 }
 
 section[data-type="copyright-page"] {
-  background-image: url("https://raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images/holt/HoltLogo30K.png");
+  background-image: url("#{$imagepath}/holt/HoltLogo30K.png");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: 20pt auto;

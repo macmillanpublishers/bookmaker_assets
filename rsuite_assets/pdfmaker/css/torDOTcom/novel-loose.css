@@ -159,7 +159,7 @@
   @footnotes {
     font-family: "ArnoPro-SmText", serif;
     font-size: 9pt;
-    background-image: url("https://raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images/generic/titlepage-rule.jpg");
+    background-image: url("S:/resources/bookmaker_scripts/bookmaker_assets/pdfmaker/images/generic/titlepage-rule.jpg");
     background-position: 0 0in;
     background-size: 60pt auto;
     background-repeat: no-repeat;
@@ -715,7 +715,7 @@ section[data-type=titlepage] p[class*=Author] {
 section[data-type=titlepage] p[class*=Author1Au1] {
   font-size: 16pt;
   padding-top: 40pt;
-  background-image: url("https://raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images/generic/titlepage-rule.jpg");
+  background-image: url("S:/resources/bookmaker_scripts/bookmaker_assets/pdfmaker/images/generic/titlepage-rule.jpg");
   background-size: 60pt auto;
   background-position: top;
   background-repeat: no-repeat;
@@ -733,7 +733,7 @@ section[data-type=titlepage] *[class*=ImprintImp] {
 
 section[data-type=titlepage] *[class*=Logo-PlacementLogo] {
   content: " ";
-  background-image: url("https://raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images/torDOTcom/logo.jpg");
+  background-image: url("S:/resources/bookmaker_scripts/bookmaker_assets/pdfmaker/images/torDOTcom/logo.jpg");
   background-position: center center;
   background-size: auto 0.5in;
   background-repeat: no-repeat;
@@ -2203,7 +2203,7 @@ p.Blank-Space-BreakBsbrk {
 }
 
 p.Blank-Space-BreakBsbrk {
-  background-image: url("https://raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images/generic/titlepage-rule.jpg");
+  background-image: url("S:/resources/bookmaker_scripts/bookmaker_assets/pdfmaker/images/generic/titlepage-rule.jpg");
   background-size: 60pt auto;
 }
 
@@ -2213,19 +2213,19 @@ p.Blank-Space-Break2Bsbrk2 {
 }
 
 p.Ornamental-Space-BreakOsbrk {
-  background-image: url("https://raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images/generic/orn.jpg");
+  background-image: url("S:/resources/bookmaker_scripts/bookmaker_assets/pdfmaker/images/generic/orn.jpg");
   background-size: 20.5pt auto;
   height: 16pt;
 }
 
 div[data-type=part] > p.Ornamental-Space-BreakOsbrk,
 div[data-type=part] > p.Ornamental-Space-Break2Osbrk2 {
-  background-image: url("https://raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images/generic/titlepage-rule.jpg");
+  background-image: url("S:/resources/bookmaker_scripts/bookmaker_assets/pdfmaker/images/generic/titlepage-rule.jpg");
   background-size: 60pt auto;
 }
 
 p.Ornamental-Space-Break2Osbrk2 {
-  background-image: url("https://raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images/generic/orn-bull.jpg");
+  background-image: url("S:/resources/bookmaker_scripts/bookmaker_assets/pdfmaker/images/generic/orn-bull.jpg");
   background-size: 21.6pt auto;
   height: 16pt;
 }

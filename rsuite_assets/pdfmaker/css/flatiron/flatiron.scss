@@ -137,7 +137,7 @@ below this point, flatiron specific items
 }
 
 section[data-type="titlepage"] *[class*="Logo-PlacementLogo"] {
-  background-image: url("https://raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images/flatiron/logo.jpg");
+  background-image: url("#{$imagepath}/flatiron/logo.jpg");
   background-position: center center;
   background-size: auto 0.65in;
   height: 0.7in;

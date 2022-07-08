@@ -1,7 +1,7 @@
 @import url('../default_core.css');
 
 section[data-type="titlepage"] *[class*="Logo-PlacementLogo"] {
-  background-image: url("https://raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images/fsg/logo.jpg");
+  background-image: url("S:/resources/bookmaker_scripts/bookmaker_assets/pdfmaker/images/fsg/logo.jpg");
   background-position: center center;
   background-size: auto 0.65in;
   height: 0.7in;

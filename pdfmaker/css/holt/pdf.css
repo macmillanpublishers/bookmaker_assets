@@ -395,7 +395,7 @@ section[data-type="preface"] [class*="AdCardMainHeadacmh"] {
 
 section[data-type="titlepage"] *[class*="TitlepageLogologo"] {
   content: " ";
-  background-image: url("https://raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images/holt/logo.jpg");
+  background-image: url("S:/resources/bookmaker_scripts/bookmaker_assets/pdfmaker/images/holt/logo.jpg");
   background-size: auto 0.5in;
   height: 0.55in;
   background-repeat: no-repeat;
@@ -448,7 +448,7 @@ h1 + *[class*="TitlepageSeriesTitleser"] {
 *[class="TitlepageBookTitletit"] + *[class*="TitlepageSeriesTitleser"] {
   padding-top: 14pt;
   margin-top: 11pt;
-  background-image: url("https://raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images/generic/titlepage-rule.jpg");
+  background-image: url("S:/resources/bookmaker_scripts/bookmaker_assets/pdfmaker/images/generic/titlepage-rule.jpg");
   background-size: 80.4pt auto;
   background-position: top;
   background-repeat: no-repeat; }
@@ -482,7 +482,7 @@ section[data-type="titlepage"] *[class*="TitlepageImprintLineimp"] {
   text-indent: 0; }
 
 section[data-type="copyright-page"] p:first-of-type {
-  background-image: url("https://raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images/holt/HoltLogo30K.png");
+  background-image: url("S:/resources/bookmaker_scripts/bookmaker_assets/pdfmaker/images/holt/HoltLogo30K.png");
   background-position: center top;
   background-size: 25pt auto;
   background-repeat: no-repeat;
@@ -796,7 +796,7 @@ div[data-type="part"] h1[class*="PartNumberpn"] {
   text-transform: capitalize;
   font-variant: small-caps;
   font-variant: prince-opentype(smcp, onum);
-  background-image: url("https://raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images/generic/titlepage-rule.jpg");
+  background-image: url("S:/resources/bookmaker_scripts/bookmaker_assets/pdfmaker/images/generic/titlepage-rule.jpg");
   background-size: 45.75pt auto;
   background-position: bottom;
   background-repeat: no-repeat; }
@@ -1088,24 +1088,24 @@ p.SpaceBreakwithALTOrnamentorn2 {
 /*not in Meryl's nf large design
 p.SpaceBreak,
 p.SpaceBreak-1-Linels1 {
-  background-image: url("https://raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images/generic/titlepage-rule.jpg");
+  background-image: url("S:/resources/bookmaker_scripts/bookmaker_assets/pdfmaker/images/generic/titlepage-rule.jpg");
   background-size: 60pt auto; }
 */
 
 p.PartOrnamentporn,
 p.ChapOrnamentcorn,
 p.ChapOrnamentALTcorn2 {
-  background-image: url("https://raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images/generic/titlepage-rule.jpg");
+  background-image: url("S:/resources/bookmaker_scripts/bookmaker_assets/pdfmaker/images/generic/titlepage-rule.jpg");
   background-size: 60pt auto; }
 
 p.SpaceBreakOrnamentorn,
 p.SpaceBreakwithOrnamentorn {
-  background-image: url("https://raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images/generic/orn.jpg");
+  background-image: url("S:/resources/bookmaker_scripts/bookmaker_assets/pdfmaker/images/generic/orn.jpg");
   background-size: 20.5pt auto;
   height: 15.5pt; }
 
 p.SpaceBreakwithALTOrnamentorn2 {
-  background-image: url("https://raw.githubusercontent.com/macmillanpublishers/bookmaker_assets/master/pdfmaker/images/generic/orn-bull.jpg");
+  background-image: url("S:/resources/bookmaker_scripts/bookmaker_assets/pdfmaker/images/generic/orn-bull.jpg");
   background-size: 21.6pt auto;
   height: 15.5pt; }
 
