@@ -1479,6 +1479,15 @@ section[data-type=preface].epigraph p[class^=Body-TextTx] {
   text-indent: 0;
 }
 
+section[data-type=dedication] p[class^=Epigraph-Non-Verse] + div.runfoot + div.runheadright + div.runheadleft + p[class^=Epigraph-Non-Verse],
+section[data-type=preface].epigraph p[class^=Epigraph-Non-Verse] + div.runfoot + div.runheadright + div.runheadleft + p[class^=Epigraph-Non-Verse],
+section[data-type=preface].epigraph p[class^=Body-TextTx] + div.runfoot + div.runheadright + div.runheadleft + p[class^=Body-TextTx],
+section[data-type=dedication] p[class^=Epigraph-Non-Verse] + p[class^=Epigraph-Non-Verse],
+section[data-type=preface].epigraph p[class^=Epigraph-Non-Verse] + p[class^=Epigraph-Non-Verse],
+section[data-type=preface].epigraph p[class^=Body-TextTx] + p[class^=Body-TextTx] {
+  text-indent: 12pt;
+}
+
 section[data-type=dedication] p[class^=Epigraph-Source],
 section[data-type=preface] p[class^=Epigraph-Source],
 *[class^=SourceSrc] {
@@ -1579,17 +1588,37 @@ section[data-type=titlepage] p[class^=Epigraph-Non-Verse],
 section[data-type=halftitlepage] p[class^=Epigraph-Non-Verse],
 section[data-type=copyright-page] p[class^=Epigraph-Non-Verse] {
   margin-left: 0;
+  text-indent: 0;
   page-break-inside: auto;
+}
+
+section[data-type=chapter] p[class^=Epigraph-Non-Verse] + div.runfoot + div.runheadright + div.runheadleft + p[class^=Epigraph-Non-Verse],
+div[data-type=part] p[class^=Epigraph-Non-Verse] + div.runfoot + div.runheadright + div.runheadleft + p[class^=Epigraph-Non-Verse],
+section[data-type=chapter] p[class^=Epigraph-Non-Verse] + div.runfoot + div.runheadright + div.runheadleft + p[class^=Epigraph-Non-Verse],
+section[data-type=foreword] p[class^=Epigraph-Non-Verse] + div.runfoot + div.runheadright + div.runheadleft + p[class^=Epigraph-Non-Verse],
+section[data-type=introduction] p[class^=Epigraph-Non-Verse] + div.runfoot + div.runheadright + div.runheadleft + p[class^=Epigraph-Non-Verse],
+section[data-type=titlepage] p[class^=Epigraph-Non-Verse] + div.runfoot + div.runheadright + div.runheadleft + p[class^=Epigraph-Non-Verse],
+section[data-type=halftitlepage] p[class^=Epigraph-Non-Verse] + div.runfoot + div.runheadright + div.runheadleft + p[class^=Epigraph-Non-Verse],
+section[data-type=copyright-page] p[class^=Epigraph-Non-Verse] + div.runfoot + div.runheadright + div.runheadleft + p[class^=Epigraph-Non-Verse],
+section[data-type=chapter] p[class^=Epigraph-Non-Verse] + p[class^=Epigraph-Non-Verse],
+div[data-type=part] p[class^=Epigraph-Non-Verse] + p[class^=Epigraph-Non-Verse],
+section[data-type=chapter] p[class^=Epigraph-Non-Verse] + p[class^=Epigraph-Non-Verse],
+section[data-type=foreword] p[class^=Epigraph-Non-Verse] + p[class^=Epigraph-Non-Verse],
+section[data-type=introduction] p[class^=Epigraph-Non-Verse] + p[class^=Epigraph-Non-Verse],
+section[data-type=titlepage] p[class^=Epigraph-Non-Verse] + p[class^=Epigraph-Non-Verse],
+section[data-type=halftitlepage] p[class^=Epigraph-Non-Verse] + p[class^=Epigraph-Non-Verse],
+section[data-type=copyright-page] p[class^=Epigraph-Non-Verse] + p[class^=Epigraph-Non-Verse] {
+  text-indent: 12pt;
 }
 
 section[data-type=chapter] p[class^=Epigraph-Source],
 div[data-type=part] p[class^=Epigraph-Source],
-section[data-type=chapter] p[class^=Epigraph-Source],
 section[data-type=foreword] p[class^=Epigraph-Source],
 section[data-type=introduction] p[class^=Epigraph-Source],
 section[data-type=titlepage] p[class^=Epigraph-Source],
 section[data-type=halftitlepage] p[class^=Epigraph-Source],
-section[data-type=copyright-page] p[class^=Epigraph-Source] {
+section[data-type=copyright-page] p[class^=Epigraph-Source],
+section[data-type=acknowledgments] p[class^=Epigraph-Source] {
   text-align: right;
   font-weight: 600;
   /*page-break-before: avoid;*/
@@ -1599,22 +1628,22 @@ section[data-type=copyright-page] p[class^=Epigraph-Source] {
 }
 section[data-type=chapter] p[class^=Epigraph-Source] em,
 div[data-type=part] p[class^=Epigraph-Source] em,
-section[data-type=chapter] p[class^=Epigraph-Source] em,
 section[data-type=foreword] p[class^=Epigraph-Source] em,
 section[data-type=introduction] p[class^=Epigraph-Source] em,
 section[data-type=titlepage] p[class^=Epigraph-Source] em,
 section[data-type=halftitlepage] p[class^=Epigraph-Source] em,
-section[data-type=copyright-page] p[class^=Epigraph-Source] em {
+section[data-type=copyright-page] p[class^=Epigraph-Source] em,
+section[data-type=acknowledgments] p[class^=Epigraph-Source] em {
   break-inside: avoid;
 }
 section[data-type=chapter] p[class^=Epigraph-Source] span.itali,
 div[data-type=part] p[class^=Epigraph-Source] span.itali,
-section[data-type=chapter] p[class^=Epigraph-Source] span.itali,
 section[data-type=foreword] p[class^=Epigraph-Source] span.itali,
 section[data-type=introduction] p[class^=Epigraph-Source] span.itali,
 section[data-type=titlepage] p[class^=Epigraph-Source] span.itali,
 section[data-type=halftitlepage] p[class^=Epigraph-Source] span.itali,
-section[data-type=copyright-page] p[class^=Epigraph-Source] span.itali {
+section[data-type=copyright-page] p[class^=Epigraph-Source] span.itali,
+section[data-type=acknowledgments] p[class^=Epigraph-Source] span.itali {
   break-inside: avoid;
 }
 

@@ -249,10 +249,12 @@ H1
 --------------------------
 */
 
+/* adding selector for 1st child h1.Numbers to style Nums without titles */
 h1,
 .A-HeadAhead,
 .TitleTtl,
-.Main-HeadMHead {
+.Main-HeadMHead,
+div.chapter > h1.NumberNum:first-child {
   text-indent: 0;
   font-size: 1.5em;
   line-height: 1.25em;
@@ -288,7 +290,8 @@ div[data-type="part"] > h1.TitleTtl,
 div[data-type="part"] > h1.Main-HeadMHead,
 div.chapter > h1.A-HeadAhead,
 div.chapter > h1.TitleTtl,
-div.chapter > h1.Main-HeadMHead {
+div.chapter > h1.Main-HeadMHead,
+div.chapter > h1.NumberNum:first-child {
   margin-bottom: 3.00em;
   }
 
@@ -542,6 +545,14 @@ p.Epigraph-VerseEpiv,
 p.Epigraph-Non-VerseEpi {
   font-style: italic;
   }
+
+p.Epigraph-Non-VerseEpi {
+  text-indent: 0;
+}
+
+p.Epigraph-Non-VerseEpi + p.Epigraph-Non-VerseEpi {
+  text-indent: 1.5em;
+}
 
 p.Epigraph-SourceEpisrc,
 .SourceSrc,
@@ -909,7 +920,7 @@ blockquote[data-type="letter"] .ClosingClos + .SignatureSig {
 
 /*
 --------------------------------------------------
-SCREENPLAY
+SCREENPLAY / SPEAKER / DIALOGUE
 --------------------------------------------------
 */
 .ScreenplayDramatisPersonaedp,
@@ -952,6 +963,66 @@ SCREENPLAY
 .ScreenplayTextsptx {
   text-indent: 1.5em;
   }
+
+.Speaker1Sp1:first-of-type,
+.Speaker2Sp2:first-of-type,
+.Stage-DirectionsStdir:first-of-type,
+.Dialogue1Dia1:first-of-type,
+.Dialogue2Dia2:first-of-type,
+.Speaker1Sp1,
+.Speaker2Sp2,
+.Stage-DirectionsStdir,
+.Dialogue1Dia1,
+.Dialogue2Dia2 {
+  /* margin-left: 1em; */
+  margin-right: 1em;
+  text-indent: 0;
+}
+
+.Speaker1Sp1,
+.Speaker2Sp2 {
+  font-weight: bold;
+  margin-top: 1em;
+  text-align: left;
+}
+
+.Speaker1Sp1,
+.Speaker2Sp2 {
+  text-transform: uppercase;
+}
+/* .Speaker2Sp2,
+.Dialogue2Dia2 {
+  margin-left: 24pt;
+} */
+.Stage-DirectionsStdir {
+  text-indent: 0;
+  font-style: italic;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.Speaker1Sp1 + .Dialogue1Dia1,
+.Speaker2Sp2 + .Dialogue2Dia2,
+.Speaker2Sp2 + .Dialogue1Dia1,
+.Speaker1Sp1 + .Dialogue2Dia2 {
+  margin-top: 0;
+}
+
+.Dialogue1Dia1 + *,
+.Dialogue2Dia2 + * {
+  margin-top: 1em;
+}
+
+.Dialogue1Dia1 + .Speaker1Sp1,
+.Dialogue2Dia2 + .Speaker2Sp2,
+.Dialogue1Dia1 + .Speaker2Sp2,
+.Dialogue2Dia2 + .Speaker1Sp1 {
+    margin-top: .5em;
+}
+
+pre.Speaker1Sp1,
+pre.Speaker2Sp2 {
+  margin-bottom: 0;
+}
 
 /*
 --------------------------------------------------
