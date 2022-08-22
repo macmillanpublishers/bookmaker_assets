@@ -249,12 +249,10 @@ H1
 --------------------------
 */
 
-/* adding selector for 1st child h1.Numbers to style Nums without titles */
 h1,
 .A-HeadAhead,
 .TitleTtl,
-.Main-HeadMHead,
-div.chapter > h1.NumberNum:first-child {
+.Main-HeadMHead {
   text-indent: 0;
   font-size: 1.5em;
   line-height: 1.25em;
@@ -268,6 +266,16 @@ h1.NumberNum {
   letter-spacing: .2em;
   padding: .5em;
   margin-top: 0;
+  }
+
+/* adding selector for 1st child h1.Numbers: to style Nums without titles, as titles */
+div.chapter > h1.NumberNum:first-child {
+  text-transform: none;
+  letter-spacing: normal;
+  padding: 0;
+  text-indent: 0;
+  font-size: 1.5em;
+  line-height: 1.25em;
   }
 
 p.NumberNum {
