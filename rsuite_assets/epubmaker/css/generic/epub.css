@@ -276,6 +276,7 @@ div.chapter > h1.NumberNum:first-child {
   text-indent: 0;
   font-size: 1.5em;
   line-height: 1.25em;
+  margin-top: .5em;
   }
 
 p.NumberNum {
