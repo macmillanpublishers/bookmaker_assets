@@ -1045,7 +1045,11 @@ section[data-type=chapter] > h1[class*=NumberNum] {
 
 section[data-type=chapter] > h1[class*=NumberNum] + p {
   margin-top: 15pt;
-  margin-bottom: 7pt;
+  margin-bottom: 7.5pt;
+}
+
+section[data-type=chapter] > h1[class*=NumberNum] + p[class*=Body-Text] {
+  margin-bottom: 0;
 }
 
 section[data-type=chapter] h1[class*=TitleTtl] {
