@@ -899,7 +899,11 @@ section[data-type="chapter"] > h1[class*="NumberNum"] {
 
 section[data-type="chapter"] > h1[class*="NumberNum"] + p {
   margin-top: $gridheight;
-  margin-bottom: 7pt;
+  margin-bottom: $gridheight/2;
+}
+
+section[data-type="chapter"] > h1[class*="NumberNum"] + p[class*="Body-Text"] {
+  margin-bottom: 0;
 }
 
 section[data-type="chapter"] h1[class*="TitleTtl"] {
