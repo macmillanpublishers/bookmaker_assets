@@ -2997,17 +2997,29 @@ section[data-type=titlepage] *[class*=Author] {
   string-set: author content();
 }
 
-section[data-type=titlepage] *[class*="Logo-PlacementLogo)"] {
-  background-image: none;
+section[data-type=titlepage] *[class*=Logo-PlacementLogo] {
+  background-image: url("S:/resources/bookmaker_scripts/bookmaker_assets/pdfmaker/images/holt/logo_notext.jpg");
+  background-size: auto 0.4in;
+  height: 0.45in;
+  background-position: center center;
+  margin-bottom: auto;
 }
 
 section[data-type=copyright-page] {
-  background-image: url("S:/resources/bookmaker_scripts/bookmaker_assets/pdfmaker/images/holt/HoltLogo30K.png");
+  background-image: url("S:/resources/bookmaker_scripts/bookmaker_assets/pdfmaker/images/holt/logo.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: 20pt auto;
   padding-top: 34pt;
   float: bottom;
+}
+
+section[data-type=copyright-page] span.small_logo {
+  content: url("S:/resources/bookmaker_scripts/bookmaker_assets/pdfmaker/images/holt/logo_notext.jpg");
+  max-height: 9.2pt;
+  vertical-align: top;
+  padding: 0 0 0 1pt;
+  margin: 0;
 }
 
 nav[data-type=toc] {

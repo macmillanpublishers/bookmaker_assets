@@ -27,6 +27,20 @@ function moveIllustrationSource()
   };
 };
 
+function addClassToTxt(selector, targetstr, newclass)
+{
+  var targetparas = document.querySelectorAll(selector);
+  //   console.log(targetparas.length);
+  for (var k = 0; targetparas.length > k; k++) {
+    if (targetparas[k].innerHTML.indexOf(targetstr) >= 0){
+      //     console.log(targetparas[k].innerHTML);
+      var newStr = targetparas[k].innerHTML.replace(targetstr, "<span class='"+newclass+"'>"+targetstr+"</span>");
+      targetparas[k].innerHTML = newStr;
+
+    }
+  }
+}
+
 function addRunningElements() {
   var allParas = document.getElementsByTagName('p');
   for (var q = 0; allParas.length > q; q++) {
@@ -122,6 +136,7 @@ function fullpageFigures() {
 window.onload = function() {
   moveIllustrationSource();
   addRunningElements();
+  addClassToTxt("section[data-type='copyright-page'] p", "[Henry Holt logo]", "small_logo");
   fullpageFigures();
 };
 
