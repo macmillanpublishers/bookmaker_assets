@@ -72,6 +72,10 @@ function addRunningElements() {
         var sectionHead = section.getElementsByClassName('TitleTtl')[0].textContent;
       } else if (section.getElementsByClassName('NumberNum')[0] != null) {
         var sectionHead = section.getElementsByClassName('NumberNum')[0].textContent;
+      } else if (section.querySelector("header > h1") != null) {
+        // capture chap head names for chaps with no printed title
+        //   though not ideal for every use-case, this is consistent with ebook ncx, and easily user customizable
+        var sectionHead = section.querySelector("header > h1").textContent;
       };
       if (sectionHead.length < 4 && sectionHead.match(/^[0-9]+$/) != null) {
         sectionHead = "Chapter " + sectionHead;
