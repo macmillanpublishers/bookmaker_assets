@@ -1131,6 +1131,7 @@ div[data-type="part"] > p[class*="SubtitleSttl"] {
   font-size: $sizecode + 1;
   text-indent: 0;
   margin-top: $gridheight;
+  margin-bottom: $gridheight;
   margin-left: 0;
   margin-right: 0;
 }

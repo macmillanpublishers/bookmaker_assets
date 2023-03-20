@@ -1268,6 +1268,7 @@ div[data-type=part] > p[class*=SubtitleSttl] {
   font-size: 9.165pt;
   text-indent: 0;
   margin-top: 15pt;
+  margin-bottom: 15pt;
   margin-left: 0;
   margin-right: 0;
 }
@@ -1476,8 +1477,7 @@ section[data-type=preface].epigraph p[class^=Body-TextTx] {
 
 section[data-type=dedication] p[class^=Epigraph-Non-Verse],
 section[data-type=preface].epigraph p[class^=Epigraph-Non-Verse],
-section[data-type=preface].epigraph p[class^=Body-TextTx] {
-  /*edit 7*/
+section[data-type=preface].epigraph p[class^=Body-TextTx] { /*edit 7*/
   margin-left: 36pt;
   text-indent: 0;
 }
