@@ -98,23 +98,7 @@ $familyfootnote: "ArnoPro-SmText", serif;
 
 /*@import "../_modules/gridlines.scss";
 */
-@page part {
-  @top-center {
-    vertical-align: bottom;
-  }
-}
 
-@page chapter {
-  @top-center {
-    vertical-align: bottom;
-  }
-}
-
-@page front {
-  @top-center {
-    vertical-align: bottom;
-  }
-}
 
 section[data-type=preface],
 section[data-type=foreword] {

@@ -101,6 +101,7 @@ $familyfootnote: "ArnoPro-SmText", serif;
 */
 @page part {
   @top-center {
+    vertical-align: baseline;
   }
   @bottom-center {
     content: normal;
@@ -109,6 +110,7 @@ $familyfootnote: "ArnoPro-SmText", serif;
 
 @page chapter {
   @top-center {
+    vertical-align: baseline;
   }
   @bottom-center {
     content: normal;
@@ -117,6 +119,7 @@ $familyfootnote: "ArnoPro-SmText", serif;
 
 @page front {
   @top-center {
+    vertical-align: baseline;
   }
 }
 

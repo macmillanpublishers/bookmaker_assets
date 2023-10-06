@@ -1,4 +1,4 @@
-/* TO COMPILE: $ sass novella.scss pdf.css */
+/* TO COMPILE: $ sass novella-tighter2.scss novella-tighter2.css */
 
 /* GLOBAL VARIABLES */
 @import "../_modules/vars_global.scss";
@@ -7,11 +7,11 @@
 $biggest: 18pt; //sizehalftitle sizepartnum
 $bigger: 16pt; //sizefst sizesubtitle sizeau sizetochead sizefmhead sizechaptitle
 $big: 14pt; //sizeacmh sizechapsubtitle sizeh1
-$normal: 12pt; //sizenormal sizechapnum sizeh2 sizeh3 sizeextracthead
+$normal: 11.5pt; //sizenormal sizechapnum sizeh2 sizeh3 sizeextracthead
 $small: 10pt; //sizetitlepagetext sizecopyright sizeepigraph sizedateline
 $smaller: 8.5pt; //sizecode sizecaption
 
-$gridheight: 16pt;
+$gridheight: 15.2pt;
 
 $pagewidth: 5in;
 $pageheight: 8in;
@@ -45,16 +45,16 @@ $sizeh1: $big;
 $sizeh2: $normal;
 $sizeh3: $normal;
 $sizenormal: $normal;
-$sizenormalalt: 9.75pt;
-$sizecode: $smaller;
-$sizepoetry: 10.5pt; //sizeextract
-$sizeextract: 10.5pt;
+$sizenormalalt: $normal * .8125;
+$sizecode: $normal * .71;
+$sizepoetry: 10.5pt;
+$sizeextract: 10.5pt;;
 $sizeextracthead: $normal;
 $sizedateline: $small;
-$sizeepigraph: $small;
+$sizeepigraph: 10.5pt;;
 $sizerunfoot: 9pt;
 $sizerunhead: $smaller;
-$sizecopyright: $small;
+$sizecopyright: 9pt;
 $sizefootnote: 9pt;
 $sizecaption: $smaller;
 $sizefigsrc: 7pt;
@@ -83,7 +83,6 @@ $spacebreakheight: $gridheight;
 $familyrunhead: "ArnoPro-Caption", serif;
 $familybody: "ArnoPro", serif;
 $familyfootnote: "ArnoPro-SmText", serif;
-
 
 @import "../_modules/font_arnopro.scss";
 @import "../_modules/font_aroma.scss";

@@ -1,5 +1,3 @@
-/* TO COMPILE: $ sass novella.scss pdf.css */
-
 /* GLOBAL VARIABLES */
 @import "../_modules/vars_global.scss";
 
@@ -26,11 +24,11 @@ $insidemargin: 63pt;
 $textindent: 12pt;
 
 $sizetitle: 25pt;
-$sizesubtitle: $bigger; /*$big2 * 1.625*/
+$sizesubtitle: $bigger;
 $sizeau: $bigger;
 $sizetitlepagetext: $small;
 $sizefst: $bigger;
-$sizefsqs: 10.5pt; /* normal * o.875 */
+$sizefsqs: 10.5pt;
 $sizeacmh: $big;
 $sizehalftitle: $biggest;
 $sizetochead: $bigger;
@@ -83,28 +81,3 @@ $spacebreakheight: $gridheight;
 $familyrunhead: "ArnoPro-Caption", serif;
 $familybody: "ArnoPro", serif;
 $familyfootnote: "ArnoPro-SmText", serif;
-
-
-@import "../_modules/font_arnopro.scss";
-@import "../_modules/font_aroma.scss";
-@import "../_modules/font_minionpro.scss";
-@import "../_modules/font_myriadpro.scss";
-@import "../_modules/font_sourcecodepro.scss";
-@import "../_modules/font_timesnewroman.scss";
-@import "../_modules/font_noto.scss";
-@import "../_modules/font_berrangerhanditc.scss";
-@import "../_modules/font_feltpencom.scss";
-
-@import "../_modules/base.scss";
-
-/*@import "../_modules/gridlines.scss";
-*/
-
-
-figure.fullpage {
-  margin-top: 0.55in;
-  margin-inside: -1in;
-  margin-outside: -0.75in; }
-
-img[src*="fullpage"] {
-  margin-top: -1.65in; }

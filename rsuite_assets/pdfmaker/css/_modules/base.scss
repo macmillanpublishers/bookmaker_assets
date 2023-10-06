@@ -44,6 +44,7 @@
 
 @page part {
   @top-center {
+    vertical-align: bottom;
     @include runhead
   }
   @bottom-center {
@@ -93,6 +94,7 @@
 
 @page chapter {
   @top-center {
+    vertical-align: bottom;
     @include runhead
   }
   @bottom-center {
@@ -140,6 +142,7 @@
 @page front {
   @top-center {
     content: normal;
+    vertical-align: bottom;
     @include runhead
   }
   @bottom-center {
@@ -709,7 +712,7 @@ nav[data-type="toc"] li.TOC-BackmatterTocbm {
 }
 
 nav[data-type=toc] li.TOC-FrontmatterTocfm {
-  margin-bottom: ($gridheight / 2);
+  margin-bottom: calc($gridheight / 2);
 }
 
 nav[data-type=toc] li.TOC-FrontmatterTocfm + li.TOC-ChapterTocch,
@@ -899,7 +902,7 @@ section[data-type="chapter"] > h1[class*="NumberNum"] {
 
 section[data-type="chapter"] > h1[class*="NumberNum"] + p {
   margin-top: $gridheight;
-  margin-bottom: $gridheight/2;
+  margin-bottom: calc($gridheight / 2);
 }
 
 section[data-type="chapter"] > h1[class*="NumberNum"] + p[class*="Body-Text"] {
@@ -2153,11 +2156,11 @@ p.PageBreakpb + div.runfoot + div.runheadright + div.runheadleft + * {
 /* need clarification */
 .Definitiondef {
   font-size: $sizeextract;
-  line-height: ($gridheight * ($sizeextract / $sizenormal));
+  line-height: ($gridheight * calc($sizeextract / $sizenormal));
   text-indent: ($textindent * -2);
   margin: 0;
   margin-left: ($textindent * 2);
-  margin-bottom: ($gridheight / 2);
+  margin-bottom: calc($gridheight / 2);
 }
 
 .Definitiondef:first-of-type, *[class*="Definitiondef"]:first-of-type {
@@ -2332,7 +2335,7 @@ section[data-type="preface"].epigraph > header + div {
 .Dialogue1Dia1 + div.runfoot + div.runheadright + div.runheadleft  + .Speaker2Sp2,
 .Dialogue2Dia2 + div.runfoot + div.runheadright + div.runheadleft  + .Speaker1Sp1,
 .AnswerAns + div.runfoot + div.runheadright + div.runheadleft + .QuestionQues {
-  margin-top: $gridheight / 2;
+  margin-top: calc($gridheight / 2);
 }
 
 pre.Speaker1Sp1,
@@ -2506,6 +2509,6 @@ td p {
 }
 
 td  p ~ p {
-margin-top: ($gridheight / 2);
+margin-top: calc($gridheight / 2);
 text-indent: 0;
 }

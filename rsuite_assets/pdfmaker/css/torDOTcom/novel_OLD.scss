@@ -1,3 +1,4 @@
+/* BEGIN: global template: novel.css */
 /* TO COMPILE: $ sass novel.scss novel.css */
 
 /* GLOBAL VARIABLES */
@@ -7,11 +8,11 @@
 $biggest: 18pt; //sizehalftitle sizepartnum
 $bigger: 16pt; //sizefst sizesubtitle sizeau sizetochead sizefmhead sizechaptitle
 $big: 14pt; //sizeacmh sizechapsubtitle sizeh1
-$normal: 12pt; //sizenormal sizechapnum sizeh2 sizeh3 sizeextracthead
+$normal: 11.75pt; //sizenormal sizechapnum sizeh2 sizeh3 sizeextracthead
 $small: 10pt; //sizetitlepagetext sizecopyright sizeepigraph sizedateline
 $smaller: 8.5pt; //sizecode sizecaption
 
-$gridheight: 16pt;
+$gridheight: 15.5pt;
 
 $pagewidth: 5in;
 $pageheight: 8in;
@@ -85,23 +86,10 @@ $familyrunhead: "ArnoPro-Caption", serif;
 $familybody: "ArnoPro", serif;
 $familyfootnote: "ArnoPro-SmText", serif;
 
-@import "../_modules/font_arnopro.scss";
-@import "../_modules/font_aroma.scss";
-@import "../_modules/font_minionpro.scss";
-@import "../_modules/font_myriadpro.scss";
-@import "../_modules/font_sourcecodepro.scss";
-@import "../_modules/font_timesnewroman.scss";
-@import "../_modules/font_noto.scss";
-@import "../_modules/font_berrangerhanditc.scss";
-@import "../_modules/font_feltpencom.scss";
-
-@import "../_modules/base.scss";
-
 /*@import "../_modules/gridlines.scss";
 */
 @page part {
   @top-center {
-    vertical-align: baseline;
   }
   @bottom-center {
     content: normal;
@@ -110,7 +98,6 @@ $familyfootnote: "ArnoPro-SmText", serif;
 
 @page chapter {
   @top-center {
-    vertical-align: baseline;
   }
   @bottom-center {
     content: normal;
@@ -119,7 +106,6 @@ $familyfootnote: "ArnoPro-SmText", serif;
 
 @page front {
   @top-center {
-    vertical-align: baseline;
   }
 }
 
@@ -160,17 +146,8 @@ figure.fullpage {
   margin-outside: -0.69in;
   height: 6in; }
 
-// reverse engineered this measurement:
-//  -(margin-top + padding-top + .fullpage margin-top + mystery extra '9.7 pts')
 img[src*="fullpage"] {
-  margin-top: -1.42in; }
-
-p.Blank-Space-BreakBsbrk,
-p.Ornamental-Space-BreakOsbrk,
-p.Ornamental-Space-Break2Osbrk2 {
-  margin-top: ($gridheight / 2);
-  margin-bottom: ($gridheight / 2);
-}
+  margin-top: -1.4in; }
 
 section[data-type="copyright-page"] p {
   line-height: $sizecopyright + 4;
@@ -180,10 +157,6 @@ section[data-type="dedication"] p:first-of-type,
 section[data-type="dedication"] h1[class*="Nonprinting"] + p[class*="Body-Text"],
 section[data-type="dedication"] h1[class*="ChapTitleNonprintingctnp"] + * {
   margin-top: $gridheight * 4; }
-
-section.adcard h1 {
-  margin-bottom: $gridheight;
-}
 
 p[class*="Dateline"] {
   font-weight: normal;
@@ -205,3 +178,5 @@ p[class*="Dateline"] {
 .Dialogue2Dia2 {
   margin-left: $gridheight;
 }
+
+/* END:  global template: novel.css */
