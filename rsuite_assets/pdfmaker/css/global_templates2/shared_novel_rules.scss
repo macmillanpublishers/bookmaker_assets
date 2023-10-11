@@ -1,0 +1,68 @@
+
+@page part {
+  @top-center {
+    vertical-align: baseline;
+  }
+  @bottom-center {
+    content: normal;
+  }
+}
+
+@page chapter {
+  @top-center {
+    vertical-align: baseline;
+  }
+  @bottom-center {
+    content: normal;
+  }
+}
+
+@page front {
+  @top-center {
+    vertical-align: baseline;
+  }
+}
+
+@page copyright {
+  margin-bottom: 31pt;
+}
+
+div.runheadleft {
+  font-variant: prince-opentype(onum);
+}
+
+div.runheadright {
+  font-variant: prince-opentype(onum);
+}
+
+div.runheadleft::before {
+  content: counter(page)" • ";
+  font-style: normal;
+}
+
+div.runheadright::after {
+  content: " • "counter(page);
+  font-style: normal;
+}
+
+.fullpage div.runheadleft::before,
+.fullpage div.runheadright::after {
+  content: "";
+}
+
+figure.fullpage {
+  margin-top: 0.55in;
+  margin-inside: -0.82in;
+  margin-outside: -0.69in;
+  height: 6in; }
+
+p.Blank-Space-BreakBsbrk,
+p.Ornamental-Space-BreakOsbrk,
+p.Ornamental-Space-Break2Osbrk2 {
+  margin-top: calc($gridheight / 2);
+  margin-bottom: calc($gridheight / 2);
+}
+
+section.adcard h1 {
+  margin-bottom: $gridheight;
+}

@@ -1,4 +1,4 @@
-/* TO COMPILE: $ sass novel.scss novel.css */
+/* BEGIN tordotcom novel-loose template */
 
 /* GLOBAL VARIABLES */
 @import "../_modules/vars_global.scss";
@@ -158,8 +158,8 @@ img[src*="fullpage"] {
 p.Blank-Space-BreakBsbrk,
 p.Ornamental-Space-BreakOsbrk,
 p.Ornamental-Space-Break2Osbrk2 {
-  margin-top: ($gridheight / 2);
-  margin-bottom: ($gridheight / 2);
+  margin-top: calc($gridheight / 2);
+  margin-bottom: calc($gridheight / 2);
 }
 
 section[data-type="copyright-page"] p {
@@ -195,3 +195,5 @@ p[class*="Dateline"] {
 .Dialogue2Dia2 {
   margin-left: $gridheight;
 }
+
+/* END tordotcom novel-loose template */

@@ -1,10 +1,10 @@
 .Definitiondef {
     font-size: $sizeextract;
-    line-height: ($gridheight * ($sizeextract / $sizenormal));
+    line-height: ($gridheight * calc($sizeextract / $sizenormal));
     text-indent: ($textindent * -2);
     margin: 0;
     margin-left: ($textindent * 2);
-    margin-bottom: ($gridheight / 2);
+    margin-bottom: calc($gridheight / 2);
 }
 .Definitiondef:first-of-type, *[class*="Definitiondef"]:first-of-type {
     text-indent: ($textindent * -2);

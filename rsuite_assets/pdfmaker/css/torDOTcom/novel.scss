@@ -1,4 +1,4 @@
-/* TO COMPILE: $ sass novel.scss novel.css */
+/* BEGIN tordotcom novel template */
 
 /* GLOBAL VARIABLES */
 @import "../_modules/vars_global.scss";
@@ -182,3 +182,5 @@ p[class*="Dateline"] {
 .Dialogue2Dia2 {
   margin-left: $gridheight;
 }
+
+/* END tordotcom novel template */

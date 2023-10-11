@@ -1,0 +1,57 @@
+// all of these rules are to reverse novel template settings back to base.scss (which is novella)
+
+@page part {
+  @top-center {
+    vertical-align: bottom;
+  }
+  @bottom-center {
+    content: flow(runfoot);
+  }
+}
+
+@page chapter {
+  @top-center {
+    vertical-align: bottom;
+  }
+  @bottom-center {
+    content: flow(runfoot);
+  }
+}
+
+@page front {
+  @top-center {
+    vertical-align: bottom;
+  }
+}
+
+@page copyright {
+  margin-bottom: 0.25in;
+}
+
+div.runheadleft {
+  font-variant: normal;
+}
+
+div.runheadright {
+  font-variant: normal;
+}
+
+div.runheadleft::before {
+  content: normal;
+}
+
+div.runheadright::after {
+  content: normal;
+}
+
+figure.fullpage {
+  margin-inside: -1in;
+  margin-outside: -0.75in;
+  height: 5.4in; }
+
+p.Blank-Space-BreakBsbrk,
+p.Ornamental-Space-BreakOsbrk,
+p.Ornamental-Space-Break2Osbrk2 {
+  margin-top: $gridheight;
+  margin-bottom: $gridheight;
+}

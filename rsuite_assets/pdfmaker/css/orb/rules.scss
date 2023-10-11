@@ -1,0 +1,13 @@
+@import "../generic/rules.scss";
+
+/* BEGIN orb rules.scss */
+
+section[data-type="titlepage"] *[class*="Logo-PlacementLogo"] {
+  background-image: url("S:/resources/bookmaker_scripts/bookmaker_assets/pdfmaker/images/orb/logo.jpg");
+  background-size: auto .5in;
+  height: .55in;
+  background-position: center center;
+  margin-bottom: auto;
+}
+
+/* END orb rules.scss */
