@@ -85,21 +85,9 @@ $familybody: "ArnoPro", serif;
 $familyfootnote: "ArnoPro-SmText", serif;
 
 
-@import "../_modules/font_arnopro.scss";
-@import "../_modules/font_aroma.scss";
-@import "../_modules/font_minionpro.scss";
-@import "../_modules/font_myriadpro.scss";
-@import "../_modules/font_sourcecodepro.scss";
-@import "../_modules/font_timesnewroman.scss";
-@import "../_modules/font_noto.scss";
-@import "../_modules/font_berrangerhanditc.scss";
-@import "../_modules/font_feltpencom.scss";
-
 @import "../_modules/base.scss";
 
-/*@import "../_modules/gridlines.scss";
-*/
-
+// @import "../_modules/gridlines.scss";
 
 section[data-type=preface],
 section[data-type=foreword] {
