@@ -1,0 +1,44 @@
+@import "../_modules/base.scss";
+// @import "../_modules/gridlines.scss";
+
+section[data-type=preface],
+section[data-type=foreword] {
+  page: front; }
+
+figure.fullpage {
+  margin-top: 0.55in;
+  margin-inside: -1in;
+  margin-outside: -0.75in; }
+
+img[src*="fullpage"] {
+  margin-top: -1.65in; }
+
+section[data-type="copyright-page"] p {
+  line-height: $sizecopyright + 4;
+}
+
+section[data-type="dedication"] p:first-of-type,
+section[data-type="dedication"] h1[class*="Nonprinting"] + p[class*="Body-Text"],
+section[data-type="dedication"] h1[class*="ChapTitleNonprintingctnp"] + * {
+  margin-top: $gridheight * 4; }
+
+p[class*="Dateline"] {
+  font-weight: normal;
+  font-style: normal;
+  font-variant: small-caps;
+  font-variant: prince-opentype(smcp, onum);
+  text-align: center;
+  text-align-last: center;
+  em {
+    font-style: italic;
+  }
+
+  span.itali {
+    font-style: italic;
+  }
+}
+
+.Speaker2Sp2,
+.Dialogue2Dia2 {
+  margin-left: $gridheight;
+}
