@@ -1,6 +1,7 @@
-$margintop: $gridheight * 3;
+$margintop: ($gridheight * 3)-2pt;
 $marginbottom: 40pt;
-$padding: 5pt 0 0 0;
+$paddingtop: 8pt;
+$padding: $paddingtop 0 0 0;
 $outsidemargin: 40pt;
 $insidemargin: 50pt;
 
@@ -17,3 +18,5 @@ $ctmarginbottom: 5pt;
 $prmargintop: ($gridheight * 2);
 
 $spacebreakheight: $gridheight;
+
+$imgfullpagemargintop: - $margintop - $fullpagemargintop - 9.2pt - $paddingtop;

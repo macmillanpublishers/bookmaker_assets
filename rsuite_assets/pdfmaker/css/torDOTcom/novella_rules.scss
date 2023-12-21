@@ -6,12 +6,12 @@ section[data-type=foreword] {
   page: front; }
 
 figure.fullpage {
-  margin-top: 0.55in;
+  margin-top: $fullpagemargintop;
   margin-inside: -1in;
   margin-outside: -0.75in; }
 
 img[src*="fullpage"] {
-  margin-top: -1.65in; }
+  margin-top: $imgfullpagemargintop; }
 
 section[data-type="copyright-page"] p {
   line-height: $sizecopyright + 4;

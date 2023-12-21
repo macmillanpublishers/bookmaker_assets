@@ -1,0 +1,13 @@
+// $bleedwidth: 0.125in;
+// $bleedheight: 0.125in;
+$margintop: round(calc($pageheight / 11.077));
+$marginbottom: round(calc($pageheight / 9));
+$paddingtop: calc($pageheight / 32);
+$padding: $paddingtop 0 calc($pageheight / 36) 0;
+$outsidemargin: round(calc($pagewidth / 8));
+$insidemargin: round(calc($pagewidth / 5.7));
+
+$imgfullpagemargintop: - $margintop - $fullpagemargintop - 9.2pt - $paddingtop;
+//  -(margin-top + padding-top + .fullpage margin-top + mystery extra '9.7 pts')
+
+$textindent: calc($pagewidth / 30);

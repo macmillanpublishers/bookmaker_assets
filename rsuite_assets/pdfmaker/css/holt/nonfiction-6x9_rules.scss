@@ -13,7 +13,7 @@ figure.fullpage {
   height: 7.25in; }
 
 img[src*="fullpage"] {
-  margin-top: -1.65in; }
+  margin-top: $imgfullpagemargintop }
 
 @page {
   @footnotes {

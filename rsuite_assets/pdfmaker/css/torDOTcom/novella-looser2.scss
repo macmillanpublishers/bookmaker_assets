@@ -13,17 +13,27 @@ $smaller: 8.5pt; //sizecode sizecaption
 
 $gridheight: 17pt;
 
-$pagewidth: 5in;
-$pageheight: 8in;
+/* TRIM VARS Placeholder
+$pagewidthinches: PAGEWIDTHINCHES;
+$pageheightinches: PAGEHEIGHTINCHES;
+$pagewidth: PAGEWIDTHPTS;
+$pageheight: PAGEHEIGHTPTS;
+TRIM VARS */
+
+$pagewidthinches: 5in;
+$pageheightinches: 8in;
+$pagewidth: 360pt;
+$pageheight: 576pt;
 $bleedwidth: 0.125in;
 $bleedheight: 0.125in;
-$margintop: 52pt;
-$marginbottom: 64pt;
-$padding: 18pt 0 16pt 0;
-$outsidemargin: 45pt;
-$insidemargin: 63pt;
+$margintop: round(calc($pageheight / 11.077)); // 52pt
+$marginbottom: round(calc($pageheight / 9));  // 64pt
+$paddingtop: calc($pageheight / 32); // 18pt
+$padding: $paddingtop 0 calc($pageheight / 36) 0; // 18pt 0 16pt 0;
+$outsidemargin: round(calc($pagewidth / 8)); // 45pt;
+$insidemargin: round(calc($pagewidth / 5.714)); // 63pt;
 
-$textindent: 12pt;
+$textindent: calc($pagewidth / 30); // 12pt;
 
 $sizetitle: 25pt;
 $sizesubtitle: $bigger; /*$big2 * 1.625*/
@@ -78,6 +88,9 @@ $cemargintop: ($gridheight * 2);
 $cemarginbottom: ($gridheight * 3);
 $prmargintop: $gridheight; //preface/frontmatter top margin
 
+$fullpagemargintop: 0.55in;
+$imgfullpagemargintop: - $margintop - $fullpagemargintop - 9.2pt - $paddingtop;
+
 $spacebreakheight: $gridheight;
 
 $familyrunhead: "ArnoPro-Caption", serif;
@@ -93,12 +106,12 @@ section[data-type=foreword] {
   page: front; }
 
 figure.fullpage {
-  margin-top: 0.55in;
+  margin-top: $fullpagemargintop;
   margin-inside: -1in;
   margin-outside: -0.75in; }
 
 img[src*="fullpage"] {
-  margin-top: -1.65in; }
+  margin-top: $imgfullpagemargintop; }
 
 section[data-type="copyright-page"] p {
   line-height: $sizecopyright + 4;

@@ -47,7 +47,7 @@ div.runheadright::after {
 figure.fullpage {
   margin-inside: -1in;
   margin-outside: -0.75in;
-  height: 5.4in; }
+  height: $pageheight - 2; }
 
 p.Blank-Space-BreakBsbrk,
 p.Ornamental-Space-BreakOsbrk,

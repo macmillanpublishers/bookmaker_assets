@@ -13,17 +13,27 @@ $smaller: 8.5pt; //sizecode sizecaption
 
 $gridheight: 14.4pt;
 
-$pagewidth: 6.125in;
-$pageheight: 9.25in;
+/* TRIM VARS Placeholder
+$pagewidthinches: PAGEWIDTHINCHES;
+$pageheightinches: PAGEHEIGHTINCHES;
+$pagewidth: PAGEWIDTHPTS;
+$pageheight: PAGEHEIGHTPTS;
+TRIM VARS */
+
+$pagewidthinches: 6.125in;
+$pageheightinches: 9.25in;
+$pagewidth: 441pt;
+$pageheight: 666pt;
 $bleedwidth: 0.125in;
 $bleedheight: 0.125in;
-$margintop: 42pt;
-$marginbottom: 57pt;
-$padding: 18pt 0 0 0;
-$outsidemargin: 63pt;
-$insidemargin: 63pt;
+$margintop: round(calc($pageheight / 15.857)); // 42pt
+$marginbottom: round(calc($pageheight / 11.684));  // 57pt
+$paddingtop: calc($pageheight / 37); // 18pt
+$padding: $paddingtop 0 0 0; // 18pt 0 0 0;
+$outsidemargin: round(calc($pagewidth / 10.57)); // 63pt;
+$insidemargin: round(calc($pagewidth / 10.57)); // 63pt;
 
-$textindent: 12pt;
+$textindent: calc($pagewidth / 55.5); // 12pt;
 
 $sizetitle: 26pt;
 $sizesubtitle: 14pt;
@@ -78,9 +88,14 @@ $cemargintop: ($gridheight * 2);
 $cemarginbottom: ($gridheight * 3);
 $prmargintop: ($gridheight * 4);
 
+$fullpagemargintop: 0.7in;
+$imgfullpagemargintop: - $margintop - $fullpagemargintop - 9.2pt - $paddingtop;
+
 $spacebreakheight: $gridheight;
 
 @import "_shared_vars.scss";
+
+// TRIM VARS PLACEHOLDER
 
 @import "../_modules/base.scss";
 
@@ -91,13 +106,13 @@ $spacebreakheight: $gridheight;
 /* Holt-specific overrides */
 
 figure.fullpage {
-  margin-top: 0.7in;
+  margin-top: $fullpagemargintop;
   margin-inside: -1in;
   margin-outside: -1in;
   height: 7.25in; }
 
 img[src*="fullpage"] {
-  margin-top: -1.65in; }
+  margin-top: $imgfullpagemargintop }
 
 section[data-type="titlepage"] > h1 {
   font-weight: normal;

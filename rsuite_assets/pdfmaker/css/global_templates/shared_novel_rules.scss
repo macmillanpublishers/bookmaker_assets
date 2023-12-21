@@ -51,10 +51,10 @@ div.runheadright::after {
 }
 
 figure.fullpage {
-  margin-top: 0.55in;
+  margin-top: $fullpagemargintop;
   margin-inside: -0.82in;
   margin-outside: -0.69in;
-  height: 6in; }
+  height: $pageheightinches - 2; }
 
 p.Blank-Space-BreakBsbrk,
 p.Ornamental-Space-BreakOsbrk,
@@ -66,3 +66,10 @@ p.Ornamental-Space-Break2Osbrk2 {
 section.adcard h1 {
   margin-bottom: $gridheight;
 }
+
+// reverse engineered this measurement:
+//  -(margin-top + padding-top + .fullpage margin-top + mystery extra '9.7 pts')
+img[src*="fullpage"] {
+  margin-top: $imgfullpagemargintop;
+  // padding: $margintop $fullpagemargintop 9.2pt $paddingtop;
+}  // -1.4 // -1.379in;

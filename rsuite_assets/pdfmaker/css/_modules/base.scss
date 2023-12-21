@@ -9,7 +9,7 @@
 }
 
 @page {
-  size: $pagewidth $pageheight;
+  size: $pagewidthinches $pageheightinches;
   margin-top: $margintop;
   margin-bottom: $marginbottom;
   padding: $padding;
@@ -2001,14 +2001,14 @@ figure.fullpage {
   float: top unless-fit;
   box-sizing: border-box;
   width: $pagewidth + ($bleedwidth * 2);
-  margin-top: 0.55in;
+  margin-top: $fullpagemargintop;
   margin-bottom: 0;
   text-align: inside;
   text-align-last: inside;
   margin-inside: -1in;
   margin-outside: -0.75in;
   overflow: visible;
-  height: 5.4in; }
+  height: $pageheightinches - 2; }
 
 h1 + figure {
   min-height: 21pt;
@@ -2050,9 +2050,9 @@ section[data-type="appendix"].abouttheauthor h1 + figure img,
 
 img[src*="fullpage"] {
   display: block;
-  width: $pagewidth + ($bleedwidth * 2);
-  height: $pageheight + ($bleedheight * 2);
-  margin-top: -1.65in; }
+  width: $pagewidthinches + ($bleedwidth * 2);
+  height: $pageheightinches + ($bleedheight * 2);
+  margin-top: $imgfullpagemargintop; }
 
 section.excerptchapter *[class*="Body-TextTx"]:first-of-type {
   text-indent: 0;

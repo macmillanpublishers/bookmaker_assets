@@ -7,6 +7,13 @@ $gridheight: 15.5pt;
 
 @import "./shared_novel_vars.scss";
 
+/* TRIM VARS Placeholder
+$pagewidthinches: PAGEWIDTHINCHES;
+$pageheightinches: PAGEHEIGHTINCHES;
+$pagewidth: PAGEWIDTHPTS;
+$pageheight: PAGEHEIGHTPTS;
+@import "./trim_vars_novel.scss";
+TRIM VARS */
 
 // rules
 
@@ -17,10 +24,5 @@ $gridheight: 15.5pt;
 /* RULES: global novel template */
 
 @import "./shared_novel_rules.scss";
-
-// reverse engineered this measurement:
-//  -(margin-top + padding-top + .fullpage margin-top + mystery extra '9.7 pts')
-img[src*="fullpage"] {
-  margin-top: -1.4in; }  // -1.4 // -1.379in;
 
 /* end RULES: global novel template */

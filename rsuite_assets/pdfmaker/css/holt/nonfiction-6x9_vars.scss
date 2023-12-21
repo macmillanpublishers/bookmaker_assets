@@ -11,13 +11,16 @@ $smaller: 8.5pt; //sizecode sizecaption
 
 $gridheight: 15pt;
 
-$pagewidth: 6.125in;
-$pageheight: 9.25in;
+$pagewidthinches: 6.125in;
+$pageheightinches: 9.25in;
+$pagewidth: 441pt;
+$pageheight: 666pt;
 $bleedwidth: 0.125in;
 $bleedheight: 0.125in;
 $margintop: 42pt;
 $marginbottom: 57pt;
-$padding: 18pt 0 0 0;
+$paddingtop: 18pt;
+$padding: $paddingtop 0 0 0;
 $outsidemargin: 60pt;
 $insidemargin: 60pt;
 
@@ -75,6 +78,9 @@ $comargintop: ($gridheight * 5); //DONE
 $cemargintop: ($gridheight * 4);
 $cemarginbottom: ($gridheight * 3);
 $prmargintop: ($gridheight * 4);
+
+$fullpagemargintop: 0.7in;
+$imgfullpagemargintop: -1.65in;
 
 $spacebreakheight: $gridheight;
 
