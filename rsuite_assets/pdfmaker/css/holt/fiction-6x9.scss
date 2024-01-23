@@ -12,6 +12,10 @@ $small: 10pt; //sizetitlepagetext sizecopyright sizeepigraph sizedateline
 $smaller: 8.5pt; //sizecode sizecaption
 
 $gridheight: 14.4pt;
+$pagewidthinches: 6.125in;
+$pageheightinches: 9.25in;
+$pagewidth: 441pt;
+$pageheight: 666pt;
 
 /* TRIM VARS Placeholder
 $pagewidthinches: PAGEWIDTHINCHES;
@@ -20,10 +24,6 @@ $pagewidth: PAGEWIDTHPTS;
 $pageheight: PAGEHEIGHTPTS;
 TRIM VARS */
 
-$pagewidthinches: 6.125in;
-$pageheightinches: 9.25in;
-$pagewidth: 441pt;
-$pageheight: 666pt;
 $bleedwidth: 0.125in;
 $bleedheight: 0.125in;
 $margintop: round(calc($pageheight / 15.857)); // 42pt

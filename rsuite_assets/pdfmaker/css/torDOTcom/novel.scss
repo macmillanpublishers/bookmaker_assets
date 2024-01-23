@@ -13,6 +13,11 @@ $smaller: 8.5pt; //sizecode sizecaption
 
 $gridheight: 15.5pt;
 
+$pagewidthinches: 5in;
+$pageheightinches: 8in;
+$pagewidth: 360pt;
+$pageheight: 576pt;
+
 /* TRIM VARS Placeholder
 $pagewidthinches: PAGEWIDTHINCHES;
 $pageheightinches: PAGEHEIGHTINCHES;
@@ -20,10 +25,6 @@ $pagewidth: PAGEWIDTHPTS;
 $pageheight: PAGEHEIGHTPTS;
 TRIM VARS */
 
-$pagewidthinches: 5in;
-$pageheightinches: 8in;
-$pagewidth: 360pt;
-$pageheight: 576pt;
 $bleedwidth: 0.125in;
 $bleedheight: 0.125in;
 $margintop: round(calc($pageheight / 12.387)); // 46.5pt

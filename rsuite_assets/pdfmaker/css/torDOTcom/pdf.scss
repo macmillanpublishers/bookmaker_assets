@@ -1,4 +1,18 @@
 
-/* Tor-dot-com default CSS: using novella.scss as base */
+/* Tor-dot-com default CSS: using novella.scss as base (this is a copy of contents for pdf.scss) */
 
-@import "./novella.scss";
+/* BEGIN tordotcom novella template */
+
+@import "./novella_vars.scss";
+
+/* TRIM VARS Placeholder
+$pagewidthinches: PAGEWIDTHINCHES;
+$pageheightinches: PAGEHEIGHTINCHES;
+$pagewidth: PAGEWIDTHPTS;
+$pageheight: PAGEHEIGHTPTS;
+@import "./novella_trim_vars.scss";
+TRIM VARS */
+
+@import "./novella_rules.scss";
+
+/* END tordotcom novella template */
