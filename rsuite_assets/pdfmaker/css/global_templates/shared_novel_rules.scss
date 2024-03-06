@@ -35,12 +35,12 @@ div.runheadright {
   font-variant: prince-opentype(onum);
 }
 
-div.runheadleft::before {
+div.runheadleft:not(.holt)::before {
   content: counter(page)" • ";
   font-style: normal;
 }
 
-div.runheadright::after {
+div.runheadright:not(.holt)::after {
   content: " • "counter(page);
   font-style: normal;
 }

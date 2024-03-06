@@ -51,7 +51,7 @@ function addRunningElements() {
 
     var runHeadLeft = document.createElement("div");
     var runHeadLeftSpan = document.createElement("span");
-    runHeadLeft.setAttribute("class", "runheadleft");
+    runHeadLeft.setAttribute("class", "runheadleft holt");
     var textnode = document.createTextNode(BKMKRINSERTBKTITLE);
 
     while (section.tagName != "SECTION" && section.tagName != "NAV" && section.tagName != "DIV" && i < 10) {
@@ -99,7 +99,7 @@ function addRunningElements() {
 
     var runHeadRight = document.createElement("div");
     var runHeadRightSpan = document.createElement("span");
-    runHeadRight.setAttribute("class", "runheadright");
+    runHeadRight.setAttribute("class", "runheadright holt");
     runHeadRightSpan.textContent=sectionHead;
     runHeadRight.appendChild(runHeadRightSpan);
     thisParent.parentNode.insertBefore(runHeadRight, thisParent.nextSibling);
