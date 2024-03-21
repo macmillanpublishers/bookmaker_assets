@@ -4,11 +4,40 @@
 
 $normal: 12pt; //sizenormal sizechapnum sizeh2 sizeh3 sizeextracthead
 $gridheight: 16pt;
+// have to re-define all vars dependent on ^ normal and gridheight so they are re-calculated
+$sizesubtitle: $bigger;
+$sizeau: $bigger;
+$sizetitlepagetext: $small;
+$sizefst: $bigger;
+$sizeacmh: $big;
+$sizehalftitle: $biggest;
+$sizetochead: $bigger;
+$sizefmhead: $bigger;
+$sizepartnum: $biggest;
+$sizechapnum: $normal;
+$sizechaptitle: $bigger;
+$sizechapsubtitle: $big;
+$sizeh1: $big;
+$sizeh2: $normal;
+$sizeh3: $normal;
+$sizenormal: $normal;
+$sizenormalalt: $normal * .8125;
+$sizecode: $normal * .71;
+$sizeextracthead: $normal;
+$sizedateline: $small;
+$sizerunhead: $smaller;
+$sizecopyright: $small;
+$sizecaption: $smaller;
+$htmargintop: ($gridheight * 1);
+$comargintop: ($gridheight * 4);
+$cemargintop: ($gridheight * 2);
+$cemarginbottom: ($gridheight * 3);
+$spacebreakheight: $gridheight;
 
+// this-template specific measurements
 $sizepoetry: 10.5pt; //sizeextract
 $sizeextract: 10.5pt;
 $sizeepigraph: 10.5pt;
-
 $ctmargintop: ($gridheight * 0.6875);
 $ctmarginbottom: ($gridheight * 3.8125);
 $prmargintop: $gridheight;

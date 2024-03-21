@@ -1,11 +1,3 @@
-
-$margintop: round(calc($pageheight / 11.077)); // 52pt
-$marginbottom: round(calc($pageheight / 9));  // 64pt
-$paddingtop: calc($pageheight / 32); // 18pt
-$padding: $paddingtop 0 calc($pageheight / 36) 0; // 18pt 0 16pt 0;
-$outsidemargin: round(calc($pagewidth / 8)); // 45pt;
-$insidemargin: round(calc($pagewidth / 5.714)); // 63pt;
-
-$textindent: calc($pagewidth / 30); // 12pt;
+// $textindent: calc($pagewidth / 30); // 12pt;
 
 $imgfullpagemargintop: - $margintop - $fullpagemargintop - 9.2pt - $paddingtop;

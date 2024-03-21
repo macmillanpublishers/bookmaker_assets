@@ -1,11 +1,12 @@
-// $bleedwidth: 0.125in;
-// $bleedheight: 0.125in;
-$margintop: $gridheight * calc($pageheight / 192pt) - calc($pageheight / 230.4);
-$marginbottom: round(calc($pageheight / 14.4));
-$paddingtop: calc($pageheight / 76.8);// 57.6 //115.2);
-$padding: $paddingtop 0 0 0;
-$outsidemargin: round(calc($pagewidth / 9));
-$insidemargin: round(calc($pagewidth / 7.2));
+$extrapointsVert: calc(round(calc(($pageheight - 576pt) / 7.2))/10);// extra pts per inch added hiehgt; roundede to nearest 10th
+$extrapointsHorizntl: calc(round(calc(($pagewidth - 360pt) / 7.2))/10);// extra pts per inch added hiehgt; roundede to nearest 10th
+
+$margintop: $gridheight * 3 + 2 * $extrapointsVert; // default val for 8" + 2pt per additional 1"
+$marginbottom: 40 + 3 * $extrapointsVert; // default val for 8" + 3pt per additional 1"
+$runheadtm: 2 * $extrapointsVert;
+
+$outsidemargin: 40 + 2 * $extrapointsHorizntl; // default val for 5" + 2pt per additional 1"
+$insidemargin: 52 + 2 * $extrapointsHorizntl; // default val for 5" + 2pt per additional 1"
 
 $imgfullpagemargintop: - $margintop - $fullpagemargintop - 9.2pt - $paddingtop;
 //  -(margin-top + padding-top + .fullpage margin-top + mystery extra '9.7 pts')

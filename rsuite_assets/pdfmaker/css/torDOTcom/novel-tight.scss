@@ -27,14 +27,14 @@ TRIM VARS */
 
 $bleedwidth: 0.125in;
 $bleedheight: 0.125in;
-$margintop: round(calc($pageheight / 12.8)); // 45pt
-$marginbottom: round(calc($pageheight / 14.4));  // 40pt
-$paddingtop: calc($pageheight / 115.2); // 5pt
-$padding: $paddingtop 0 0 0; // 5pt 0 0 0;
-$outsidemargin: round(calc($pagewidth / 9)); // 40pt;
-$insidemargin: round(calc($pagewidth / 7.2)); // 50pt;
+$margintop: $gridheight * 3;
+$marginbottom: 40pt;
+$paddingtop: 5pt;
+$padding: $paddingtop 0 0 0;
+$outsidemargin: 40pt;
+$insidemargin: 50pt;
 
-$textindent: calc($pagewidth / 30); // 12pt;
+$textindent: 12pt;// $textindent: calc($pagewidth / 30);
 
 $sizetitle: 25pt;
 $sizesubtitle: $bigger;

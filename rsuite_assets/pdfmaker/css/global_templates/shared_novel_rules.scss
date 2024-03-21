@@ -1,7 +1,7 @@
 
 @page part {
   @top-center {
-    vertical-align: baseline;
+    margin-top: $runheadtm;
   }
   @bottom-center {
     content: normal;
@@ -10,7 +10,7 @@
 
 @page chapter {
   @top-center {
-    vertical-align: baseline;
+    margin-top: $runheadtm;
   }
   @bottom-center {
     content: normal;
@@ -19,7 +19,7 @@
 
 @page front {
   @top-center {
-    vertical-align: baseline;
+    margin-top: $runheadtm;
   }
 }
 

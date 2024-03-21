@@ -4,7 +4,36 @@
 
 $normal: 11.75pt; //sizenormal sizechapnum sizeh2 sizeh3 sizeextracthead
 $gridheight: 15.5pt;
-
+// have to re-define all vars dependent on ^ normal and gridheight so they are re-calculated
+$sizesubtitle: $bigger;
+$sizeau: $bigger;
+$sizetitlepagetext: $small;
+$sizefst: $bigger;
+$sizeacmh: $big;
+$sizehalftitle: $biggest;
+$sizetochead: $bigger;
+$sizefmhead: $bigger;
+$sizepartnum: $biggest;
+$sizechapnum: $normal;
+$sizechaptitle: $bigger;
+$sizechapsubtitle: $big;
+$sizeh1: $big;
+$sizeh2: $normal;
+$sizeh3: $normal;
+$sizenormal: $normal;
+$sizenormalalt: $normal * .8125;
+$sizecode: $normal * .71;
+$sizeextracthead: $normal;
+$sizedateline: $small;
+$sizeepigraph: $small;
+$sizerunhead: $smaller;
+$sizecopyright: $small;
+$sizecaption: $smaller;
+$htmargintop: ($gridheight * 1);
+$comargintop: ($gridheight * 4);
+$cemargintop: ($gridheight * 2);
+$cemarginbottom: ($gridheight * 3);
+$spacebreakheight: $gridheight;
 @import "./shared_novel_vars.scss";
 
 /* TRIM VARS Placeholder
