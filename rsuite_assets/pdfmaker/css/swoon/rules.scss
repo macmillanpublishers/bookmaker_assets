@@ -1,0 +1,13 @@
+@import "../generic/rules.scss";
+
+/* BEGIN swoon rules.scss */
+
+section[data-type="titlepage"] *[class*="Logo-PlacementLogo"] {
+  background-image: url("S:/resources/bookmaker_scripts/bookmaker_assets/pdfmaker/images/swoon/logo.jpg");
+  background-size: auto 0.40in;
+  height: 0.45in;
+  background-position: center center;
+  margin-bottom: auto;
+}
+
+/* END swoon rules.scss */

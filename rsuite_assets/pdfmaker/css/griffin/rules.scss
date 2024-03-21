@@ -1,0 +1,12 @@
+@import "../generic/rules.scss";
+
+/* BEGIN griffin rules.scss */
+
+section[data-type="titlepage"] *[class*="Logo-PlacementLogo"] {
+  background-image: url("S:/resources/bookmaker_scripts/bookmaker_assets/pdfmaker/images/griffin/logo.jpg");
+  background-size: auto 0.75in;
+  height: 1in;
+  margin-bottom: auto;
+}
+
+/* END griffin rules.scss */

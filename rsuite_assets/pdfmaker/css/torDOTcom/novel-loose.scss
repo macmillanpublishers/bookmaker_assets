@@ -1,4 +1,4 @@
-/* TO COMPILE: $ sass novel.scss novel.css */
+/* BEGIN tordotcom novel-loose template */
 
 /* GLOBAL VARIABLES */
 @import "../_modules/vars_global.scss";
@@ -13,17 +13,28 @@ $smaller: 8.5pt; //sizecode sizecaption
 
 $gridheight: 16pt;
 
-$pagewidth: 5in;
-$pageheight: 8in;
+$pagewidthinches: 5in;
+$pageheightinches: 8in;
+$pagewidth: 360pt;
+$pageheight: 576pt;
+
+/* TRIM VARS Placeholder
+$pagewidthinches: PAGEWIDTHINCHES;
+$pageheightinches: PAGEHEIGHTINCHES;
+$pagewidth: PAGEWIDTHPTS;
+$pageheight: PAGEHEIGHTPTS;
+TRIM VARS */
+
 $bleedwidth: 0.125in;
 $bleedheight: 0.125in;
 $margintop: $gridheight * 3;
 $marginbottom: 40pt;
-$padding: 5pt 0 0 0;
+$paddingtop: 5pt;
+$padding: $paddingtop 0 0 0;
 $outsidemargin: 40pt;
 $insidemargin: 50pt;
 
-$textindent: 12pt;
+$textindent: 12pt;// $textindent: calc($pagewidth / 30);
 
 $sizetitle: 25pt;
 $sizesubtitle: $bigger;
@@ -79,28 +90,22 @@ $cemargintop: ($gridheight * 2);
 $cemarginbottom: ($gridheight * 3);
 $prmargintop: ($gridheight * 2);
 
+$fullpagemargintop: 0.55in;
+$imgfullpagemargintop: - $margintop - $fullpagemargintop - 9.2pt - $paddingtop;
+
 $spacebreakheight: $gridheight;
 
 $familyrunhead: "ArnoPro-Caption", serif;
 $familybody: "ArnoPro", serif;
 $familyfootnote: "ArnoPro-SmText", serif;
 
-@import "../_modules/font_arnopro.scss";
-@import "../_modules/font_aroma.scss";
-@import "../_modules/font_minionpro.scss";
-@import "../_modules/font_myriadpro.scss";
-@import "../_modules/font_sourcecodepro.scss";
-@import "../_modules/font_timesnewroman.scss";
-@import "../_modules/font_noto.scss";
-@import "../_modules/font_berrangerhanditc.scss";
-@import "../_modules/font_feltpencom.scss";
-
 @import "../_modules/base.scss";
 
-/*@import "../_modules/gridlines.scss";
-*/
+// @import "../_modules/gridlines.scss";
+
 @page part {
   @top-center {
+    vertical-align: baseline;
   }
   @bottom-center {
     content: normal;
@@ -109,6 +114,7 @@ $familyfootnote: "ArnoPro-SmText", serif;
 
 @page chapter {
   @top-center {
+    vertical-align: baseline;
   }
   @bottom-center {
     content: normal;
@@ -117,6 +123,7 @@ $familyfootnote: "ArnoPro-SmText", serif;
 
 @page front {
   @top-center {
+    vertical-align: baseline;
   }
 }
 
@@ -152,7 +159,7 @@ div.runheadright::after {
 }
 
 figure.fullpage {
-  margin-top: 0.55in;
+  margin-top: $fullpagemargintop;
   margin-inside: -0.82in;
   margin-outside: -0.69in;
   height: 6in; }
@@ -160,13 +167,13 @@ figure.fullpage {
 // reverse engineered this measurement:
 //  -(margin-top + padding-top + .fullpage margin-top + mystery extra '9.7 pts')
 img[src*="fullpage"] {
-  margin-top: -1.42in; }
+  margin-top: $imgfullpagemargintop; } // 1.42in
 
 p.Blank-Space-BreakBsbrk,
 p.Ornamental-Space-BreakOsbrk,
 p.Ornamental-Space-Break2Osbrk2 {
-  margin-top: ($gridheight / 2);
-  margin-bottom: ($gridheight / 2);
+  margin-top: calc($gridheight / 2);
+  margin-bottom: calc($gridheight / 2);
 }
 
 section[data-type="copyright-page"] p {
@@ -202,3 +209,5 @@ p[class*="Dateline"] {
 .Dialogue2Dia2 {
   margin-left: $gridheight;
 }
+
+/* END tordotcom novel-loose template */

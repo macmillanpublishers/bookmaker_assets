@@ -1,0 +1,13 @@
+@import "../generic/rules.scss";
+
+/* BEGIN roaringbrook rules.scss */
+
+section[data-type="titlepage"] *[class*="Logo-PlacementLogo"] {
+  background-image: url("S:/resources/bookmaker_scripts/bookmaker_assets/pdfmaker/images/roaringbrook/logo.jpg");
+  background-size: auto 0.35in;
+  height: 0.36in;
+  background-position: center center;
+  margin-bottom: auto;
+}
+
+/* END roaringbrook rules.scss */

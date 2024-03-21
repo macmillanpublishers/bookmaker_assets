@@ -1,0 +1,4 @@
+$imgfullpagemargintop: - $margintop - $fullpagemargintop - 9.2pt - $paddingtop;
+//  -(margin-top + padding-top + .fullpage margin-top + mystery extra '9.7 pts')
+
+$textindent: calc($pagewidth / 30);
