@@ -1,0 +1,75 @@
+
+@page part {
+  @top-center {
+    margin-top: $runheadtm;
+  }
+  @bottom-center {
+    content: normal;
+  }
+}
+
+@page chapter {
+  @top-center {
+    margin-top: $runheadtm;
+  }
+  @bottom-center {
+    content: normal;
+  }
+}
+
+@page front {
+  @top-center {
+    margin-top: $runheadtm;
+  }
+}
+
+@page copyright {
+  margin-bottom: 31pt;
+}
+
+div.runheadleft {
+  font-variant: prince-opentype(onum);
+}
+
+div.runheadright {
+  font-variant: prince-opentype(onum);
+}
+
+div.runheadleft:not(.holt)::before {
+  content: counter(page)" • ";
+  font-style: normal;
+}
+
+div.runheadright:not(.holt)::after {
+  content: " • "counter(page);
+  font-style: normal;
+}
+
+.fullpage div.runheadleft::before,
+.fullpage div.runheadright::after {
+  content: "";
+}
+
+figure.fullpage {
+  margin-top: $fullpagemargintop;
+  margin-inside: -0.82in;
+  margin-outside: -0.69in;
+  height: $pageheightinches - 2; }
+
+p.Blank-Space-BreakBsbrk,
+p.Ornamental-Space-BreakOsbrk,
+p.Ornamental-Space-Break2Osbrk2 {
+  margin-top: calc($gridheight / 2);
+  margin-bottom: calc($gridheight / 2);
+}
+
+section.adcard h1 {
+  margin-bottom: $gridheight;
+}
+
+// reverse engineered this measurement:
+//  -(margin-top + padding-top + .fullpage margin-top + mystery extra '9.7 pts')
+img[src*="fullpage"] {
+  margin-top: $imgfullpagemargintop;
+  // padding: $margintop $fullpagemargintop 9.2pt $paddingtop;
+}  // -1.4 // -1.379in;

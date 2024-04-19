@@ -1,0 +1,66 @@
+// vars
+
+@import "../IMPRINT/vars.scss";   // _imprint_ value will be replaced at runtime
+
+$normal: 12.5pt; //sizenormal sizechapnum sizeh2 sizeh3 sizeextracthead
+$gridheight: 17pt;
+// have to re-define all vars dependent on ^ normal and gridheight so they are re-calculated
+$sizesubtitle: $bigger;
+$sizeau: $bigger;
+$sizetitlepagetext: $small;
+$sizefst: $bigger;
+$sizeacmh: $big;
+$sizehalftitle: $biggest;
+$sizetochead: $bigger;
+$sizefmhead: $bigger;
+$sizepartnum: $biggest;
+$sizechapnum: $normal;
+$sizechaptitle: $bigger;
+$sizechapsubtitle: $big;
+$sizeh1: $big;
+$sizeh2: $normal;
+$sizeh3: $normal;
+$sizenormal: $normal;
+$sizenormalalt: $normal * .8125;
+$sizecode: $normal * .71;
+$sizeextracthead: $normal;
+$sizedateline: $small;
+$sizerunhead: $smaller;
+$sizecopyright: $small;
+$sizecaption: $smaller;
+$htmargintop: ($gridheight * 1);
+$comargintop: ($gridheight * 4);
+$cemargintop: ($gridheight * 2);
+$cemarginbottom: ($gridheight * 3);
+$spacebreakheight: $gridheight;
+
+// this-template specific measurements
+$sizepoetry: 10.75pt;
+$sizeextract: 10.75pt;
+$sizeepigraph: 10.75pt;
+
+$ctmargintop: ($gridheight * 0.6875);
+$ctmarginbottom: ($gridheight * 3.8125);
+$prmargintop: $gridheight; //preface/frontmatter top margin
+
+@import "./shared_novella_vars.scss";
+
+/* TRIM VARS Placeholder
+$pagewidthinches: PAGEWIDTHINCHES;
+$pageheightinches: PAGEHEIGHTINCHES;
+$pagewidth: PAGEWIDTHPTS;
+$pageheight: PAGEHEIGHTPTS;
+@import "./trim_vars_novella_loose.scss";
+TRIM VARS */
+
+// rules
+
+/* RULES: IMPRINT */
+
+@import "../IMPRINT/rules.scss";    // _imprint_ value will be replaced at runtime
+
+/* RULES: global novella-loose template */
+
+@import "./shared_novella_rules.scss";
+
+/* end RULES: global novella-loose template */

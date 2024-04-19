@@ -1,4 +1,4 @@
-/* TO COMPILE: $ sass novella.scss pdf.css */
+/* BEGIN holt nonfiction-55x825 template */
 
 /* GLOBAL VARIABLES */
 @import "../_modules/vars_global.scss";
@@ -12,18 +12,28 @@ $small: 10pt; //sizetitlepagetext sizecopyright sizeepigraph sizedateline
 $smaller: 8.5pt; //sizecode sizecaption
 
 $gridheight: 14.4pt;
+$pagewidthinches: 5.5in;
+$pageheightinches: 8.25in;
+$pagewidth: 396pt;
+$pageheight: 594pt;
 
-$pagewidth: 5.5in;
-$pageheight: 8.25in;
+/* TRIM VARS Placeholder
+$pagewidthinches: PAGEWIDTHINCHES;
+$pageheightinches: PAGEHEIGHTINCHES;
+$pagewidth: PAGEWIDTHPTS;
+$pageheight: PAGEHEIGHTPTS;
+TRIM VARS */
+
 $bleedwidth: 0.125in;
 $bleedheight: 0.125in;
 $margintop: 33pt;
 $marginbottom: 54pt;
-$padding: 21pt 0 0 0;
+$paddingtop: 21pt;
+$padding: $paddingtop 0 0 0; // 21pt 0 0 0;
 $outsidemargin: 58pt;
 $insidemargin: 58pt;
 
-$textindent: 12pt;
+$textindent: calc($pagewidth / 33); // 12pt;
 
 $sizetitle: 26pt;
 $sizesubtitle: 14pt;
@@ -78,19 +88,14 @@ $cemargintop: ($gridheight * 4);
 $cemarginbottom: ($gridheight * 3);
 $prmargintop: ($gridheight * 4);
 
+$fullpagemargintop: 0.7in;
+$imgfullpagemargintop: - $margintop - $fullpagemargintop - 9.2pt - $paddingtop;
+
 $spacebreakheight: $gridheight;
 
 @import "_shared_vars.scss";
 
-@import "../_modules/font_arnopro.scss";
-@import "../_modules/font_aroma.scss";
-@import "../_modules/font_minionpro.scss";
-@import "../_modules/font_myriadpro.scss";
-@import "../_modules/font_sourcecodepro.scss";
-@import "../_modules/font_timesnewroman.scss";
-@import "../_modules/font_noto.scss";
-@import "../_modules/font_berrangerhanditc.scss";
-@import "../_modules/font_feltpencom.scss";
+// TRIM VARS PLACEHOLDER
 
 @import "../_modules/base.scss";
 
@@ -101,13 +106,13 @@ $spacebreakheight: $gridheight;
 /* Holt-specific overrides */
 
 figure.fullpage {
-  margin-top: 0.7in;
+  margin-top: $fullpagemargintop;
   margin-inside: -0.93in;
   margin-outside: -0.93in;
   height: 6.25in; }
 
 img[src*="fullpage"] {
-  margin-top: -1.65in; }
+  margin-top: $imgfullpagemargintop }
 
 @page {
   @footnotes {
@@ -376,3 +381,5 @@ span[data-type="footnote"] {
   footnote-style-position: outside;
   margin-left: 12pt;
 }
+
+/* END holt nonfiction-55x825 template */

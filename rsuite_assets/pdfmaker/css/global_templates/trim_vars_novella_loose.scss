@@ -1,0 +1,16 @@
+$extrapointsHorizntl: calc(round(calc(($pagewidth - 360pt) / 7.2))/10);// extra pts per inch added hiehgt; roundede to nearest 10th
+$extrapointsVert: calc(round(calc(($pageheight - 576pt) / 7.2))/10);// extra pts per inch added hiehgt; roundede to nearest 10th
+//
+$margintop: 52 + 2 * $extrapointsVert; // default val for 8" + 2pt per additional 1"
+$marginbottom: 64 + 3 * $extrapointsVert; // default val for 8" + 3pt per additional 1"
+
+$paddingtop: 18 - $extrapointsVert; // default val for 8" - 1pt per additional 1"
+$paddingbottom: 16pt;
+$padding: $paddingtop 0 $paddingbottom 0;
+
+$outsidemargin: 45 + 2 * $extrapointsHorizntl; // default val for 5" + 2pt per additional 1"
+$insidemargin: 63 + 2 * $extrapointsHorizntl; // default val for 5" + 2pt per additional 1"
+
+$imgfullpagemargintop: - $margintop - $fullpagemargintop - 9.2pt - $paddingtop;
+
+$textindent: calc($pagewidth / 30);
