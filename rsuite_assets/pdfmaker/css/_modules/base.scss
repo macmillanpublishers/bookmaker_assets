@@ -606,7 +606,7 @@ section[data-type="titlepage"] *[class*="ImprintImp"] {
 
 section[data-type="titlepage"] *[class*="Logo-PlacementLogo"] {
   content: " ";
-  background-image: url("#{$imagepath}/torDOTcom/logo.jpg");
+  background-image: url("#{$imagepath}/SMP/logo.jpg");
   background-position: center center;
   background-size: $logowidth $logoheight;
   background-repeat: no-repeat;
