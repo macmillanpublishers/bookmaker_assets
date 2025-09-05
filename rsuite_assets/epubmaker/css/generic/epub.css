@@ -169,7 +169,7 @@ INLINE ELEMENTS
 */
 
 a {
-text-decoration: none;
+text-decoration: underline;
 }
 em,
 .smallcaps-italsci,
