@@ -1119,7 +1119,7 @@ div[data-type="part"] > p[class*="SubtitleSttl"] {
 /* NEED CLARIFICATION */
 *[class*="Body-Text2Tx2"],
 *[class*="Body-Text2-ContinuedTx2c"] {
-  font-family: "PetalaPro", sans-serif, "Noto";
+  font-family: "FaberSansPro", sans-serif, "Noto";
   font-size: $sizenormalalt;
 }
 /* end note */
@@ -1679,7 +1679,7 @@ div.verse p[class*=Verse2],
 div.verse p[class*=Verse2]:first-of-type,
 div.verse pre[class*=Verse2],
 div.verse pre[class*=Verse2]:first-of-type {
-  font-family: "PetalaPro", sans-serif, "Noto";
+  font-family: "FaberSansPro", sans-serif, "Noto";
   font-size: $sizepoetry * .83;
 }
 /* verse indents */
@@ -1750,16 +1750,6 @@ pre.verse div.runfoot + div.runheadright + div.runheadleft + p.SeparatorSep {
 /* end note */
 
 /* ---------------- LETTER */
-
-span.spanaltfont1span1 {
-  	font-family: royhand_pro_light;
-  	font-size: $sizehwritingprint;
-  	letter-spacing: .02em; }
-
-span.spanaltfont2span2 {
-  	font-family: manus;
-  	font-size: $sizehwritingnormal; }
-
 blockquote[data-type="letter"] p,
 blockquote[data-type="letter"] li {
   font-style: italic;
@@ -2018,7 +2008,7 @@ h1 + figure {
 }
 
 figcaption {
-  font-family: "PetalaPro", sans-serif, "Noto";
+  font-family: "FaberSansPro", sans-serif, "Noto";
   font-size: $sizecaption;
   line-height: $gridheight;
   text-align: left;

@@ -87,14 +87,14 @@
   font-weight: normal;
 }
 @font-face {
-  font-family: "PetalaPro";
-  src: url("S:/resources/bookmaker_scripts/bookmakerfonts/PetalaPro-Italic.otf");
+  font-family: "FaberSansPro";
+  src: url("S:/resources/bookmaker_scripts/bookmakerfonts/FaberSansPro-Italic.otf");
   font-style: italic;
   font-weight: normal;
 }
 @font-face {
-  font-family: "PetalaPro";
-  src: url("S:/resources/bookmaker_scripts/bookmakerfonts/PetalaPro-Regular.otf");
+  font-family: "FaberSansPro";
+  src: url("S:/resources/bookmaker_scripts/bookmakerfonts/FaberSansPro-Regular.otf");
   font-style: normal;
   font-weight: normal;
 }
@@ -131,18 +131,6 @@
 @font-face {
   font-family: "Noto";
   src: url("S:/resources/bookmaker_scripts/bookmakerfonts/NotoSansSymbols-Regular.ttf");
-}
-@font-face {
-  font-family: "manus";
-  src: url("S:/resources/bookmaker_scripts/bookmakerfonts/manus.otf");
-  font-style: normal;
-  font-weight: normal;
-}
-@font-face {
-  font-family: "royhand_pro_light";
-  src: url("S:/resources/bookmaker_scripts/bookmakerfonts/royhand_pro_light.ttf");
-  font-style: normal;
-  font-weight: normal;
 }
 @page {
   size: 5in 8in;
@@ -1125,7 +1113,7 @@ div[data-type=part] h1[class*=PartNumberpn] + div.runfoot + div.runheadright + d
 /* ---------------- TEXT */
 *[class*=Text-StandardALTatx],
 *[class*=Text-StdNo-IndentALTatx1] {
-  font-family: "PetalaPro", sans-serif, "Noto";
+  font-family: "FaberSansPro", sans-serif, "Noto";
   font-size: 9.75pt;
 }
 
@@ -1525,17 +1513,6 @@ p[class*=Extract-Noteextn] {
   hyphens: none;
 }
 
-span.spanaltfont1span1 {
-  font-family: royhand_pro_light;
-  font-size: 12.5pt;
-  letter-spacing: 0.02em;
-}
-
-span.spanaltfont2span2 {
-  font-family: manus;
-  font-size: 10.75pt;
-}
-
 p.LetterExtBodyTextltx, p.LetterExtBodyTextNo-Indentltx1 {
   font-style: italic;
 }
@@ -1730,7 +1707,7 @@ h1 + figure {
 }
 
 figcaption {
-  font-family: "PetalaPro", sans-serif, "Noto";
+  font-family: "FaberSansPro", sans-serif, "Noto";
   font-size: 8.5pt;
   line-height: 15.5pt;
   text-align: left;
