@@ -989,7 +989,7 @@ div[data-type="part"] h1[class*="PartNumberpn"] + div.runfoot + div.runheadright
 
 *[class*="Text-StandardALTatx"],
 *[class*="Text-StdNo-IndentALTatx1"] {
-  font-family: "AromaNo2LTPro", sans-serif, "Noto";
+  font-family: "FaberSansPro", sans-serif, "Noto";
   font-size: $sizenormalalt;
 }
 
@@ -1276,15 +1276,6 @@ p[class*="Extract-Noteextn"] {
   hyphens: none;
 }
 
-span.spanaltfont1span1 {
-    font-family: FeltpenCom-Medium;
-    font-size: $sizehwritingprint;
-    letter-spacing: .02em; }
-
-span.spanaltfont2span2 {
-    font-family: BerrangerHandITCStd;
-    font-size: $sizehwritingnormal; }
-
 p.LetterExtBodyTextltx, p.LetterExtBodyTextNo-Indentltx1 {
   font-style: italic;
 
@@ -1478,7 +1469,7 @@ h1 + figure {
 }
 
 figcaption {
-  font-family: "AromaNo2LTPro", sans-serif, "Noto";
+  font-family: "FaberSansPro", sans-serif, "Noto";
   font-size: $sizecaption;
   line-height: $gridheight;
   text-align: left;
